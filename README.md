@@ -16,7 +16,13 @@ Symlink /run to /var/run
 ```sh
 echo 'run\tprivate/var/run' | sudo tee -a /etc/synthetic.conf
 ```
-A restart is required after this step.
+A restart is required after this step
+
+---
+Until [this issue](https://github.com/LnL7/nix-darwin/issues/149) is fixed, you need to move your global `nix.conf`:
+```sh
+sudo mv /etc/nix/nix.conf /etc/nix/.nix-darwin.bkp.nix.conf
+```
 
 ### 📁 Clone this config
 > Note: You need to have the Xcode Command Line Tools installed. As these dotfiles also require a homebrew installation, you can just install homebrew which automatically installs the Command Line Tools if they aren't installed yet. --> https://brew.sh/
@@ -27,10 +33,6 @@ git clone https://github.com/GiyoMoon/nix ~/.config
 ```
 
 ### ▶️ First time build
-Until [this issue](https://github.com/LnL7/nix-darwin/issues/149) is fixed, you need to move your global `nix.conf`:
-```sh
-sudo mv /etc/nix/nix.conf /etc/nix/.nix-darwin.bkp.nix.conf
-```
 You only need to execute these commands one time. Make sure to restart your shell after this, or maybe even restart your MacBook for all configs to be applied.
 ```
 cd ~/.config
@@ -39,14 +41,26 @@ cd ~/.config
 nix build .#darwinConfigurations.JasisMacBook.system
 ```
 ```
-sudo ./result/sw/bin/darwin-rebuild switch --flake .#JasisMacBook
+./result/sw/bin/darwin-rebuild switch --flake .#JasisMacBook
 ```
 
 ### 🔁 Update config
 If you made any changes and want to update:
 ```
-sudo darwin-rebuild switch --flake .#JasisMacBook
+darwin-rebuild switch --flake .#JasisMacBook
 ```
+
+## 🔴 Errors
+If you get the following error when running the `darwin-rebuild switch` command:
+```
+error: The ~/.nix-defexpr/channels symlink does not point your users channels, aborting activation
+```
+This happens because the `~/.nix-defexpr/channels` symlink points to the root channels, and not to your user's channels. To fix this:
+```sh
+sudo rm -r ~/.nix-defexpr
+nix-channel --update
+```
+> **Important**: Don't run the `nix-channel` command as sudo, this would result into the same error again.
 
 ## 📋 Todo
 Things I want to expand this Nix config with:
