@@ -1,4 +1,4 @@
-# Jasi's Nix configs
+# 🌺 Jasi's Nix configs
 Nix configs for macOS.
 
 **Extremely** inspired by [@malob](https://github.com/malob)'s [Nix configs](https://github.com/malob/nixpkgs).
@@ -19,9 +19,9 @@ echo 'run\tprivate/var/run' | sudo tee -a /etc/synthetic.conf
 A restart is required after this step.
 
 ### 📁 Clone this config
-> Note: You need to have the Xcode Command Line Tools installed. As these dotfiles also require a homebrew installation, you can just install homebrew which automatically installs the Command Line Tools if the aren't installed yet. --> https://brew.sh/
+> Note: You need to have the Xcode Command Line Tools installed. As these dotfiles also require a homebrew installation, you can just install homebrew which automatically installs the Command Line Tools if they aren't installed yet. --> https://brew.sh/
 > 
-> Another note: If you want to put your configs somewhere else than `~/.config`, you still need to create the [nix.conf](./nix/nix.conf) file under `~/.config/nix`.
+> Another note: If you want to put your configs somewhere else than in `~/.config`, you still need to create the [nix.conf](./nix/nix.conf) file under `~/.config/nix`.
 ```
 git clone https://github.com/GiyoMoon/nix ~/.config
 ```
@@ -45,5 +45,17 @@ sudo ./result/sw/bin/darwin-rebuild switch --flake .#JasisMacBook
 ### 🔁 Update config
 If you made any changes and want to update:
 ```
-darwin-rebuild switch --flake .#JasisMacBook
+sudo darwin-rebuild switch --flake .#JasisMacBook
 ```
+
+## 📋 Todo
+Things I want to expand this Nix config with:
+- [ ] Install casks with homebrew
+- [ ] Set default browser
+- [ ] Git config
+  - [ ] Name, email, signingKey etc.
+  - [ ] Aliases
+  - [ ] Configure a work directory
+  - [ ] `git config --global pull.rebase true`
+  - [ ] [@malob](https://github.com/malob)'s nice [git log alias](https://github.com/malob/nixpkgs/blob/46a480cd1edf687df81c1d5f0f2b8de8f15a5154/home/git-aliases.nix#L47)
+- [ ] A nice shell setup with [fish](https://fishshell.com/) and [starship](https://starship.rs/)
