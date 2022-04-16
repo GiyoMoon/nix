@@ -24,7 +24,7 @@
 
     primaryUserInfo = {
       username = "giyomoon";
-    }
+    };
 
     darwinConfigurations = rec {
       JasisMacBook = darwinSystem {
