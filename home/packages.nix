@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   programs.bat.enable = true;
@@ -17,5 +17,5 @@
     nodePackages.npm-check-updates
     yarn
     nodejs-16_x
-  ]
+  ];
 }

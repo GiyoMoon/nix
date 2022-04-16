@@ -11,20 +11,16 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs-unstable";
   };
 
-  outputs = { self, darwin, nixpkgs, home-manager }:
+  outputs = { self, darwin, nixpkgs, home-manager, ... }@inputs:
   let 
     inherit (darwin.lib) darwinSystem;
+    inherit (inputs.nixpkgs-unstable.lib) attrValues;
     nixpkgsConfig = {
       config = { allowUnfree = true; };
-      overlays = attrValues self.overlays;
     };
   in
   {
     homeManagerStateVersion = "22.05";
-
-    primaryUserInfo = {
-      username = "giyomoon";
-    };
 
     darwinConfigurations = rec {
       JasisMacBook = darwinSystem {
@@ -33,20 +29,17 @@
           home-manager.darwinModules.home-manager
           (
             { config, lib, pkgs, ... }:
-            let
-               inherit (config.users) primaryUser;
-            in
+
             {
               nixpkgs = nixpkgsConfig;
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
-              home-manager.users.${primaryUser.username} = {
+              home-manager.users.giyomoon = {
                 imports = attrValues self.homeManagerModules;
-                home.stateVersion = homeManagerStateVersion;
+                home.stateVersion = self.homeManagerStateVersion;
               };
             }
           )
-          users.primaryUser = primaryUserInfo;
         ];
       };
     };
