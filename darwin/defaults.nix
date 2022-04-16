@@ -1,5 +1,3 @@
-{ ... }:
-
 {
   system.defaults = {
     dock = {
@@ -46,7 +44,7 @@
       "com.apple.swipescrolldirection" = false;
     };
 
-    smb.NetBIOSName = "MacBook Jasmin";
+    smb.NetBIOSName = "MacBook Jasi";
 
     # Does currently not exist :(
     # ".GlobalPreferences" = {
