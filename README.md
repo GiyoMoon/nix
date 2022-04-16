@@ -15,8 +15,7 @@ sh <(curl -L https://nixos.org/nix/install)
 >
 > --> https://brew.sh/
 ```
-rm -r ~/.nixpkgs
-git clone https://github.com/GiyoMoon/dotfiles ~/.**nixpkgs**
+git clone https://github.com/GiyoMoon/nix ~/.config
 ```
 
 ### ▶️ First time build
