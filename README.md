@@ -33,7 +33,7 @@ git clone https://github.com/GiyoMoon/nix ~/.config
 ```
 
 ### ▶️ First time build
-You only need to execute these commands one time. Make sure to restart your shell after this, or maybe even restart your MacBook for all configs to be applied.
+You only need to execute these commands one time. Make sure to restart your shell after this, or maybe even log out and in again for all configs to be applied.
 ```
 cd ~/.config
 ```
@@ -66,7 +66,8 @@ nix-channel --update
 Things I want to expand this Nix config with:
 - [x] Install casks with homebrew
 - [ ] Set default browser
-- [ ] Git config
+- [ ] Set login items
+- [x] Git config
   - [ ] Name, email, signingKey etc.
   - [ ] Aliases
   - [ ] Configure a work directory

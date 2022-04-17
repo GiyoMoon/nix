@@ -52,6 +52,7 @@
 
     homeManagerModules = {
       giyomoon-packages = import ./home/packages.nix;
+      giyomoon-git = import ./home/programs/git.nix;
     };
   };
 }
