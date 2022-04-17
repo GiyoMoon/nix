@@ -5,37 +5,47 @@ Nix configs for macOS.
 
 ## ⚡️ Installation
 ### ✨ Prerequisites
-Install Nix
+➖ Install Nix
 ```sh
 sh <(curl -L https://nixos.org/nix/install)
 ```
----
-It can happen that Nix fails to symlink the `/run` directory to `/private/var/run`. If so, execute this command:
 
-Symlink /run to /var/run
+> It can happen that Nix fails to symlink the `/run` directory to `/private/var/run`. If so, execute this command:
 ```sh
 echo 'run\tprivate/var/run' | sudo tee -a /etc/synthetic.conf
 ```
-A restart is required after this step
+> A restart is required after this step
 
 ---
-Until [this issue](https://github.com/LnL7/nix-darwin/issues/149) is fixed, you need to move your global `nix.conf`:
+➖ Install brew
+```sh
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+---
+➖ Until [this issue](https://github.com/LnL7/nix-darwin/issues/149) is fixed, you need to move your global `nix.conf`
 ```sh
 sudo mv /etc/nix/nix.conf /etc/nix/.nix-darwin.bkp.nix.conf
 ```
 
-### 📁 Clone this config
-> Note: You need to have the Xcode Command Line Tools installed. As these dotfiles also require a homebrew installation, you can just install homebrew which automatically installs the Command Line Tools if they aren't installed yet. --> https://brew.sh/
-> 
-> Another note: If you want to put your configs somewhere else than in `~/.config`, you still need to create the [nix.conf](./nix/nix.conf) file under `~/.config/nix`.
+---
+➖ Enable experimental nix features
+```sh
+mkdir -p ~/.config/nix
+cat <<EOF > ~/.config/nix/nix.conf
+experimental-features = nix-command flakes
+EOF
 ```
-git clone https://github.com/GiyoMoon/nix ~/.config
+
+### 📁 Clone this config
+```
+git clone https://github.com/GiyoMoon/nix ~/.nixconfig
 ```
 
 ### ▶️ First time build
 You only need to execute these commands one time. Make sure to restart your shell after this, or maybe even log out and in again for all configs to be applied.
 ```
-cd ~/.config
+cd ~/.nixconfig
 ```
 ```
 nix build .#darwinConfigurations.JasisMacBook.system
