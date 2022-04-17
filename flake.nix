@@ -14,9 +14,14 @@
   outputs = { self, darwin, nixpkgs, home-manager, ... }@inputs:
   let 
     inherit (darwin.lib) darwinSystem;
-    inherit (inputs.nixpkgs-unstable.lib) attrValues;
+    inherit (inputs.nixpkgs-unstable.lib) attrValues optionalAttrs singleton;
     nixpkgsConfig = {
       config = { allowUnfree = true; };
+      overlays = singleton (
+          final: prev: (optionalAttrs (prev.stdenv.system == "aarch64-darwin") {
+            inherit (final.pkgs-x86) starship; # TODO: remove when https://github.com/NixOS/nixpkgs/issues/160876 is fixed.
+          })
+        );
     };
   in
   {
@@ -53,6 +58,8 @@
     homeManagerModules = {
       giyomoon-packages = import ./home/packages.nix;
       giyomoon-git = import ./home/programs/git.nix;
+      giyomoon-fish = import ./home/programs/fish.nix;
+      giyomoon-starship = import ./home/programs/starship.nix;
     };
   };
 }
