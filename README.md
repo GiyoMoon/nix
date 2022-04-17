@@ -1,4 +1,4 @@
-# 🌺 Jasi's Nix configs
+# 🌺 My Nix configs
 Nix configs for macOS.
 
 **Extremely** inspired by [@malob](https://github.com/malob)'s [Nix configs](https://github.com/malob/nixpkgs).
@@ -50,7 +50,7 @@ If you made any changes and want to update:
 darwin-rebuild switch --flake .#JasisMacBook
 ```
 
-## 🔴 Errors
+## 🔴 Troubleshooting
 If you get the following error when running the `darwin-rebuild switch` command:
 ```
 error: The ~/.nix-defexpr/channels symlink does not point your users channels, aborting activation
@@ -64,7 +64,7 @@ nix-channel --update
 
 ## 📋 Todo
 Things I want to expand this Nix config with:
-- [ ] Install casks with homebrew
+- [x] Install casks with homebrew
 - [ ] Set default browser
 - [ ] Git config
   - [ ] Name, email, signingKey etc.

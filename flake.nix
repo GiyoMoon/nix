@@ -47,7 +47,7 @@
     darwinModules = {
       giyomoon-defaults = import ./darwin/defaults.nix;
       giyomoon-general = import ./darwin/general.nix;
-      # giyomoon-homebrew = import ./config/homebrew.nix;
+      giyomoon-homebrew = import ./darwin/homebrew.nix;
     };
 
     homeManagerModules = {
