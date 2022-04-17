@@ -25,6 +25,7 @@
     "firefox"
     "google-chrome"
     "microsoft-edge"
+    "microsoft-auto-update"
 
     # tools
     "insomnia"
