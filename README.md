@@ -43,7 +43,7 @@ git clone https://github.com/GiyoMoon/nix ~/.nixconfig
 ```
 
 ### ▶️ First time build
-You only need to execute these commands one time. Make sure to restart your shell after this, or maybe even log out and in again for all configs to be applied.
+You only need to execute these commands a single time. Make sure to restart your shell after this, or maybe even log out and in again for all configs to be applied.
 ```
 cd ~/.nixconfig
 ```

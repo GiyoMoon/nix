@@ -30,6 +30,6 @@
   fonts.enableFontDir = true;
   fonts.fonts = with pkgs; [
      recursive
-     (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
+     (nerdfonts.override { fonts = [ "FiraCode" ]; })
    ];
 }
