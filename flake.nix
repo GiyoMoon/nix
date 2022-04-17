@@ -60,6 +60,7 @@
       giyomoon-git = import ./home/programs/git.nix;
       giyomoon-fish = import ./home/programs/fish.nix;
       giyomoon-starship = import ./home/programs/starship.nix;
+      giyomoon-starship-symbols = import ./home/programs/starship-symbols.nix;
     };
   };
 }
