@@ -20,6 +20,7 @@
     "amethyst"
     "raycast"
     "visual-studio-code"
+    "warp"
 
     # browsers
     "firefox"

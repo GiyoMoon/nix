@@ -2,6 +2,13 @@
   programs.fish = {
     enable = true;
 
+    shellAliases = {
+      c = "clear";
+      "c." = "code .";
+      ls = "exa";
+      cat = "bat";
+    };
+
     shellInit = ''
       # Disable fish greeting
       set -g fish_greeting ""
