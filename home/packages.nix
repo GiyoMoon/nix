@@ -11,6 +11,7 @@
     thefuck
     wget
     bat
+    pinentry_mac
 
     # dev
     nodePackages.gitmoji-cli

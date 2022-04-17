@@ -65,12 +65,12 @@ nix-channel --update
 ## 📋 Todo
 Things I want to expand this Nix config with:
 - [x] Install casks with homebrew
+- [x] Git config
+  - [x] Name, email, signingKey etc.
+  - [x] Aliases
+  - [x] Configure a work directory
+  - [x] `git config --global pull.rebase true`
+  - [x] [@malob](https://github.com/malob)'s nice [git log alias](https://github.com/malob/nixpkgs/blob/46a480cd1edf687df81c1d5f0f2b8de8f15a5154/home/git-aliases.nix#L47)
+- [ ] A nice shell setup with [fish](https://fishshell.com/) and [starship](https://starship.rs/)
 - [ ] Set default browser
 - [ ] Set login items
-- [x] Git config
-  - [ ] Name, email, signingKey etc.
-  - [ ] Aliases
-  - [ ] Configure a work directory
-  - [ ] `git config --global pull.rebase true`
-  - [ ] [@malob](https://github.com/malob)'s nice [git log alias](https://github.com/malob/nixpkgs/blob/46a480cd1edf687df81c1d5f0f2b8de8f15a5154/home/git-aliases.nix#L47)
-- [ ] A nice shell setup with [fish](https://fishshell.com/) and [starship](https://starship.rs/)
