@@ -12,6 +12,7 @@
     wget
     bat
     pinentry_mac
+    gnupg
 
     # dev
     nodePackages.gitmoji-cli

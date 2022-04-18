@@ -17,11 +17,6 @@
     inherit (inputs.nixpkgs-unstable.lib) attrValues optionalAttrs singleton;
     nixpkgsConfig = {
       config = { allowUnfree = true; };
-      overlays = singleton (
-          final: prev: (optionalAttrs (prev.stdenv.system == "aarch64-darwin") {
-            inherit (final.pkgs-x86) starship; # TODO: remove when https://github.com/NixOS/nixpkgs/issues/160876 is fixed.
-          })
-        );
     };
   in
   {
