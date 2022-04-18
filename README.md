@@ -36,6 +36,11 @@ cat <<EOF > ~/.config/nix/nix.conf
 experimental-features = nix-command flakes
 EOF
 ```
+---
+➖ Update your user's nix channels
+```sh
+nix-channel --update
+```
 
 ### 📁 Clone this config
 ```
@@ -60,18 +65,6 @@ If you made any changes and want to update:
 darwin-rebuild switch --flake .#JasisMacBook
 ```
 
-## 🔴 Troubleshooting
-If you get the following error when running the `darwin-rebuild switch` command:
-```
-error: The ~/.nix-defexpr/channels symlink does not point your users channels, aborting activation
-```
-This happens because the `~/.nix-defexpr/channels` symlink points to the root channels, and not to your user's channels. To fix this:
-```sh
-sudo rm -r ~/.nix-defexpr
-nix-channel --update
-```
-> **Important**: Don't run the `nix-channel` command as sudo, this would result into the same error again.
-
 ## 📋 Todo
 Things I want to expand this Nix config with:
 - [x] Install casks with homebrew
@@ -81,6 +74,13 @@ Things I want to expand this Nix config with:
   - [x] Configure a work directory
   - [x] `git config --global pull.rebase true`
   - [x] [@malob](https://github.com/malob)'s nice [git log alias](https://github.com/malob/nixpkgs/blob/46a480cd1edf687df81c1d5f0f2b8de8f15a5154/home/git-aliases.nix#L47)
-- [ ] A nice shell setup with [fish](https://fishshell.com/) and [starship](https://starship.rs/)
-- [ ] Set default browser
-- [ ] Set login items
+- [x] A nice shell setup with [fish](https://fishshell.com/) and [starship](https://starship.rs/)
+- Small things which would be nice
+  - [ ] Set default browser
+  - [ ] Set login items
+  - [ ] Set wallpaper
+  - [ ] Disable startup sound
+  - [ ] Clear dock apps
+  - [ ] Remove spotlight shortcut
+  - [ ] Add code to PATH
+  - [ ] Show sound settings in menubar
