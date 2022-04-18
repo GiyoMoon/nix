@@ -42,6 +42,7 @@
       NSAutomaticSpellingCorrectionEnabled = false;
       AppleFontSmoothing = 1;
       "com.apple.swipescrolldirection" = false;
+      "com.apple.keyboard.fnState" = true;
     };
 
     smb.NetBIOSName = "MacBook Jasi";
