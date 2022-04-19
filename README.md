@@ -75,14 +75,19 @@ Things I want to expand this Nix config with:
   - [x] `git config --global pull.rebase true`
   - [x] [@malob](https://github.com/malob)'s nice [git log alias](https://github.com/malob/nixpkgs/blob/46a480cd1edf687df81c1d5f0f2b8de8f15a5154/home/git-aliases.nix#L47)
 - [x] A nice shell setup with [fish](https://fishshell.com/) and [starship](https://starship.rs/)
-- Small things which would be nice
+- Nice to have configs (I don't know if all are possible to configure with nix)
   - [x] Use F keys as standard function keys
   - [ ] Set default browser
   - [ ] Set login items
-  - [ ] Set wallpaper and lockscreen
+    - Amethyst
   - [ ] Disable startup sound
   - [ ] Clear dock apps
   - [ ] Remove spotlight shortcut
   - [ ] Amethyst config
-  - [ ] Add code to PATH
-  - [ ] Show sound settings in menubar
+  - [ ] Change sleep settings
+  - [ ] Disable system sounds
+  - [ ] Change trackpad click to light
+  - [ ] Change screenshot shortcut
+  - [ ] (Disable mouse scaling)
+  - [ ] (Show sound settings in menubar)
+  - [ ] (Set wallpaper and lockscreen)
