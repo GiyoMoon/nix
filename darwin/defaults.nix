@@ -2,9 +2,12 @@
 
 let
   inherit (lib) concatStringsSep;
-  userDefaults = [
+  extraUserActivationCmds = [
     # clear dock apps
     "defaults write com.apple.dock persistent-apps -array"
+
+    # Put Amethyst into login items
+    "osascript -e 'tell application \"System Events\" to make login item at end with properties { path:\"/Applications/Amethyst.app\", hidden: false }'"
   ];
 in
 {
@@ -63,5 +66,5 @@ in
     LaunchServices.LSQuarantine = false;
   };
 
-  system.activationScripts.userDefaults.text = concatStringsSep "\n" userDefaults;
+  system.activationScripts.extraUserActivation.text = concatStringsSep "\n" extraUserActivationCmds;
 }

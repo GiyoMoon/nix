@@ -78,7 +78,7 @@ Things I want to expand this Nix config with:
 - Nice to have configs (I don't know if all are possible to configure with nix)
   - [x] Use F keys as standard function keys
   - [ ] Set default browser
-  - [ ] Set login items
+  - [x] Set login items
     - Amethyst
   - [ ] Disable startup sound
   - [x] Clear dock apps
