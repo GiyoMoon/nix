@@ -81,7 +81,7 @@ Things I want to expand this Nix config with:
   - [ ] Set login items
     - Amethyst
   - [ ] Disable startup sound
-  - [ ] Clear dock apps
+  - [x] Clear dock apps
   - [ ] Remove spotlight shortcut
   - [ ] Amethyst config
   - [ ] Change sleep settings

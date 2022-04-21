@@ -1,3 +1,12 @@
+{ lib, ... }:
+
+let
+  inherit (lib) concatStringsSep;
+  userDefaults = [
+    # clear dock apps
+    "defaults write com.apple.dock persistent-apps -array"
+  ];
+in
 {
   system.defaults = {
     dock = {
@@ -47,15 +56,12 @@
 
     smb.NetBIOSName = "MacBook Jasi";
 
-    # Does currently not exist :(
-    # ".GlobalPreferences" = {
-    #   "com.apple.mouse.scaling" = -1;
-    # };
-
     screencapture.disable-shadow = true;
 
     trackpad.Clicking = true;
 
     LaunchServices.LSQuarantine = false;
   };
+
+  system.activationScripts.userDefaults.text = concatStringsSep "\n" userDefaults;
 }
