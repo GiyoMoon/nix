@@ -27,7 +27,7 @@
     localHostName = "MacBook-Jasi";
   };
 
-  fonts.enableFontDir = true;
+  fonts.fontDir.enable = true;
   fonts.fonts = with pkgs; [
      recursive
      (nerdfonts.override { fonts = [ "FiraCode" ]; })
