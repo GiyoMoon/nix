@@ -21,6 +21,7 @@
     "raycast"
     "visual-studio-code"
     "warp"
+    "docker"
 
     # browsers
     "firefox"
