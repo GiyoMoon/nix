@@ -2,7 +2,7 @@
 
 let
   inherit (lib) concatStringsSep;
-  extraUserActivationCmds = [
+  postUserActivationCmds = [
     # clear dock apps
     "defaults write com.apple.dock persistent-apps -array"
 
@@ -66,5 +66,5 @@ in
     LaunchServices.LSQuarantine = false;
   };
 
-  system.activationScripts.extraUserActivation.text = concatStringsSep "\n" extraUserActivationCmds;
+  system.activationScripts.postUserActivation.text = concatStringsSep "\n" postUserActivationCmds;
 }

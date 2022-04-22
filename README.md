@@ -77,7 +77,7 @@ Things I want to expand this Nix config with:
 - [x] A nice shell setup with [fish](https://fishshell.com/) and [starship](https://starship.rs/)
 - Nice to have configs (I don't know if all are possible to configure with nix)
   - [x] Use F keys as standard function keys
-  - [ ] Set default browser
+  - [ ] Set default browser (Probably with `~/Library/Preferences/com.apple.LaunchServices/com.apple.launchservices.secure`)
   - [x] Set login items
     - Amethyst
   - [ ] Disable startup sound
