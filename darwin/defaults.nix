@@ -2,6 +2,10 @@
 
 let
   inherit (lib) concatStringsSep;
+  postActivationCmds = [
+    # Disable startup sound
+    "sudo nvram StartupMute=%01"
+  ];
   postUserActivationCmds = [
     # clear dock apps
     "defaults write com.apple.dock persistent-apps -array"
@@ -66,5 +70,6 @@ in
     LaunchServices.LSQuarantine = false;
   };
 
+  system.activationScripts.postActivation.text = concatStringsSep "\n" postActivationCmds;
   system.activationScripts.postUserActivation.text = concatStringsSep "\n" postUserActivationCmds;
 }

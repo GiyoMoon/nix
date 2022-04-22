@@ -80,7 +80,7 @@ Things I want to expand this Nix config with:
   - [ ] Set default browser (Probably with `~/Library/Preferences/com.apple.LaunchServices/com.apple.launchservices.secure`)
   - [x] Set login items
     - Amethyst
-  - [ ] Disable startup sound
+  - [x] Disable startup sound
   - [x] Clear dock apps
   - [ ] Remove spotlight shortcut
   - [ ] Amethyst config
