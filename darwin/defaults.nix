@@ -5,10 +5,19 @@ let
   postActivationCmds = [
     # Disable startup sound
     "sudo nvram StartupMute=%01"
+
+    # Power settings
+    # -a: All Power modes
+    # -c: A/C Power
+    # -b: Battery Power
+    "sudo pmset -a displaysleep 15"
   ];
   postUserActivationCmds = [
     # clear dock apps
     "defaults write com.apple.dock persistent-apps -array"
+
+    # Bluetooth - Increase sound quality for headphones/headsets
+    "defaults write com.apple.BluetoothAudioAgent \"Apple Bitpool Min (editable)\" -int 40"
 
     # Put Amethyst into login items
     "osascript -e 'tell application \"System Events\" to make login item at end with properties { path:\"/Applications/Amethyst.app\", hidden: false }'"

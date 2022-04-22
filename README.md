@@ -84,7 +84,7 @@ Things I want to expand this Nix config with:
   - [x] Clear dock apps
   - [ ] Remove spotlight shortcut
   - [ ] Amethyst config
-  - [ ] Change sleep settings
+  - [x] Change sleep settings
   - [ ] Disable system sounds
   - [ ] Change trackpad click to light
   - [ ] Change screenshot shortcut
