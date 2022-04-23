@@ -20,7 +20,7 @@
     "amethyst"
     "raycast"
     "visual-studio-code"
-    "warp"
+    "kitty"
     "docker"
 
     # browsers

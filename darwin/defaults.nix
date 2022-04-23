@@ -21,6 +21,9 @@ let
 
     # Put Amethyst into login items
     "osascript -e 'tell application \"System Events\" to make login item at end with properties { path:\"/Applications/Amethyst.app\", hidden: false }'"
+
+    # Set fish as the default shell
+    "chsh -s /run/current-system/sw/bin/fish"
   ];
 in
 {

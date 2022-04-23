@@ -6,7 +6,7 @@
     experimental-features = nix-command flakes
   '';
 
-  programs.zsh.enable = true;
+  programs.fish.enable = true;
 
   services.nix-daemon.enable = true;
 
@@ -17,6 +17,9 @@
       ls = "exa";
       cat = "bat";
     };
+    shells = [
+      pkgs.fish
+    ];
   };
 
   time.timeZone = "Europe/Zurich";
