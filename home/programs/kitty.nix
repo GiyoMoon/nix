@@ -4,7 +4,10 @@
   programs.kitty = {
     enable = true;
     # Workaround to use homebrew package
-    package = pkgs.writeShellScriptBin "_kitty" "kitty";
+    package = pkgs.runCommand "kitty" { } ''
+        mkdir -p $out/bin
+        ln -s /opt/homebrew/bin/kitty $out/bin/kitty
+      '';
     font = {
       name = "FiraCode Nerd Font";
       size = 12;
