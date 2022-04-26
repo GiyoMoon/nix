@@ -22,6 +22,7 @@
     "visual-studio-code"
     "kitty"
     "docker"
+    "spotify"
 
     # browsers
     "firefox"
