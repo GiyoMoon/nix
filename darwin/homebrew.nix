@@ -32,6 +32,7 @@
     # tools
     "insomnia"
     "licecap"
+    "pika"
 
     # communication
     "discord"
