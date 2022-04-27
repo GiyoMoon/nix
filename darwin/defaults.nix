@@ -19,6 +19,10 @@ let
     # Bluetooth - Increase sound quality for headphones/headsets
     "defaults write com.apple.BluetoothAudioAgent \"Apple Bitpool Min (editable)\" -int 40"
 
+    # Disable user interface sound effects
+    "defaults write \"Apple Global Domain\" com.apple.sound.uiaudio.enabled -int 0"
+    "osascript -e 'tell application \"Finder\" to set volume alert volume 0'"
+
     # Put Amethyst into login items
     "osascript -e 'tell application \"System Events\" to make login item at end with properties { path:\"/Applications/Amethyst.app\", hidden: false }'"
 
