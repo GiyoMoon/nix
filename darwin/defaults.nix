@@ -81,7 +81,11 @@ in
 
     screencapture.disable-shadow = true;
 
-    trackpad.Clicking = true;
+    trackpad = {
+      Clicking = true;
+      FirstClickThreshold = 0;
+      SecondClickThreshold = 0;
+    };
 
     LaunchServices.LSQuarantine = false;
   };

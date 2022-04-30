@@ -86,7 +86,7 @@ Things I want to expand this Nix config with:
   - [ ] Amethyst config
   - [x] Change sleep settings
   - [x] Disable system sounds
-  - [ ] Change trackpad click to light
+  - [x] Change trackpad click to light
   - [ ] Change screenshot shortcut
   - [ ] (Disable mouse scaling)
   - [ ] (Show sound settings in menubar)
