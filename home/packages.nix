@@ -13,7 +13,7 @@
     bat
     pinentry_mac
     gnupg
-    # xmlstarlet
+    xmlstarlet
 
     # dev
     nodePackages.gitmoji-cli

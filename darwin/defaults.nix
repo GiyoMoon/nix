@@ -31,8 +31,10 @@ let
     "osascript -e 'tell application \"System Events\" to make login item at end with properties { path:\"/Applications/Amethyst.app\", hidden: false }'"
 
     # Remove spotlight shortcut
-    # Doesn't work as xmlstarlet isn't available in activationScripts :(
-    # "plutil -convert xml1 -o - ~/Library/Preferences/com.apple.symbolichotkeys.plist | xmlstarlet ed --rename '/plist/dict/key[text()=\"AppleSymbolicHotKeys\"]/following-sibling::dict[1]/key[text()=\"64\"]/following-sibling::dict[1]/true' --value 'false' | sed -e '1,5d;$d;$d' | xargs | sed 's/^/\'/;s/$/\'/' | xargs defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys"
+    # "plutil -convert xml1 -o - ~/Library/Preferences/com.apple.symbolichotkeys.plist | /etc/profiles/per-user/giyomoon/bin/xmlstarlet ed --rename '/plist/dict/key[text()=\"AppleSymbolicHotKeys\"]/following-sibling::dict[1]/key[text()=\"64\"]/following-sibling::dict[1]/true' --value 'false' | sed -e '1,5d;$d;$d' | xargs | sed \"s/^/'/;s/$/'/\" | xargs defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys"
+
+    # Change screenshot shortcut
+    # "plutil -convert xml1 -o - ~/Library/Preferences/com.apple.symbolichotkeys.plist | /etc/profiles/per-user/giyomoon/bin/xmlstarlet ed --update '/plist/dict/key[text()=\"AppleSymbolicHotKeys\"]/following-sibling::dict[1]/key[text()=\"31\"]/following-sibling::dict[1]/dict/array/integer[1]' --value '115' | /etc/profiles/per-user/giyomoon/bin/xmlstarlet ed --update '/plist/dict/key[text()=\"AppleSymbolicHotKeys\"]/following-sibling::dict[1]/key[text()=\"31\"]/following-sibling::dict[1]/dict/array/integer[2]' --value '1' | /etc/profiles/per-user/giyomoon/bin/xmlstarlet ed --update '/plist/dict/key[text()=\"AppleSymbolicHotKeys\"]/following-sibling::dict[1]/key[text()=\"31\"]/following-sibling::dict[1]/dict/array/integer[3]' --value '1179648'| sed -e '1,5d;$d;$d' | xargs | sed \"s/^/'/;s/$/'/\" | xargs defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys"
 
     # Set fish as the default shell
     "chsh -s /run/current-system/sw/bin/fish"
