@@ -36,6 +36,7 @@
       set -g fish_color_user brgreen
       set -g fish_color_valid_path --underline
 
+      thefuck --alias | source
       direnv hook fish | source
     '';
   };
