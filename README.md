@@ -87,6 +87,7 @@ Things I want to expand this Nix config with:
   - [x] Remove spotlight shortcut (Works but very experimental, uncomment in [defaults.nix](./darwin/defaults.nix#L34))
   - [x] Change screenshot shortcut (Works but very experimental, uncomment in [defaults.nix](./darwin/defaults.nix#L37))
   - [ ] Show sound settings in menubar (Somehow doesn't work :sadge:)
+  - [ ] Disable mouse pointer shake to locate (Somehow doesn't work :sadge:)
   - [ ] Set default browser (Probably with `~/Library/Preferences/com.apple.LaunchServices/com.apple.launchservices.secure`)
   - [ ] Amethyst config
   - [ ] (Set wallpaper and lockscreen)
