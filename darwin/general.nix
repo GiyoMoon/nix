@@ -16,6 +16,7 @@
       "c." = "code .";
       ls = "exa";
       cat = "bat";
+      p = "pnpm";
     };
     shells = [
       pkgs.fish

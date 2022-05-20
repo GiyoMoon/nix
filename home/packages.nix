@@ -18,7 +18,7 @@
     # dev
     nodePackages.gitmoji-cli
     nodePackages.npm-check-updates
-    nodePackages."@nestjs/cli"
+    nodePackages.pnpm
     yarn
     nodejs-16_x
   ];
