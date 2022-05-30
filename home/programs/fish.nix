@@ -9,7 +9,8 @@
       cat = "bat";
     };
 
-    shellInit = ''
+    shellInit = ''`
+      fish_add_path ~/.cargo/bin /opt/homebrew/bin
       # Disable fish greeting
       set -g fish_greeting ""
 
