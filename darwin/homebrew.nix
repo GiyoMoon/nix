@@ -19,7 +19,7 @@
   homebrew.casks = [
     "amethyst"
     "raycast"
-    "visual-studio-code"
+    "vscodium"
     "kitty"
     "docker"
     "spotify"

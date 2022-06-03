@@ -13,6 +13,7 @@
   environment = {
     shellAliases = {
       c = "clear";
+      code = "codium";
       "c." = "code .";
       ls = "exa";
       cat = "bat";
