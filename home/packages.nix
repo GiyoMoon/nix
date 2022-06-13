@@ -21,5 +21,6 @@
     nodePackages.pnpm
     yarn
     nodejs-16_x
+    deno
   ];
 }

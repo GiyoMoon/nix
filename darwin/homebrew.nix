@@ -34,6 +34,8 @@
     "insomnia"
     "licecap"
     "pika"
+    "gimp"
+    "aldente"
 
     # communication
     "discord"
@@ -44,10 +46,5 @@
   # Fallback for packages which don't work well with nix...
   homebrew.brews = [
     "rustup-init"
-    "libpq"
   ];
-
-  homebrew.extraConfig = ''
-    brew "libpq", link: true
-  '';
 }
