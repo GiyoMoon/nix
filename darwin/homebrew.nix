@@ -41,10 +41,16 @@
     "discord"
     "slack"
     "telegram-desktop"
+
+    "parsec"
   ];
 
   # Fallback for packages which don't work well with nix...
   homebrew.brews = [
     "rustup-init"
   ];
+
+  homebrew.masApps = {
+    "WireGuard" = 1451685025;
+  };
 }
