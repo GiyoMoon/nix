@@ -13,6 +13,10 @@ let
     "sudo pmset -a displaysleep 15"
   ];
   postUserActivationCmds = [
+    # Configure key repeat
+    "defaults write -g InitialKeyRepeat -int 12"
+    "defaults write -g KeyRepeat -int 3"
+
     # clear dock apps
     "defaults write com.apple.dock persistent-apps -array"
 
