@@ -52,5 +52,6 @@
 
   homebrew.masApps = {
     "WireGuard" = 1451685025;
+    "Unsplash Wallpapers" = 1284863847;
   };
 }
