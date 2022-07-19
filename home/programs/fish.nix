@@ -8,9 +8,13 @@
       "c." = "code .";
       ls = "exa";
       cat = "bat";
+      vim = "nvim";
+      v = "vim";
+      "v." = "vim .";
+      dev = "cd ~/Documents/dev";
     };
 
-    shellInit = ''`
+    shellInit = ''
       fish_add_path ~/.cargo/bin /opt/homebrew/bin ~/.deno/bin
       # Disable fish greeting
       set -g fish_greeting ""

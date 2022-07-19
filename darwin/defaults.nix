@@ -13,10 +13,6 @@ let
     "sudo pmset -a displaysleep 15"
   ];
   postUserActivationCmds = [
-    # Configure key repeat
-    "defaults write -g InitialKeyRepeat -int 12"
-    "defaults write -g KeyRepeat -int 3"
-
     # clear dock apps
     "defaults write com.apple.dock persistent-apps -array"
 
@@ -91,6 +87,9 @@ in
       NSAutomaticQuoteSubstitutionEnabled = false;
       NSAutomaticSpellingCorrectionEnabled = false;
       AppleFontSmoothing = 1;
+      ApplePressAndHoldEnabled = false;
+      InitialKeyRepeat = 15;
+      KeyRepeat = 3;
       "com.apple.swipescrolldirection" = false;
       "com.apple.keyboard.fnState" = true;
     };

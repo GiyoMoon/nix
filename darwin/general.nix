@@ -18,6 +18,10 @@
       ls = "exa";
       cat = "bat";
       p = "pnpm";
+      vim = "nvim";
+      v = "vim";
+      "v." = "vim .";
+      dev = "cd ~/Documents/dev";
     };
     shells = [
       pkgs.fish

@@ -14,6 +14,8 @@
     pinentry_mac
     gnupg
     xmlstarlet
+    ripgrep
+    neovim
 
     # dev
     nodePackages.gitmoji-cli
