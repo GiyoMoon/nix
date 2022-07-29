@@ -1,6 +1,10 @@
 { pkgs, ... }:
 
 {
+  home.sessionVariables = {
+    TERM = "xterm-256color";
+  };
+
   programs.kitty = {
     enable = true;
     # Workaround to use homebrew package

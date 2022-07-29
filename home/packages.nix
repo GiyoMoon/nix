@@ -16,6 +16,8 @@
     xmlstarlet
     ripgrep
     neovim
+    lazygit
+    ydiff
 
     # dev
     nodePackages.gitmoji-cli

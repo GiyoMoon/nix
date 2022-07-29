@@ -16,7 +16,7 @@
     inherit (darwin.lib) darwinSystem;
     inherit (inputs.nixpkgs-unstable.lib) attrValues optionalAttrs singleton;
     nixpkgsConfig = {
-      config = { allowUnfree = true; };
+      config = { allowUnfree = true; allowBroken = true; };
     };
   in
   {
