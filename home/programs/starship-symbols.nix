@@ -22,7 +22,7 @@ in
     nim.symbol = mkDefault " ";
     nix_shell.symbol = mkDefault " ";
     nodejs.symbol = mkDefault " ";
-    package.symbol = mkDefault " ";
-    rust.symbol = mkDefault " ";
+    package.symbol = mkDefault "📦 ";
+    rust.symbol = mkDefault "🦀 ";
   };
 }

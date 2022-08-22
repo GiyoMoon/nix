@@ -30,7 +30,7 @@ let
     # Should work but doesn't :(
     # "defaults write \"Apple Global Domain\" CGDisableCursorLocationMagnification -int 1"
 
-    # Always show sound settings in menubar 
+    # Always show sound settings in menubar
     # Somehow doesn't work :sadge:
     # "defaults write \"com.apple.controlcenter\" \"NSStatusItem Visible Sound\" -int 1"
 

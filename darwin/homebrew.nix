@@ -23,6 +23,7 @@
     "kitty"
     "docker"
     "spotify"
+    "vlc"
 
     # browsers
     "firefox"
