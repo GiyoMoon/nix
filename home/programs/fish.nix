@@ -15,7 +15,7 @@
     };
 
     shellInit = ''
-      fish_add_path ~/.cargo/bin /opt/homebrew/bin ~/.deno/bin
+      fish_add_path ~/.cargo/bin /opt/homebrew/bin ~/.deno/bin ~/.config/composer/vendor/bin
       # Disable fish greeting
       set -g fish_greeting ""
 

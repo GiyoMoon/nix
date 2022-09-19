@@ -49,6 +49,10 @@
   # Fallback for packages which don't work well with nix...
   homebrew.brews = [
     "rustup-init"
+    # Needed for Laravel Valet...
+    "php@8.1"
+    "nginx"
+    "dnsmasq"
   ];
 
   homebrew.masApps = {
