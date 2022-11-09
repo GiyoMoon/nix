@@ -1,6 +1,20 @@
+{ pkgs, ... }:
+
 {
   programs.fish = {
     enable = true;
+
+    plugins = [
+      {
+        name = "puffer-fish";
+        src = pkgs.fetchFromGitHub {
+          owner = "nickeb96";
+          repo = "puffer-fish";
+          rev = "fd0a9c95da59512beffddb3df95e64221f894631";
+          sha256 = "sha256-TdGyrAlL7aMxNtemxzOwTaOI+bbQ4zML2N2tV300FM8=";
+        };
+      }
+    ];
 
     shellAliases = {
       c = "clear";

@@ -52,11 +52,19 @@ You only need to execute these commands a single time. Make sure to restart your
 ```
 cd ~/.nixconfig
 ```
+You need to remove the `/etc/shells` file to allow nix to create its version.
+```
+sudo mv /etc/shells /etc/shells.backup
+```
 ```
 nix build .#darwinConfigurations.JasisMacBook.system
 ```
 ```
 ./result/sw/bin/darwin-rebuild switch --flake .#JasisMacBook
+```
+Set fish as the default shell
+```
+chsh -s /run/current-system/sw/bin/fish
 ```
 
 ### 🔁 Update config

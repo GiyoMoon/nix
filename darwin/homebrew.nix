@@ -2,10 +2,11 @@
 
 {
   homebrew.enable = true;
-  homebrew.autoUpdate = true;
-  homebrew.cleanup = "zap";
+  homebrew.onActivation.upgrade = true;
+  homebrew.onActivation.autoUpdate = true;
+  homebrew.onActivation.cleanup = "zap";
   homebrew.global.brewfile = true;
-  homebrew.global.noLock = true;
+  homebrew.global.lockfiles = true;
 
   homebrew.taps = [
     "homebrew/cask"
@@ -17,7 +18,6 @@
   ];
 
   homebrew.casks = [
-    "amethyst"
     "raycast"
     "vscodium"
     "kitty"
@@ -26,10 +26,8 @@
     "vlc"
 
     # browsers
-    "firefox"
+    "firefox-developer-edition"
     "google-chrome"
-    "microsoft-edge"
-    "microsoft-auto-update"
 
     # tools
     "insomnia"
@@ -44,13 +42,17 @@
     "telegram-desktop"
 
     "parsec"
+
+    "qbittorrent"
   ];
 
   # Fallback for packages which don't work well with nix...
   homebrew.brews = [
     "rustup-init"
+
     # Needed for Laravel Valet...
     "php@8.1"
+    "composer"
     "nginx"
     "dnsmasq"
   ];

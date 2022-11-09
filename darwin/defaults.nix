@@ -22,26 +22,6 @@ let
     # Disable user interface sound effects
     "defaults write \"Apple Global Domain\" com.apple.sound.uiaudio.enabled -int 0"
     "osascript -e 'tell application \"Finder\" to set volume alert volume 0'"
-
-    # Put Amethyst into login items
-    "osascript -e 'tell application \"System Events\" to make login item at end with properties { path:\"/Applications/Amethyst.app\", hidden: false }'"
-
-    # Disable mouse pointer shake to locate
-    # Should work but doesn't :(
-    # "defaults write \"Apple Global Domain\" CGDisableCursorLocationMagnification -int 1"
-
-    # Always show sound settings in menubar
-    # Somehow doesn't work :sadge:
-    # "defaults write \"com.apple.controlcenter\" \"NSStatusItem Visible Sound\" -int 1"
-
-    # Remove spotlight shortcut
-    # "plutil -convert xml1 -o - ~/Library/Preferences/com.apple.symbolichotkeys.plist | /etc/profiles/per-user/giyomoon/bin/xmlstarlet ed --rename '/plist/dict/key[text()=\"AppleSymbolicHotKeys\"]/following-sibling::dict[1]/key[text()=\"64\"]/following-sibling::dict[1]/true' --value 'false' | sed -e '1,5d;$d;$d' | xargs | sed \"s/^/'/;s/$/'/\" | xargs defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys"
-
-    # Change screenshot shortcut
-    # "plutil -convert xml1 -o - ~/Library/Preferences/com.apple.symbolichotkeys.plist | /etc/profiles/per-user/giyomoon/bin/xmlstarlet ed --update '/plist/dict/key[text()=\"AppleSymbolicHotKeys\"]/following-sibling::dict[1]/key[text()=\"31\"]/following-sibling::dict[1]/dict/array/integer[1]' --value '115' | /etc/profiles/per-user/giyomoon/bin/xmlstarlet ed --update '/plist/dict/key[text()=\"AppleSymbolicHotKeys\"]/following-sibling::dict[1]/key[text()=\"31\"]/following-sibling::dict[1]/dict/array/integer[2]' --value '1' | /etc/profiles/per-user/giyomoon/bin/xmlstarlet ed --update '/plist/dict/key[text()=\"AppleSymbolicHotKeys\"]/following-sibling::dict[1]/key[text()=\"31\"]/following-sibling::dict[1]/dict/array/integer[3]' --value '1179648'| sed -e '1,5d;$d;$d' | xargs | sed \"s/^/'/;s/$/'/\" | xargs defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys"
-
-    # Set fish as the default shell
-    "chsh -s /run/current-system/sw/bin/fish"
   ];
 in
 {
@@ -49,7 +29,7 @@ in
     dock = {
       autohide = true;
       orientation = "bottom";
-      autohide-delay = "0.0";
+      autohide-delay = 0.0;
       show-recents = false;
       tilesize = 42;
       minimize-to-application = true;
