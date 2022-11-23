@@ -15,6 +15,7 @@
     "homebrew/cask-versions"
     "homebrew/core"
     "homebrew/services"
+    "zegl/tap"
   ];
 
   homebrew.casks = [
@@ -49,6 +50,7 @@
   # Fallback for packages which don't work well with nix...
   homebrew.brews = [
     "rustup-init"
+    "zegl/tap/git-linearize"
 
     # Needed for Laravel Valet...
     "php@8.1"
