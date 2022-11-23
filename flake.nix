@@ -48,7 +48,6 @@
       giyomoon-defaults = import ./darwin/defaults.nix;
       giyomoon-general = import ./darwin/general.nix;
       giyomoon-homebrew = import ./darwin/homebrew.nix;
-      giyomoon-yabai = import ./darwin/yabai.nix;
     };
 
     homeManagerModules = {
@@ -59,6 +58,7 @@
       giyomoon-starship-symbols = import ./home/programs/starship-symbols.nix;
       giyomoon-direnv = import ./home/programs/direnv.nix;
       giyomoon-kitty = import ./home/programs/kitty.nix;
+      giyomoon-yabai = import ./darwin/yabai.nix;
     };
   };
 }

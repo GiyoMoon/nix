@@ -15,40 +15,13 @@
     "homebrew/cask-versions"
     "homebrew/core"
     "homebrew/services"
+    "koekeishiya/formulae"
     "zegl/tap"
   ];
 
-  homebrew.casks = [
-    "raycast"
-    "vscodium"
-    "kitty"
-    "docker"
-    "spotify"
-    "vlc"
-
-    # browsers
-    "firefox-developer-edition"
-    "google-chrome"
-
-    # tools
-    "insomnia"
-    "licecap"
-    "pika"
-    "gimp"
-    "aldente"
-
-    # communication
-    "discord"
-    "slack"
-    "telegram-desktop"
-
-    "parsec"
-
-    "qbittorrent"
-  ];
-
-  # Fallback for packages which don't work well with nix...
   homebrew.brews = [
+    "yabai"
+    "skhd"
     "rustup-init"
     "zegl/tap/git-linearize"
 
@@ -57,6 +30,30 @@
     "composer"
     "nginx"
     "dnsmasq"
+  ];
+
+  homebrew.casks = [
+    "raycast"
+    "aldente"
+    "vscodium"
+    "kitty"
+    "docker"
+    "vlc"
+    "insomnia"
+    "licecap"
+    "pika"
+    "gimp"
+    "qbittorrent"
+    "spotify"
+
+    # browsers
+    "firefox-developer-edition"
+    "google-chrome"
+
+    # communication
+    "discord"
+
+    "parsec"
   ];
 
   homebrew.masApps = {
