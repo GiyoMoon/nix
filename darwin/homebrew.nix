@@ -35,6 +35,7 @@
   homebrew.casks = [
     "raycast"
     "aldente"
+    "ubersicht"
     "vscodium"
     "kitty"
     "docker"

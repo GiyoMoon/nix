@@ -40,6 +40,7 @@ in
       wvous-br-corner = 1;
       wvous-tl-corner = 1;
       wvous-tr-corner = 1;
+      autohide-time-modifier = 0.2;
     };
 
     finder = {

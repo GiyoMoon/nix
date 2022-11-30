@@ -46,6 +46,12 @@ nix-channel --update
 ```
 git clone https://github.com/GiyoMoon/nix ~/.nixconfig
 ```
+If you want to use [simple-bar](https://github.com/Jean-Tinland/simple-bar), you have to initialize and update git submodules. This pulls simple-bar from upstream to later symlink it into the übersicht widget folder.
+```
+cd ~/.nixconfig
+git submodule init
+git submodule update
+```
 
 ### ▶️ First time build
 You only need to execute these commands a single time. Make sure to restart your shell after this, or maybe even log out and in again for all configs to be applied.
@@ -66,6 +72,11 @@ Set fish as the default shell
 ```
 chsh -s /run/current-system/sw/bin/fish
 ```
+For simple-bar, symlink it's submodule to the übersicht widget folder. Make sure to start übersicht at least once before to make sure the widget folder exists.
+```
+ln -s ~/.nixconfig/simple-bar ~/Library/Application\ Support/Übersicht/widgets
+```
+Also, you probably have to edit the yabai path to `/opt/homebrew/bin/yabai`. To do this, focus simple-bar, press `CTRL + ,` and change it in the settings.
 
 ### 🔁 Update config
 If you made any changes and want to update:
