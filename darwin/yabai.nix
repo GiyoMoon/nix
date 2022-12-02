@@ -45,6 +45,7 @@ with lib; {
         # excluded applications
         yabai -m rule --add app="System Preferences" manage=off
         yabai -m rule --add app='Spotify' manage=off
+        yabai -m rule --add app='Docker Desktop' manage=off
 
         echo "yabai configuration loaded.."
     '';
