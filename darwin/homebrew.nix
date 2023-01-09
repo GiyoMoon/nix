@@ -17,6 +17,7 @@
     "homebrew/services"
     "koekeishiya/formulae"
     "zegl/tap"
+    "nicoverbruggen/homebrew-cask"
   ];
 
   homebrew.brews = [
@@ -30,6 +31,13 @@
     "composer"
     "nginx"
     "dnsmasq"
+    "mysql"
+
+    # blink-admin
+    "pkg-config"
+    "imagemagick"
+    "pcre2"
+    "redis"
   ];
 
   homebrew.casks = [
@@ -46,6 +54,10 @@
     "gimp"
     "qbittorrent"
     "spotify"
+    "android-file-transfer"
+
+    # blink-admin
+    "nicoverbruggen/homebrew-cask/phpmon"
 
     # browsers
     "firefox-developer-edition"
@@ -55,6 +67,7 @@
     "discord"
 
     "parsec"
+    "blender"
   ];
 
   homebrew.masApps = {

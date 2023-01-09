@@ -43,7 +43,7 @@ with lib; {
         yabai -m config window_gap                   15
 
         # excluded applications
-        yabai -m rule --add app="System Preferences" manage=off
+        yabai -m rule --add app="System Settings" manage=off
         yabai -m rule --add app='Spotify' manage=off
         yabai -m rule --add app='Docker Desktop' manage=off
 

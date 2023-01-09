@@ -18,6 +18,7 @@
     neovim
     lazygit
     ydiff
+    youtube-dl
 
     # dev
     nodePackages.gitmoji-cli
