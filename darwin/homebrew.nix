@@ -68,6 +68,7 @@
 
     "parsec"
     "blender"
+    "stremio"
   ];
 
   homebrew.masApps = {
