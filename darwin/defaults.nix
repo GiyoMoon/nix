@@ -50,6 +50,7 @@ in
       FXEnableExtensionChangeWarning = false;
       FXPreferredViewStyle = "Nlsv";
       ShowPathbar = true;
+      QuitMenuItem = true;
     };
 
     loginwindow = {

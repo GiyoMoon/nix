@@ -16,17 +16,17 @@
     xmlstarlet
     ripgrep
     neovim
-    lazygit
-    ydiff
-    youtube-dl
+    # lazygit
+    # ydiff
+    yt-dlp
+    nmap
 
     # dev
     nodePackages.gitmoji-cli
     nodePackages.npm-check-updates
     nodePackages.pnpm
     yarn
-    nodejs-16_x
-    deno
+    nodejs-18_x
     cmake
   ];
 }

@@ -16,15 +16,12 @@
     "homebrew/core"
     "homebrew/services"
     "koekeishiya/formulae"
-    "zegl/tap"
-    "nicoverbruggen/homebrew-cask"
   ];
 
   homebrew.brews = [
     "yabai"
     "skhd"
     "rustup-init"
-    "zegl/tap/git-linearize"
 
     # Needed for Laravel Valet...
     "php@8.1"
@@ -44,7 +41,8 @@
     "raycast"
     "aldente"
     "ubersicht"
-    "vscodium"
+    # "vscodium"
+    "visual-studio-code"
     "kitty"
     "docker"
     "vlc"
@@ -54,10 +52,10 @@
     "gimp"
     "qbittorrent"
     "spotify"
-    "android-file-transfer"
-
-    # blink-admin
-    "nicoverbruggen/homebrew-cask/phpmon"
+    "blender"
+    "blockbench"
+    "godot"
+    "steam"
 
     # browsers
     "firefox-developer-edition"
@@ -67,8 +65,9 @@
     "discord"
 
     "parsec"
-    "blender"
     "stremio"
+
+    "balenaetcher"
   ];
 
   homebrew.masApps = {

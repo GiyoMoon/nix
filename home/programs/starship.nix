@@ -4,6 +4,7 @@
   programs.starship = {
     enable = true;
     settings = {
+      command_timeout = 1000;
       format = lib.concatStrings [
         "[](#FE9ACE)"
         "$directory"

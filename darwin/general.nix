@@ -13,7 +13,6 @@
   environment = {
     shellAliases = {
       c = "clear";
-      code = "codium";
       "c." = "code .";
       ls = "exa";
       cat = "bat";
@@ -22,6 +21,8 @@
       v = "vim";
       "v." = "vim .";
       dev = "cd ~/Documents/dev";
+      work = "cd ~/Documents/dev/work";
+      priv = "cd ~/Documents/dev/priv";
     };
     shells = [
       pkgs.fish
