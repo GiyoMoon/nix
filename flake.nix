@@ -58,7 +58,7 @@
       giyomoon-starship-symbols = import ./home/programs/starship-symbols.nix;
       giyomoon-direnv = import ./home/programs/direnv.nix;
       giyomoon-kitty = import ./home/programs/kitty.nix;
-      giyomoon-yabai = import ./darwin/yabai.nix;
+      giyomoon-yabai = import ./home/programs/yabai.nix;
     };
   };
 }

@@ -14,7 +14,7 @@
       '';
     font = {
       name = "FiraCode Nerd Font";
-      size = 12;
+      size = 16;
     };
     settings = {
       macos_quit_when_last_window_closed = "yes";

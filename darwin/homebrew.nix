@@ -56,6 +56,7 @@
     "blockbench"
     "godot"
     "steam"
+    "notable"
 
     # browsers
     "firefox-developer-edition"
@@ -66,8 +67,6 @@
 
     "parsec"
     "stremio"
-
-    "balenaetcher"
   ];
 
   homebrew.masApps = {

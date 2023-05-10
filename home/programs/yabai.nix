@@ -35,7 +35,7 @@ with lib; {
         yabai -m config mouse_drop_action            swap
 
         # space settings
-        yabai -m config layout                       bsp
+        yabai -m config layout                       stack
         yabai -m config external_bar                 all:40:0
         yabai -m config bottom_padding               20
         yabai -m config left_padding                 20
@@ -51,7 +51,7 @@ with lib; {
         echo "yabai configuration loaded.."
     '';
     onChange = ''
-      /opt/homebrew/bin/brew services restart yabai
+      /opt/homebrew/bin/yabai --restart-service
     '';
   };
 
@@ -79,7 +79,7 @@ with lib; {
       ${modMask} - d : yabai -m config layout stack
     '';
     onChange = ''
-      /opt/homebrew/bin/brew services restart skhd
+      /opt/homebrew/bin/skhd --restart-service
     '';
   };
 }
