@@ -13,7 +13,7 @@
   environment = {
     shellAliases = {
       c = "clear";
-      "c." = "code .";
+      "c." = "code-insiders .";
       ls = "exa";
       cat = "bat";
       p = "pnpm";
@@ -28,6 +28,8 @@
       pkgs.fish
     ];
   };
+
+  users.users.giyomoon.home = "/Users/giyomoon";
 
   time.timeZone = "Europe/Zurich";
 

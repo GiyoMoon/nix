@@ -42,7 +42,8 @@
     "aldente"
     "ubersicht"
     # "vscodium"
-    "visual-studio-code"
+    # "visual-studio-code"
+    "visual-studio-code-insiders"
     "kitty"
     "docker"
     "vlc"
@@ -61,6 +62,7 @@
     # browsers
     "firefox-developer-edition"
     "google-chrome"
+    "arc"
 
     # communication
     "discord"

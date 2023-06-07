@@ -5,103 +5,90 @@
     enable = true;
     settings = {
       command_timeout = 1000;
+      add_newline = false;
       format = lib.concatStrings [
-        "[](#FE9ACE)"
         "$directory"
-        "[](fg:#FE9ACE bg:#FF53BF)"
+
         "$git_branch"
         "$git_status"
-        "[](fg:#FF53BF bg:#000000)"
-        "[](fg:#000000 bg:#6760FE)"
+
         "$c"
+        "$dart"
         "$elixir"
         "$elm"
         "$golang"
         "$haskell"
         "$java"
-        "$julia"
         "$nodejs"
-        "$nim"
+        "$php"
         "$rust"
-        "[](fg:#6760FE bg:#8EA6FF)"
+
         "$package"
-        "[](fg:#8EA6FF)"
+        "$cmd_duration"
+
         "$line_break"
         "$character"
       ];
 
       directory = {
-        style = "bg:#FE9ACE";
-        format = "[ $path ]($style)";
+        style = "fg:#C59DFF";
         truncation_length = 3;
         truncation_symbol = "…/";
         substitutions = {
-          "Documents" = " ";
-          "Downloads" = " ";
-          "Music" = " ";
-          "Pictures" = " ";
+          "Documents" = "󰈙";
+          "Downloads" = "";
         };
       };
 
-      package = {
-        style = "bg:#8EA6FF";
-        format = "[ $symbol ($version) ]($style)";
-      };
-
       git_branch = {
-        style = "bg:#FF53BF";
-        format = "[ $symbol $branch ]($style)";
+        format = "[$symbol $branch](fg:#FFC8DD)";
       };
-
       git_status = {
-        style = "bg:#FF53BF";
-        format = "[$all_status$ahead_behind ]($style)";
+        format = "[$all_status$ahead_behind](fg:#FFC8DD) ";
       };
 
       c = {
-        style = "bg:#6760FE";
-        format = "[ $symbol ($version) ]($style)";
+        format = "[$symbol ($version)](fg:#FFAFCC) ";
+      };
+      dart = {
+        format = "[$symbol ($version)](fg:#FFAFCC) ";
       };
       elixir = {
-        style = "bg:#6760FE";
-        format = "[ $symbol ($version) ]($style)";
+        format = "[$symbol ($version)](fg:#FFAFCC) ";
       };
       elm = {
-        style = "bg:#6760FE";
-        format = "[ $symbol ($version) ]($style)";
+        format = "[$symbol ($version)](fg:#FFAFCC) ";
       };
       golang = {
-        style = "bg:#6760FE";
-        format = "[ $symbol ($version) ]($style)";
+        format = "[$symbol ($version)](fg:#FFAFCC) ";
       };
       haskell = {
-        style = "bg:#6760FE";
-        format = "[ $symbol ($version) ]($style)";
+        format = "[$symbol ($version)](fg:#FFAFCC) ";
       };
       java = {
-        style = "bg:#6760FE";
-        format = "[ $symbol ($version) ]($style)";
-      };
-      julia = {
-        style = "bg:#6760FE";
-        format = "[ $symbol ($version) ]($style)";
+        format = "[$symbol ($version)](fg:#FFAFCC) ";
       };
       nodejs = {
-        style = "bg:#6760FE";
-        format = "[ $symbol ($version) ]($style)";
+        format = "[$symbol ($version)](fg:#FFAFCC) ";
       };
-      nim = {
-        style = "bg:#6760FE";
-        format = "[ $symbol ($version) ]($style)";
+      php = {
+        format = "[$symbol ($version)](fg:#FFAFCC) ";
       };
       rust = {
-        style = "bg:#6760FE";
-        format = "[ $symbol ($version) ]($style)";
+        format = "[$symbol ($version)](fg:#FFAFCC) ";
+      };
+
+      package = {
+        format = "[$symbol ($version)](fg:#BDE0FE) ";
+      };
+
+      cmd_duration = {
+        format = " [$duration](fg:#A2D2FF)";
       };
 
       character = {
-        success_symbol = "[](fg:#6760FE)";
-        error_symbol = "[](fg:#FF53BF)";
+        success_symbol = "[❯](fg:#C59DFF)";
+        error_symbol = "[❯](fg:#FF53BF)";
       };
     };
   };

@@ -14,12 +14,12 @@
       '';
     font = {
       name = "FiraCode Nerd Font";
-      size = 16;
+      size = 18;
     };
     settings = {
       macos_quit_when_last_window_closed = "yes";
       window_padding_width = 20;
-      background_opacity = "0.85";
+      background_opacity = "0.75";
     };
   };
 }
