@@ -11,6 +11,11 @@ let
     # -c: A/C Power
     # -b: Battery Power
     "sudo pmset -a displaysleep 15"
+
+    # Symlink spotify tui config
+    "mkdir -p ~/.config/spotify-tui"
+    "rm -rf ~/.config/spotify-tui/config.yml"
+    "ln -s ~/.nixconfig/configs/spotify-tui.yml ~/.config/spotify-tui/config.yml"
   ];
   postUserActivationCmds = [
     # clear dock apps
@@ -76,7 +81,7 @@ in
       "com.apple.keyboard.fnState" = true;
     };
 
-    smb.NetBIOSName = "MacBook Jasi";
+    smb.NetBIOSName = "MacBook-Jasi";
 
     screencapture.disable-shadow = true;
 

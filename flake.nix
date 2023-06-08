@@ -2,7 +2,7 @@
   description = "Jasi's Nix configs";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-22.05-darwin";
+    nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-23.05-darwin";
     nixpkgs-unstable.url = github:NixOS/nixpkgs/nixpkgs-unstable;
 
     darwin.url = "github:lnl7/nix-darwin/master";
@@ -20,7 +20,7 @@
     };
   in
   {
-    homeManagerStateVersion = "22.05";
+    homeManagerStateVersion = "23.05";
 
     darwinConfigurations = rec {
       JasisMacBook = darwinSystem {

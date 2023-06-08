@@ -23,6 +23,8 @@
       dev = "cd ~/Documents/dev";
       work = "cd ~/Documents/dev/work";
       priv = "cd ~/Documents/dev/priv";
+      flutter = "fvm flutter";
+      dart = "fvm dart";
     };
     shells = [
       pkgs.fish
@@ -34,7 +36,7 @@
   time.timeZone = "Europe/Zurich";
 
   networking = {
-    computerName = "MacBook Jasi";
+    computerName = "MacBook-Jasi";
     hostName = "MacBook-Jasi";
     localHostName = "MacBook-Jasi";
   };

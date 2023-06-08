@@ -27,6 +27,8 @@
       dev = "cd ~/Documents/dev";
       work = "cd ~/Documents/dev/work";
       priv = "cd ~/Documents/dev/priv";
+      flutter = "fvm flutter";
+      dart = "fvm dart";
     };
 
     shellInit = ''

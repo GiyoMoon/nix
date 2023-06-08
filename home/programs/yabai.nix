@@ -44,7 +44,6 @@ with lib; {
 
         # excluded applications
         yabai -m rule --add app="System Settings" manage=off
-        yabai -m rule --add app="Spotify" manage=off
         yabai -m rule --add app="Docker Desktop" manage=off
         yabai -m rule --add app="Godot" manage=off
 

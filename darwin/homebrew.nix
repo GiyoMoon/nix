@@ -16,6 +16,7 @@
     "homebrew/core"
     "homebrew/services"
     "koekeishiya/formulae"
+    "leoafarias/fvm"
   ];
 
   homebrew.brews = [
@@ -35,6 +36,9 @@
     "imagemagick"
     "pcre2"
     "redis"
+
+    # Flutter version manager
+    "fvm"
   ];
 
   homebrew.casks = [
@@ -52,12 +56,12 @@
     "pika"
     "gimp"
     "qbittorrent"
-    "spotify"
     "blender"
     "blockbench"
     "godot"
     "steam"
     "notable"
+    "beekeeper-studio"
 
     # browsers
     "firefox-developer-edition"

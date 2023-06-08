@@ -20,6 +20,8 @@
     # ydiff
     yt-dlp
     nmap
+    spotifyd
+    spotify-tui
 
     # dev
     nodePackages.gitmoji-cli
