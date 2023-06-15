@@ -62,17 +62,23 @@
     "steam"
     "notable"
     "beekeeper-studio"
+    "mullvadvpn"
 
     # browsers
     "firefox-developer-edition"
     "google-chrome"
     "arc"
+    "tor-browser"
 
     # communication
     "discord"
 
     "parsec"
     "stremio"
+
+    # Java, android development
+    "temurin17"
+    "android-commandlinetools"
   ];
 
   homebrew.masApps = {

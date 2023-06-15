@@ -46,6 +46,7 @@ with lib; {
         yabai -m rule --add app="System Settings" manage=off
         yabai -m rule --add app="Docker Desktop" manage=off
         yabai -m rule --add app="Godot" manage=off
+        yabai -m rule --add title="^Android Emulator*" manage=off
 
         echo "yabai configuration loaded.."
     '';

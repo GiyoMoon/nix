@@ -14,8 +14,16 @@ let
 
     # Symlink spotify tui config
     "mkdir -p ~/.config/spotify-tui"
+    "chown -R giyomoon ~/.config/spotify-tui"
     "rm -rf ~/.config/spotify-tui/config.yml"
     "ln -s ~/.nixconfig/configs/spotify-tui.yml ~/.config/spotify-tui/config.yml"
+
+    # Symlink spotifyd config
+    "mkdir -p ~/.config/spotifyd"
+    "mkdir -p ~/.config/spotifyd/cache"
+    "chown -R giyomoon ~/.config/spotify-tui"
+    "rm -rf ~/.config/spotifyd/spotifyd.conf"
+    "ln -s ~/.nixconfig/configs/spotifyd.conf ~/.config/spotifyd/spotifyd.conf"
   ];
   postUserActivationCmds = [
     # clear dock apps
