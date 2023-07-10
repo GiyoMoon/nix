@@ -6,8 +6,8 @@
 
     ignores = [ ".DS_Store" ];
 
-    userName = "GiyoMoon";
-    userEmail = "giyomoon@gmail.com";
+    userName = "Jasmin";
+    userEmail = "code@jasi.dev";
 
     extraConfig = {
       init.defaultBranch = "main";
@@ -18,15 +18,15 @@
       {
         condition = "gitdir:~/Documents/dev/work/";
         contents = {
-          user.name = "Jasmin Nötzli";
-          user.email = "jasmin.noetzli@blinkdrive.ch";
-          user.signingKey = "379CAA1A6BBA8F7829E79FD9F077A56961503993";
+          user.name = "Jasmin";
+          user.email = "blink@jasi.dev";
+          user.signingKey = "6BCBF2FCCE79B9919B1B4AA39F3D123478A32800";
         };
       }
     ];
 
     signing = {
-      key = "7F35C1EA94675E53CD5570CA5059E9821D1E1158";
+      key = "65DF56C115CD06841E6609D78A5E05D8D7724765";
       signByDefault = true;
     };
 

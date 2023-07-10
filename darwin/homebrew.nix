@@ -60,7 +60,7 @@
     "blockbench"
     "godot"
     "steam"
-    "notable"
+    "obsidian"
     "beekeeper-studio"
     "mullvadvpn"
 
