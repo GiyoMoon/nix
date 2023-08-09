@@ -22,6 +22,7 @@
     nmap
     spotifyd
     spotify-tui
+    hadolint
 
     # dev
     nodePackages.gitmoji-cli
@@ -30,5 +31,7 @@
     yarn
     nodejs-18_x
     cmake
+    libwebp
+    bun
   ];
 }

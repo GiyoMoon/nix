@@ -1,7 +1,7 @@
 # 🌺 My Nix configs
 Nix configs for macOS.
 
-**Extremely** inspired by [@malob](https://github.com/malob)'s [Nix configs](https://github.com/malob/nixpkgs).
+Inspired by [@malob](https://github.com/malob)'s [Nix configs](https://github.com/malob/nixpkgs).
 
 ## ⚡️ Installation
 ### ✨ Prerequisites

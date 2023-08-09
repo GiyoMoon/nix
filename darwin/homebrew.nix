@@ -45,9 +45,7 @@
     "raycast"
     "aldente"
     "ubersicht"
-    # "vscodium"
-    # "visual-studio-code"
-    "visual-studio-code-insiders"
+    "vscodium"
     "kitty"
     "docker"
     "vlc"
@@ -83,6 +81,5 @@
 
   homebrew.masApps = {
     "WireGuard" = 1451685025;
-    "Unsplash Wallpapers" = 1284863847;
   };
 }

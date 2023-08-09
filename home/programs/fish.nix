@@ -18,7 +18,8 @@
 
     shellAliases = {
       c = "clear";
-      "c." = "code-insiders .";
+      code = "codium";
+      "c." = "code .";
       ls = "exa";
       cat = "bat";
       vim = "nvim";
