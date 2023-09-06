@@ -30,6 +30,7 @@
       priv = "cd ~/Documents/dev/priv";
       flutter = "fvm flutter";
       dart = "fvm dart";
+      pa = "php artisan";
     };
 
     shellInit = ''
