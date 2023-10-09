@@ -7,10 +7,11 @@
     # basics
     coreutils
     curl
-    exa
+    eza
     thefuck
     wget
     bat
+    cloc
     pinentry_mac
     gnupg
     xmlstarlet
@@ -29,7 +30,7 @@
     nodePackages.npm-check-updates
     nodePackages.pnpm
     yarn
-    nodejs-18_x
+    nodejs_20
     cmake
     libwebp
     bun

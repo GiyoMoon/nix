@@ -20,7 +20,7 @@
       c = "clear";
       code = "codium";
       "c." = "code .";
-      ls = "exa";
+      ls = "eza";
       cat = "bat";
       vim = "nvim";
       v = "vim";

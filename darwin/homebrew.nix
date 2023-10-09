@@ -9,11 +9,9 @@
   homebrew.global.lockfiles = true;
 
   homebrew.taps = [
-    "homebrew/cask"
     "homebrew/cask-drivers"
     "homebrew/cask-fonts"
     "homebrew/cask-versions"
-    "homebrew/core"
     "homebrew/services"
     "koekeishiya/formulae"
     "leoafarias/fvm"
@@ -49,7 +47,7 @@
     "kitty"
     "docker"
     "vlc"
-    "insomnia"
+    "bruno"
     "licecap"
     "pika"
     "gimp"
@@ -61,6 +59,7 @@
     "obsidian"
     "beekeeper-studio"
     "mullvadvpn"
+    "android-file-transfer"
 
     # browsers
     "firefox-developer-edition"

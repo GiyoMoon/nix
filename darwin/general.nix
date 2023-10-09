@@ -15,7 +15,7 @@
       c = "clear";
       code = "codium";
       "c." = "code .";
-      ls = "exa";
+      ls = "eza";
       cat = "bat";
       p = "pnpm";
       vim = "nvim";
