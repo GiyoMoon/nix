@@ -34,5 +34,8 @@
     cmake
     libwebp
     bun
+
+    # mobile dev
+    cocoapods
   ];
 }

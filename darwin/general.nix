@@ -27,6 +27,7 @@
       flutter = "fvm flutter";
       dart = "fvm dart";
       pa = "php artisan";
+      gm = "npx gitmoji-cli";
     };
     shells = [
       pkgs.fish

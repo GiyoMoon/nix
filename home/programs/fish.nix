@@ -31,10 +31,12 @@
       flutter = "fvm flutter";
       dart = "fvm dart";
       pa = "php artisan";
+      gm = "npx gitmoji-cli";
     };
 
     shellInit = ''
       fish_add_path ~/.cargo/bin /opt/homebrew/bin ~/.deno/bin ~/.config/composer/vendor/bin /opt/homebrew/share/android-commandlinetools/platform-tools /opt/homebrew/share/android-commandlinetools/emulator
+      set -Ux ANDROID_HOME /opt/homebrew/share/android-commandlinetools
       # Disable fish greeting
       set -g fish_greeting ""
 
