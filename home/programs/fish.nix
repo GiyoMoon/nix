@@ -16,24 +16,6 @@
       }
     ];
 
-    shellAliases = {
-      c = "clear";
-      code = "codium";
-      "c." = "code .";
-      ls = "eza";
-      cat = "bat";
-      vim = "nvim";
-      v = "vim";
-      "v." = "vim .";
-      dev = "cd ~/Documents/dev";
-      work = "cd ~/Documents/dev/work";
-      priv = "cd ~/Documents/dev/priv";
-      flutter = "fvm flutter";
-      dart = "fvm dart";
-      pa = "php artisan";
-      gm = "npx gitmoji-cli";
-    };
-
     shellInit = ''
       fish_add_path ~/.cargo/bin /opt/homebrew/bin ~/.deno/bin ~/.config/composer/vendor/bin /opt/homebrew/share/android-commandlinetools/platform-tools /opt/homebrew/share/android-commandlinetools/emulator
       set -Ux ANDROID_HOME /opt/homebrew/share/android-commandlinetools

@@ -60,6 +60,8 @@
     "beekeeper-studio"
     "mullvadvpn"
     "android-file-transfer"
+    "1password"
+    "handbrake"
 
     # browsers
     "firefox-developer-edition"

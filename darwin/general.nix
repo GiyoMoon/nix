@@ -18,6 +18,8 @@
       ls = "eza";
       cat = "bat";
       p = "pnpm";
+      pex = "pnpm exec";
+      plx = "pnpm dlx";
       vim = "nvim";
       v = "vim";
       "v." = "vim .";
