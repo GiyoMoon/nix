@@ -48,6 +48,7 @@ with lib; {
         yabai -m rule --add app="Godot" manage=off
         yabai -m rule --add app="GIMP" title!='(^GNU|^GIMP)' manage=off
         yabai -m rule --add title="^Android Emulator*" manage=off
+        yabai -m rule --add app="Simulator" manage=off
         yabai -m rule --add app="Bruno" manage=off
 
         echo "yabai configuration loaded.."
