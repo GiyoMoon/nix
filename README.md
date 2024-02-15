@@ -1,112 +1,74 @@
-# 🌺 My Nix configs
-Nix configs for macOS.
+# .nix
+Jasi's macOS nix configs.
 
-Inspired by [@malob](https://github.com/malob)'s [Nix configs](https://github.com/malob/nixpkgs).
+Inspired by [@okkdev](https://github.com/okkdev)'s [Nix configs](https://github.com/okkdev/dotnix) 🌟
 
 ## ⚡️ Installation
 ### ✨ Prerequisites
 ➖ Install Nix
 ```sh
-sh <(curl -L https://nixos.org/nix/install)
+sh <(curl -L https://nixos.org/nix/install) --daemon
 ```
-
-> It can happen that Nix fails to symlink the `/run` directory to `/private/var/run`. If so, execute this command:
-```sh
-echo 'run\tprivate/var/run' | sudo tee -a /etc/synthetic.conf
-```
-> A restart is required after this step
-
+> Restart your shell after installing nix to make sure the nix command is available.
 ---
-➖ Install brew
+➖ Install brew (Will also install Command Line Tools for Xcode)
 ```sh
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+# Disable analytics
+/opt/homebrew/bin/brew analytics off
 ```
 
----
-➖ Until [this issue](https://github.com/LnL7/nix-darwin/issues/149) is fixed, you need to move your global `nix.conf`
-```sh
-sudo mv /etc/nix/nix.conf /etc/nix/.nix-darwin.bkp.nix.conf
+### 📁 Clone this config
+```
+git clone https://github.com/GiyoMoon/nix ~/.nix
+```
+If you want to use [simple-bar](https://github.com/Jean-Tinland/simple-bar), you have to initialize and update git submodules. This pulls simple-bar from upstream to later symlink it into the übersicht widget folder.
+```
+cd ~/.nix
+git submodule init
+git submodule update
 ```
 
----
-➖ Enable experimental nix features
+### 🔥 Activate config
+➖ Enable nix-command and flakes and symlink to the home-manager config directory
 ```sh
 mkdir -p ~/.config/nix
 cat <<EOF > ~/.config/nix/nix.conf
 experimental-features = nix-command flakes
 EOF
+ln -s ~/.nix ~/.config/home-manager
 ```
 ---
-➖ Update your user's nix channels
+➖ Activate the config
+```
+nix run home-manager -- switch
+```
+---
+➖ 🚨 Fish needs to be set as the default shell manually
 ```sh
-nix-channel --update
+echo /Users/jasi/.nix-profile/bin/fish | sudo tee -a /etc/shells
+chsh -s /Users/jasi/.nix-profile/bin/fish
 ```
+> 🚨 You need to log out and log in again for all changes to take effect. A restart does NOT work properly.
 
-### 📁 Clone this config
-```
-git clone https://github.com/GiyoMoon/nix ~/.nixconfig
-```
-If you want to use [simple-bar](https://github.com/Jean-Tinland/simple-bar), you have to initialize and update git submodules. This pulls simple-bar from upstream to later symlink it into the übersicht widget folder.
-```
-cd ~/.nixconfig
-git submodule init
-git submodule update
-```
-
-### ▶️ First time build
-You only need to execute these commands a single time. Make sure to restart your shell after this, or maybe even log out and in again for all configs to be applied.
-```
-cd ~/.nixconfig
-```
-You need to remove the `/etc/shells` file to allow nix to create its version.
-```
-sudo mv /etc/shells /etc/shells.backup
-```
-```
-nix build .#darwinConfigurations.JasisMacBook.system
-```
-```
-./result/sw/bin/darwin-rebuild switch --flake .#JasisMacBook
-```
-Set fish as the default shell
-```
-chsh -s /run/current-system/sw/bin/fish
-```
+#### 💅 Simple-bar
 For simple-bar, symlink it's submodule to the übersicht widget folder. Make sure to start übersicht at least once before to make sure the widget folder exists.
 ```
-ln -s ~/.nixconfig/simple-bar ~/Library/Application\ Support/Übersicht/widgets
+ln -s ~/.nix/simple-bar ~/Library/Application\ Support/Übersicht/widgets
 ```
-Also, you probably have to edit the yabai path to `/opt/homebrew/bin/yabai`. To do this, focus simple-bar, press `CTRL + ,` and change it in the settings.
+Also, you'll have to edit the yabai path to `/opt/homebrew/bin/yabai`. To do this, focus simple-bar, press `CTRL + ,` and change it in the settings.
+
+### 🎉 Done
+That's it! 🚀
+
+Things you might want to do:
+- Remove spotlight shortcut in `Settings > Keyboard > Shortcuts > Spotlight`
+- Remove spotlight from the menu bar in `Settings > Control Centre > Menu Bar Only > Spotlight`
 
 ### 🔁 Update config
-If you made any changes and want to update:
+If you made any changes and want to update, you can run the home manager switch command directly to apply the changes:
+```sh
+nix flake update # optionally update flakes
+home-manager switch
 ```
-darwin-rebuild switch --flake .#JasisMacBook
-```
-
-## 📋 Todo
-Things I want to expand this Nix config with:
-- [x] Install casks with homebrew
-- [x] Git config
-  - [x] Name, email, signingKey etc.
-  - [x] Aliases
-  - [x] Configure a work directory
-  - [x] `git config --global pull.rebase true`
-  - [x] [@malob](https://github.com/malob)'s nice [git log alias](https://github.com/malob/nixpkgs/blob/46a480cd1edf687df81c1d5f0f2b8de8f15a5154/home/git-aliases.nix#L47)
-- [x] A nice shell setup with [fish](https://fishshell.com/) and [starship](https://starship.rs/)
-- Nice to have configs (I don't know if all are possible to configure with nix)
-  - [x] Use F keys as standard function keys
-  - [x] Set login items
-    - Amethyst
-  - [x] Disable startup sound
-  - [x] Clear dock apps
-  - [x] Change sleep settings
-  - [x] Disable system sounds
-  - [x] Change trackpad click to light
-  - [x] Remove spotlight shortcut (Works but very experimental, uncomment in [defaults.nix](./darwin/defaults.nix#L34))
-  - [x] Change screenshot shortcut (Works but very experimental, uncomment in [defaults.nix](./darwin/defaults.nix#L37))
-  - [ ] Show sound settings in menubar (Somehow doesn't work :sadge:)
-  - [ ] Disable mouse pointer shake to locate (Somehow doesn't work :sadge:)
-  - [ ] Set default browser (Probably with `~/Library/Preferences/com.apple.LaunchServices/com.apple.launchservices.secure`)
-  - [ ] Amethyst config
-  - [ ] (Set wallpaper and lockscreen)

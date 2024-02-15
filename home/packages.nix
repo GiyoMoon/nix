@@ -1,41 +1,47 @@
 { pkgs, ... }:
 
 {
+  fonts.fontconfig.enable = true;
+
   programs.bat.enable = true;
+  programs.eza.enable = true;
 
   home.packages = with pkgs; [
-    # basics
-    coreutils
-    curl
-    eza
-    thefuck
-    wget
-    bat
-    cloc
     pinentry_mac
     gnupg
-    xmlstarlet
+
+    # cli
+    wget
+    fd
     ripgrep
     neovim
-    # lazygit
-    # ydiff
-    yt-dlp
-    nmap
-    spotifyd
-    spotify-tui
     hadolint
+    gitmoji-cli
+    yt-dlp
 
-    # dev
-    nodePackages.gitmoji-cli
-    nodePackages.npm-check-updates
-    nodePackages.pnpm
-    yarn
+    # fonts
+    (nerdfonts.override { fonts = [ "FiraCode" ]; })
+    monaspace
+
+    # javascript
     nodejs_20
-    cmake
-    libwebp
+    nodePackages.pnpm
+    nodePackages.yarn
     bun
 
-    # mobile dev
+    rustup
+
+    # mobile development
     cocoapods
+
+    # php stuff :(
+    (php83.buildEnv {
+      extraConfig = ''
+        memory_limit = 2G
+        extension = ${php83Extensions.imagick}/lib/php/extensions/imagick.so
+      '';
+    })
+    php83Packages.composer
+    php83Extensions.imagick
   ];
 }

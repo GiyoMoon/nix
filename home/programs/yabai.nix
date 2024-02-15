@@ -1,57 +1,57 @@
-{ config, pkgs, lib, ... }:
+{ ... }:
 
-with lib; {
+{
   home.file.yabai = {
-      executable = true;
-      target = ".config/yabai/yabairc";
-      text = ''
-        #!/usr/bin/env sh
+    executable = true;
+    target = ".config/yabai/yabairc";
+    text = ''
+      #!/usr/bin/env sh
 
-        # global settings
-        yabai -m config mouse_follows_focus          off
-        yabai -m config focus_follows_mouse          off
-        yabai -m config window_origin_display        default
-        yabai -m config window_placement             second_child
+      # global settings
+      yabai -m config mouse_follows_focus          off
+      yabai -m config focus_follows_mouse          off
+      yabai -m config window_origin_display        default
+      yabai -m config window_placement             second_child
 
-        # Requires SIP to be partially disabled
-        # yabai -m config window_topmost               off
-        # yabai -m config window_shadow                on
-        # yabai -m config window_opacity               off
-        # yabai -m config window_opacity_duration      0.0
-        # yabai -m config active_window_opacity        1.0
-        # yabai -m config normal_window_opacity        0.90
+      # Requires SIP to be partially disabled
+      # yabai -m config window_topmost               off
+      # yabai -m config window_shadow                on
+      # yabai -m config window_opacity               off
+      # yabai -m config window_opacity_duration      0.0
+      # yabai -m config active_window_opacity        1.0
+      # yabai -m config normal_window_opacity        0.90
 
-        yabai -m config window_border                true
-        yabai -m config window_border_width          6
-        yabai -m config active_window_border_color   0xffC458E7
-        yabai -m config normal_window_border_color   0xff555555
+      yabai -m config window_border                true
+      yabai -m config window_border_width          6
+      yabai -m config active_window_border_color   0xffC458E7
+      yabai -m config normal_window_border_color   0xff555555
 
-        yabai -m config insert_feedback_color        0xffd75f5f
-        yabai -m config split_ratio                  0.50
-        yabai -m config auto_balance                 off
-        yabai -m config mouse_modifier               fn
-        yabai -m config mouse_action1                move
-        yabai -m config mouse_action2                resize
-        yabai -m config mouse_drop_action            swap
+      yabai -m config insert_feedback_color        0xffd75f5f
+      yabai -m config split_ratio                  0.50
+      yabai -m config auto_balance                 off
+      yabai -m config mouse_modifier               fn
+      yabai -m config mouse_action1                move
+      yabai -m config mouse_action2                resize
+      yabai -m config mouse_drop_action            swap
 
-        # space settings
-        yabai -m config layout                       stack
-        yabai -m config external_bar                 all:40:0
-        yabai -m config bottom_padding               20
-        yabai -m config left_padding                 20
-        yabai -m config right_padding                20
-        yabai -m config window_gap                   15
+      # space settings
+      yabai -m config layout                       stack
+      yabai -m config external_bar                 all:40:0
+      yabai -m config bottom_padding               20
+      yabai -m config left_padding                 20
+      yabai -m config right_padding                20
+      yabai -m config window_gap                   15
 
-        # excluded applications
-        yabai -m rule --add app="System Settings" manage=off
-        yabai -m rule --add app="Docker Desktop" manage=off
-        yabai -m rule --add app="Godot" manage=off
-        yabai -m rule --add app="GIMP" title!='(^GNU|^GIMP)' manage=off
-        yabai -m rule --add title="^Android Emulator*" manage=off
-        yabai -m rule --add app="Simulator" manage=off
-        yabai -m rule --add app="Bruno" manage=off
+      # excluded applications
+      yabai -m rule --add app="System Settings" manage=off
+      yabai -m rule --add app="Docker Desktop" manage=off
+      yabai -m rule --add app="Godot" manage=off
+      yabai -m rule --add app="GIMP" title!='(^GNU|^GIMP)' manage=off
+      yabai -m rule --add title="^Android Emulator*" manage=off
+      yabai -m rule --add app="Simulator" manage=off
+      yabai -m rule --add app="Bruno" manage=off
 
-        echo "yabai configuration loaded.."
+      echo "yabai configuration loaded.."
     '';
     onChange = ''
       /opt/homebrew/bin/yabai --restart-service

@@ -1,64 +1,31 @@
 {
-  description = "Jasi's Nix configs";
+  description = "Jasi's macOS nix config 🦇";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-23.05";
-    nixpkgs-unstable.url = github:NixOS/nixpkgs/nixos-unstable;
-
-    darwin.url = "github:lnl7/nix-darwin/master";
-    darwin.inputs.nixpkgs.follows = "nixpkgs-unstable";
-    home-manager.url = "github:nix-community/home-manager";
-    home-manager.inputs.nixpkgs.follows = "nixpkgs-unstable";
+    # Stable: github:NixOS/nixpkgs/nixos-23.11
+    # Unstable: github:NixOS/nixpkgs/nixos-unstable
+    nixpkgs = { url = "github:NixOS/nixpkgs/nixos-unstable"; };
+    home-manager = {
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, darwin, nixpkgs, home-manager, ... }@inputs:
-  let
-    inherit (darwin.lib) darwinSystem;
-    inherit (inputs.nixpkgs-unstable.lib) attrValues optionalAttrs singleton;
-    nixpkgsConfig = {
-      config = { allowUnfree = true; allowBroken = true; };
-    };
-  in
-  {
-    homeManagerStateVersion = "23.05";
+  outputs = { self, nixpkgs, nix-darwin, home-manager, ... }:
 
-    darwinConfigurations = rec {
-      JasisMacBook = darwinSystem {
-        system = "aarch64-darwin";
-        modules = attrValues self.darwinModules ++ [
-          home-manager.darwinModules.home-manager
-          (
-            { config, lib, pkgs, ... }:
+    let
+      system = "aarch64-darwin";
+      pkgs = nixpkgs.legacyPackages.${system};
+    in {
+      nix.extraOptions = ''
+        auto-optimise-store = true
+        experimental-features = nix-command flakes
+      '';
 
-            {
-              nixpkgs = nixpkgsConfig;
-              home-manager.useGlobalPkgs = true;
-              home-manager.useUserPackages = true;
-              home-manager.users.giyomoon = {
-                imports = attrValues self.homeManagerModules;
-                home.stateVersion = self.homeManagerStateVersion;
-              };
-            }
-          )
-        ];
+      homeConfigurations.jasi = home-manager.lib.homeManagerConfiguration {
+        inherit pkgs;
+
+        modules = [ ./home/home.nix ];
       };
     };
-
-    darwinModules = {
-      giyomoon-defaults = import ./darwin/defaults.nix;
-      giyomoon-general = import ./darwin/general.nix;
-      giyomoon-homebrew = import ./darwin/homebrew.nix;
-    };
-
-    homeManagerModules = {
-      giyomoon-packages = import ./home/packages.nix;
-      giyomoon-git = import ./home/programs/git.nix;
-      giyomoon-fish = import ./home/programs/fish.nix;
-      giyomoon-starship = import ./home/programs/starship.nix;
-      giyomoon-starship-symbols = import ./home/programs/starship-symbols.nix;
-      giyomoon-direnv = import ./home/programs/direnv.nix;
-      giyomoon-kitty = import ./home/programs/kitty.nix;
-      giyomoon-yabai = import ./home/programs/yabai.nix;
-    };
-  };
 }

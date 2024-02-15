@@ -1,17 +1,13 @@
 { pkgs, ... }:
 
 {
-  home.sessionVariables = {
-    TERM = "xterm-256color";
-  };
-
   programs.kitty = {
     enable = true;
     # Workaround to use homebrew package
     package = pkgs.runCommand "kitty" { } ''
-        mkdir -p $out/bin
-        ln -s /opt/homebrew/bin/kitty $out/bin/kitty
-      '';
+      mkdir -p $out/bin
+      ln -s /opt/homebrew/bin/kitty $out/bin/kitty
+    '';
     font = {
       name = "FiraCode Nerd Font";
       size = 18;
