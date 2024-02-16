@@ -16,37 +16,31 @@ let
   casks = [
     "1password"
     "aldente"
-    # "android-commandlinetools"
-    # "android-file-transfer"
+    "android-commandlinetools"
+    "android-file-transfer"
     "arc"
-    # "beekeeper-studio"
-    # "bruno"
-    # "chromium"
-    # "discord"
-    # "docker"
-    # "firefox-developer-edition"
-    # "gimp"
-    # "handbrake"
+    "beekeeper-studio"
+    "bruno"
+    "chromium"
+    "discord"
+    "docker"
+    "firefox-developer-edition"
+    "handbrake"
     "kitty"
-    # "licecap"
-    # "mullvadvpn"
-    # "obsidian"
-    # "parsec"
-    # "pika"
-    # "qbittorrent"
+    "licecap"
+    "obsidian"
+    "pika"
     "raycast"
-    # "stremio"
-    # "temurin17"
+    "stremio"
     "ubersicht"
-    # "vlc"
     "vscodium"
   ];
 
   mas = [
-  #   {
-  #   name = "WireGuard";
-  #   id = "1451685025";
-  # }
+    {
+      name = "WireGuard";
+      id = "1451685025";
+    }
   ];
 in {
   home.sessionPath = [ "/opt/homebrew/bin" ];
