@@ -31,7 +31,7 @@
       ];
 
       directory = {
-        style = "fg:#C59DFF";
+        style = "fg:#d774f8";
         truncation_length = 3;
         truncation_symbol = "…/";
         substitutions = {
@@ -42,62 +42,62 @@
       };
 
       git_branch = {
-        format = "[$symbol $branch](fg:#FFC8DD)";
+        format = "[$symbol $branch](fg:#9f62f6)";
         symbol = "";
       };
-      git_status = { format = "[$all_status$ahead_behind](fg:#FFC8DD) "; };
+      git_status = { format = "[$all_status$ahead_behind](fg:#9f62f6) "; };
 
       c = {
-        format = "[$symbol ($version)](fg:#FFAFCC) ";
+        format = "[$symbol ($version)](fg:#eb568c) ";
         symbol = "";
       };
       dart = {
-        format = "[$symbol ($version)](fg:#FFAFCC) ";
+        format = "[$symbol ($version)](fg:#eb568c) ";
         symbol = "";
       };
       elixir = {
-        format = "[$symbol ($version)](fg:#FFAFCC) ";
+        format = "[$symbol ($version)](fg:#eb568c) ";
         symbol = "";
       };
       elm = {
-        format = "[$symbol ($version)](fg:#FFAFCC) ";
+        format = "[$symbol ($version)](fg:#eb568c) ";
         symbol = "";
       };
       golang = {
-        format = "[$symbol ($version)](fg:#FFAFCC) ";
+        format = "[$symbol ($version)](fg:#eb568c) ";
         symbol = "";
       };
       haskell = {
-        format = "[$symbol ($version)](fg:#FFAFCC) ";
+        format = "[$symbol ($version)](fg:#eb568c) ";
         symbol = "";
       };
       java = {
-        format = "[$symbol ($version)](fg:#FFAFCC) ";
+        format = "[$symbol ($version)](fg:#eb568c) ";
         symbol = "";
       };
       nodejs = {
-        format = "[$symbol ($version)](fg:#FFAFCC) ";
+        format = "[$symbol ($version)](fg:#eb568c) ";
         symbol = "";
       };
       php = {
-        format = "[$symbol ($version)](fg:#FFAFCC) ";
+        format = "[$symbol ($version)](fg:#eb568c) ";
         symbol = "";
       };
       rust = {
-        format = "[$symbol ($version)](fg:#FFAFCC) ";
+        format = "[$symbol ($version)](fg:#eb568c) ";
         symbol = "";
       };
 
       package = {
-        format = "[$symbol ($version)](fg:#BDE0FE) ";
+        format = "[$symbol ($version)](fg:#54a7f8) ";
         symbol = "";
       };
 
-      cmd_duration = { format = " [$duration](fg:#A2D2FF)"; };
+      cmd_duration = { format = "[ $duration](fg:#d774f8)"; };
 
       character = {
-        success_symbol = "[❯](fg:#C59DFF)";
-        error_symbol = "[❯](fg:#FF53BF)";
+        success_symbol = "[❯](fg:#9f62f6)";
+        error_symbol = "[❯](fg:#eb568c)";
       };
 
       nix_shell.symbol = "";

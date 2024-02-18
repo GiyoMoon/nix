@@ -50,6 +50,7 @@
       /opt/homebrew/bin/yabai -m rule --add title="^Android Emulator*" manage=off
       /opt/homebrew/bin/yabai -m rule --add app="Simulator" manage=off
       /opt/homebrew/bin/yabai -m rule --add app="Bruno" manage=off
+      /opt/homebrew/bin/yabai -m rule --add app="1Password" manage=off
 
       echo "yabai configuration loaded.."
     '';

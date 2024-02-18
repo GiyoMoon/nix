@@ -72,3 +72,7 @@ If you made any changes and want to update, you can run the home manager switch 
 nix flake update # optionally update flakes
 home-manager switch
 ```
+To update simple-bar, use:
+```sh
+git submodule update --remote
+```

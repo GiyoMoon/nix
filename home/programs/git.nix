@@ -16,7 +16,7 @@
     };
 
     includes = [{
-      condition = "gitdir:~/Documents/dev/work/";
+      condition = "gitdir:~/Documents/work/";
       contents = {
         user.name = "Jasmin";
         user.email = "blink@jasi.dev";
@@ -30,6 +30,8 @@
     };
 
     aliases = {
+      c = "commit";
+
       pl = "pull";
       pu = "push";
 

@@ -15,7 +15,8 @@
     settings = {
       macos_quit_when_last_window_closed = "yes";
       window_padding_width = 20;
-      background_opacity = "0.75";
+      # background_opacity = "0.75";
     };
+    extraConfig = "include current-theme.conf";
   };
 }
