@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ... }:
+{ config, pkgs, lib, inputs, ... }:
 
 with lib; {
   home = {
@@ -22,6 +22,7 @@ with lib; {
     ./programs/shell.nix
     ./programs/starship.nix
     ./programs/yabai.nix
+    ./programs/neovim/neovim.nix
   ];
 
   home.activation = {

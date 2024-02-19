@@ -14,7 +14,6 @@
     wget
     fd
     ripgrep
-    neovim
     hadolint
     gitmoji-cli
     yt-dlp
@@ -32,7 +31,8 @@
     rustup
 
     # mobile development
-    cocoapods
+    # Installing over brew until 1.15.2 is out on nixpkgs
+    # cocoapods
 
     # php stuff :(
     (php83.buildEnv {

@@ -11,6 +11,7 @@ let
   brews = [
     "skhd"
     "yabai"
+    "cocoapods"
   ];
 
   casks = [

@@ -63,9 +63,8 @@
       pex = "pnpm exec";
       plx = "pnpm dlx";
 
-      vim = "nvim";
-      v = "vim";
-      "v." = "vim .";
+      v = "nvim";
+      "v." = "nvim .";
 
       flutter = "fvm flutter";
       dart = "fvm dart";

@@ -9,9 +9,13 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nixvim = {
+      url = "github:nix-community/nixvim";
+      inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
+    };
   };
 
-  outputs = { self, nixpkgs, nix-darwin, home-manager, ... }:
+  outputs = { self, nixpkgs, nix-darwin, home-manager, nixvim, ... }:
 
     let
       system = "aarch64-darwin";
@@ -25,7 +29,7 @@
       homeConfigurations.jasi = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
 
-        modules = [ ./home/home.nix ];
+        modules = [ nixvim.homeManagerModules.nixvim ./home/home.nix ];
       };
     };
 }
