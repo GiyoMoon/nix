@@ -29,6 +29,7 @@
     bun
 
     rustup
+    sqlx-cli
 
     # mobile development
     # Installing over brew until 1.15.2 is out on nixpkgs

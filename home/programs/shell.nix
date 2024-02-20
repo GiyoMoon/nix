@@ -51,6 +51,7 @@
 
     shellAliases = {
       c = "clear";
+      f = "z";
       ls = "eza";
       cat = "bat";
       find = "fd";
