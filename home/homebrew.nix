@@ -22,7 +22,7 @@ let
     "arc"
     "beekeeper-studio"
     "bruno"
-    "chromium"
+    "google-chrome"
     "discord"
     "docker"
     "firefox-developer-edition"
