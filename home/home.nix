@@ -20,6 +20,7 @@ with lib; {
     ./programs/git.nix
     ./programs/kitty.nix
     ./programs/shell.nix
+    ./programs/simple-bar.nix
     ./programs/starship.nix
     ./programs/yabai.nix
     ./programs/neovim/neovim.nix

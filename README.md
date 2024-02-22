@@ -23,12 +23,6 @@ sh <(curl -L https://nixos.org/nix/install) --daemon
 ```
 git clone https://github.com/GiyoMoon/nix ~/.nix
 ```
-If you want to use [simple-bar](https://github.com/Jean-Tinland/simple-bar), you have to initialize and update git submodules. This pulls simple-bar from upstream to later symlink it into the übersicht widget folder.
-```
-cd ~/.nix
-git submodule init
-git submodule update
-```
 
 ### 🔥 Activate config
 ➖ Enable nix-command and flakes and symlink to the home-manager config directory
@@ -42,6 +36,7 @@ ln -s ~/.nix ~/.config/home-manager
 ---
 ➖ Activate the config
 ```
+cd ~/.nix
 nix run home-manager -- switch
 ```
 ---
@@ -51,13 +46,6 @@ echo /Users/jasi/.nix-profile/bin/fish | sudo tee -a /etc/shells
 chsh -s /Users/jasi/.nix-profile/bin/fish
 ```
 > 🚨 You need to log out and log in again for all changes to take effect. A restart does NOT work properly.
-
-#### 💅 Simple-bar
-For simple-bar, symlink it's submodule to the übersicht widget folder. Make sure to start übersicht at least once before to make sure the widget folder exists.
-```
-ln -s ~/.nix/simple-bar ~/Library/Application\ Support/Übersicht/widgets
-```
-Also, you'll have to edit the yabai path to `/opt/homebrew/bin/yabai`. To do this, focus simple-bar, press `CTRL + ,` and change it in the settings.
 
 ### 🎉 Done
 That's it! 🚀
@@ -71,8 +59,4 @@ If you made any changes and want to update, you can run the home manager switch 
 ```sh
 nix flake update # optionally update flakes
 home-manager switch
-```
-To update simple-bar, use:
-```sh
-git submodule update --remote
 ```

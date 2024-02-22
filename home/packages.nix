@@ -17,6 +17,7 @@
     hadolint
     gitmoji-cli
     yt-dlp
+    cloudflared
 
     # fonts
     (nerdfonts.override { fonts = [ "FiraCode" ]; })

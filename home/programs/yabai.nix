@@ -52,6 +52,9 @@
       /opt/homebrew/bin/yabai -m rule --add app="Bruno" manage=off
       /opt/homebrew/bin/yabai -m rule --add app="1Password" manage=off
 
+      # https://www.jeantinland.com/toolbox/simple-bar/documentation/installation/#update-your-yabai-config
+      osascript -e 'tell application id "tracesOf.Uebersicht" to refresh'
+
       echo "yabai configuration loaded.."
     '';
     onChange = ''
