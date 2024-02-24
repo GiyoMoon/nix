@@ -72,5 +72,52 @@
 
       pa = "php artisan";
     };
+
+    functions = {
+      st = {
+        argumentNames = "mode";
+        description = "switches global theme";
+        body = ''
+          if [ "$mode" = "dark" ]
+            osascript -l JavaScript -e "Application('System Events').appearancePreferences.darkMode = true"
+            st_kitty "Catppuccin-Macchiato"
+            echo "Switched to Dark Theme"
+          else if [ "$mode" = "light" ]
+            osascript -l JavaScript -e "Application('System Events').appearancePreferences.darkMode = false"
+            st_kitty "Catppuccin-Latte"
+            echo "Switched to Light Theme"
+          else
+            if [ (os_dark_mode) = "true" ]
+              st "light"
+            else
+              st "dark"
+            end
+          end
+        '';
+      };
+      st_kitty = {
+        argumentNames = "theme_name";
+        description = "changes the kitty terminal theme";
+        body = ''
+          if [ -z "$theme_name" ]
+            echo "Please pass a theme as argument"
+            return
+          end
+
+          set -l current_theme (realpath ~/.config/kitty/current-theme.conf)
+
+          if kitty +kitten themes --dump-theme $theme_name > $current_theme
+            kitty @ --to unix:/tmp/kitty set-colors -a -c $current_theme
+          else
+            echo "Theme not found"
+          end
+        '';
+      };
+      os_dark_mode = {
+        description = "checks if macOS dark mode is on";
+        body = ''
+          osascript -l JavaScript -e "Application('System Events').appearancePreferences.darkMode()"'';
+      };
+    };
   };
 }

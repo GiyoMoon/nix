@@ -35,6 +35,8 @@ let
     "stremio"
     "ubersicht"
     "vscodium"
+
+    "steam"
   ];
 
   mas = [
