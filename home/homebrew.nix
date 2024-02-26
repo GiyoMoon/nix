@@ -2,6 +2,7 @@
 
 let
   taps = [
+    "homebrew/cask"
     "homebrew/cask-versions"
     "homebrew/services"
     # yabai and skhd
