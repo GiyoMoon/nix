@@ -18,6 +18,7 @@ with lib; {
     ./packages.nix
     ./homebrew.nix
     ./programs/git.nix
+    ./programs/hinode.nix
     ./programs/kitty.nix
     ./programs/shell.nix
     ./programs/simple-bar.nix

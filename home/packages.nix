@@ -6,6 +6,17 @@
   programs.bat.enable = true;
   programs.eza.enable = true;
 
+  nixpkgs.overlays = [
+    (self: super: {
+      hinode = pkgs.callPackage "${pkgs.fetchFromGitHub {
+        owner = "GiyoMoon";
+        repo = "hinode";
+        rev = "d8fe92c744dea18a8636497aca075bed9a4bc5cd";
+        sha256 = "sha256-EbM0M3+mr5WjUfbeN53awKi659JQZqDiPHmOytv2PcY=";
+      }}" { };
+    })
+  ];
+
   home.packages = with pkgs; [
     pinentry_mac
     gnupg
@@ -45,5 +56,7 @@
     })
     php83Packages.composer
     php83Extensions.imagick
+
+    hinode
   ];
 }

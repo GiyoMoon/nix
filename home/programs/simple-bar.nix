@@ -3,7 +3,7 @@ let
   simple_bar = pkgs.fetchFromGitHub {
     owner = "Jean-Tinland";
     repo = "simple-bar";
-    rev = "9d86a56cdc9219b00981646eedabb47a58fc4723";
+    rev = "40fc6516023f2d09f530704f3ed1f808c1a26c90";
     sha256 = "sha256-UDKDZY4xO0gJ/tPIVHNBqlQmfvbZFAg5A1TG6pF0pLQ=";
   };
 in {
@@ -68,7 +68,7 @@ in {
           "processWidget": false,
           "weatherWidget": false,
           "netstatsWidget": false,
-          "cpuWidget": true,
+          "cpuWidget": false,
           "batteryWidget": true,
           "wifiWidget": true,
           "vpnWidget": false,

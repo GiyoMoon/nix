@@ -75,16 +75,23 @@
 
     functions = {
       st = {
+        argumentNames = "mode";
         description = "switches global theme";
         body = ''
-          if [ (os_dark_mode) = "true" ]
+          if [ "$mode" = "light" ]
             osascript -l JavaScript -e "Application('System Events').appearancePreferences.darkMode = false" > /dev/null
             st_kitty "Catppuccin-Latte"
             echo "Switched to Light Theme"
-          else
+          else if [ "$mode" = "dark" ]
             osascript -l JavaScript -e "Application('System Events').appearancePreferences.darkMode = true" > /dev/null
             st_kitty "Catppuccin-Macchiato"
             echo "Switched to Dark Theme"
+          else
+            if [ (os_dark_mode) = "true" ]
+              st "light"
+            else
+              st "dark"
+            end
           end
         '';
       };
@@ -109,7 +116,8 @@
       os_dark_mode = {
         description = "checks if macOS dark mode is on";
         body = ''
-          osascript -l JavaScript -e "Application('System Events').appearancePreferences.darkMode()"'';
+          osascript -l JavaScript -e "Application('System Events').appearancePreferences.darkMode()"
+        '';
       };
     };
   };
