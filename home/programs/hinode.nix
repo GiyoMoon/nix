@@ -13,6 +13,8 @@
             "46.9480"
             "--longitude"
             "7.4474"
+            "--get-mode-cmd"
+            "osascript -l JavaScript -e \"Application('System Events').appearancePreferences.darkMode() ? 'dark' : 'light'\""
             "--light-mode-cmd"
             "/Users/jasi/.nix-profile/bin/fish -c 'st light'"
             "--dark-mode-cmd"

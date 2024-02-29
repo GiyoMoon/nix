@@ -11,8 +11,8 @@
       hinode = pkgs.callPackage "${pkgs.fetchFromGitHub {
         owner = "GiyoMoon";
         repo = "hinode";
-        rev = "d8fe92c744dea18a8636497aca075bed9a4bc5cd";
-        sha256 = "sha256-EbM0M3+mr5WjUfbeN53awKi659JQZqDiPHmOytv2PcY=";
+        rev = "a15255357472fc19ba6b2a5272ec136e659d3e3c";
+        sha256 = "sha256-rbFwQn52aoIUWhx+zyiJRqcdNRGaDowblpk/DCqHXUs=";
       }}" { };
     })
   ];
@@ -29,6 +29,7 @@
     gitmoji-cli
     yt-dlp
     cloudflared
+    hinode
 
     # fonts
     (nerdfonts.override { fonts = [ "FiraCode" ]; })
@@ -56,7 +57,5 @@
     })
     php83Packages.composer
     php83Extensions.imagick
-
-    hinode
   ];
 }

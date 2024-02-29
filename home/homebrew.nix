@@ -38,6 +38,7 @@ let
     "vscodium"
 
     "steam"
+    "parsec"
   ];
 
   mas = [
