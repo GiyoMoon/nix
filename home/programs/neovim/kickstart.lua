@@ -461,15 +461,26 @@ require('lazy').setup({
         -- clangd = {},
         -- gopls = {},
         -- pyright = {},
-        -- rust_analyzer = {},
+        eslint = {
+          command = './node_modules/.bin/eslint',
+          rootPatterns = {
+            '.eslintrc.js',
+            '.eslintrc.cjs',
+            '.eslintrc.yaml',
+            '.eslintrc.yml',
+            '.eslintrc.json',
+          },
+        },
+        html = {},
+        rust_analyzer = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
         --
         -- Some languages (like typescript) have entire language plugins that can be useful:
         --    https://github.com/pmizio/typescript-tools.nvim
         --
         -- But for many setups, the LSP (`tsserver`) will work just fine
-        -- tsserver = {},
-        --
+        tsserver = {},
+        tailwindcss = {},
 
         lua_ls = {
           -- cmd = {...},
@@ -540,6 +551,13 @@ require('lazy').setup({
       },
       formatters_by_ft = {
         lua = { 'stylua' },
+        javascript = { 'eslint' },
+        javascriptreact = { 'eslint', 'tailwindcss' },
+        typescript = { 'eslint' },
+        typescriptreact = { 'eslint', 'tailwindcss' },
+        html = { 'eslint', 'tailwindcss' },
+        css = { 'eslint', 'tailwindcss' },
+        json = { 'eslint' },
         -- Conform can also run multiple formatters sequentially
         -- python = { "isort", "black" },
         --
