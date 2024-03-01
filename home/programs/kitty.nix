@@ -18,6 +18,7 @@
       macos_quit_when_last_window_closed = "yes";
       window_padding_width = 15;
       # background_opacity = "0.75";
+      disable_ligatures = "always";
 
       allow_remote_control = "socket-only";
       listen_on = "unix:/tmp/kitty";
