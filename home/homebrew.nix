@@ -35,7 +35,6 @@ let
     "raycast"
     "stremio"
     "ubersicht"
-    "vscodium"
 
     "steam"
     "parsec"
