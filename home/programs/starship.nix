@@ -27,11 +27,12 @@
         "$cmd_duration"
 
         "$line_break"
+        # "$nix_shell"
         "$character"
       ];
 
       directory = {
-        style = "fg:#d774f8";
+        style = "none";
         truncation_length = 3;
         truncation_symbol = "…/";
         substitutions = {
@@ -42,66 +43,69 @@
       };
 
       git_branch = {
-        format = "[$symbol $branch](fg:#9f62f6)";
+        format = "[$symbol $branch](fg:purple)";
         symbol = "";
       };
-      git_status = { format = "[$all_status$ahead_behind](fg:#9f62f6) "; };
+      git_status = { format = "[$all_status$ahead_behind](fg:red) "; };
 
       c = {
-        format = "[$symbol ($version)](fg:#eb568c) ";
+        format = "[$symbol ($version)](fg:green) ";
         symbol = "";
       };
       dart = {
-        format = "[$symbol ($version)](fg:#eb568c) ";
+        format = "[$symbol ($version)](fg:green) ";
         symbol = "";
       };
       elixir = {
-        format = "[$symbol ($version)](fg:#eb568c) ";
+        format = "[$symbol ($version)](fg:green) ";
         symbol = "";
       };
       elm = {
-        format = "[$symbol ($version)](fg:#eb568c) ";
+        format = "[$symbol ($version)](fg:green) ";
         symbol = "";
       };
       golang = {
-        format = "[$symbol ($version)](fg:#eb568c) ";
+        format = "[$symbol ($version)](fg:green) ";
         symbol = "";
       };
       haskell = {
-        format = "[$symbol ($version)](fg:#eb568c) ";
+        format = "[$symbol ($version)](fg:green) ";
         symbol = "";
       };
       java = {
-        format = "[$symbol ($version)](fg:#eb568c) ";
+        format = "[$symbol ($version)](fg:green) ";
         symbol = "";
       };
       nodejs = {
-        format = "[$symbol ($version)](fg:#eb568c) ";
+        format = "[$symbol ($version)](fg:green) ";
         symbol = "";
       };
       php = {
-        format = "[$symbol ($version)](fg:#eb568c) ";
+        format = "[$symbol ($version)](fg:green) ";
         symbol = "";
       };
       rust = {
-        format = "[$symbol ($version)](fg:#eb568c) ";
+        format = "[$symbol ($version)](fg:green) ";
         symbol = "";
       };
 
       package = {
-        format = "[$symbol ($version)](fg:#54a7f8) ";
+        format = "[$symbol ($version)](fg:red) ";
         symbol = "";
       };
 
-      cmd_duration = { format = "[ $duration](fg:#d774f8)"; };
+      cmd_duration = { format = "[ $duration](fg:yellow)"; };
 
       character = {
-        success_symbol = "[❯](fg:#9f62f6)";
-        error_symbol = "[❯](fg:#eb568c)";
+        success_symbol = "❯";
+        error_symbol = "[❯](fg:red)";
       };
 
-      nix_shell.symbol = "";
-      docker_context.symbol = "";
+      # nix_shell = {
+      #   format = "[$symbol ($name)](fg:cyan) ";
+      #   symbol = "";
+      # };
+      # docker_context.symbol = "";
     };
   };
 }

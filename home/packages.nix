@@ -30,6 +30,7 @@
     yt-dlp
     cloudflared
     hinode
+    hyperfine
 
     # fonts
     (nerdfonts.override { fonts = [ "FiraCode" ]; })

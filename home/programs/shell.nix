@@ -64,8 +64,10 @@
       pex = "pnpm exec";
       plx = "pnpm dlx";
 
+      nvim = "nvim --listen /tmp/nvim.socket";
+      vim = "nvim";
+      vi = "nvim";
       v = "nvim";
-      "v." = "nvim .";
 
       flutter = "fvm flutter";
       dart = "fvm dart";
@@ -81,13 +83,15 @@
           if [ "$mode" = "light" ]
             osascript -l JavaScript -e "Application('System Events').appearancePreferences.darkMode = false" > /dev/null
             st_kitty "Catppuccin-Latte"
+            nvim --server /tmp/nvim.socket --remote-send ':LightTheme<CR>'
             echo "Switched to Light Theme"
           else if [ "$mode" = "dark" ]
             osascript -l JavaScript -e "Application('System Events').appearancePreferences.darkMode = true" > /dev/null
             st_kitty "Catppuccin-Macchiato"
+            nvim --server /tmp/nvim.socket --remote-send ':DarkTheme<CR>'
             echo "Switched to Dark Theme"
           else
-            if [ (os_dark_mode) = "true" ]
+            if [ (os_mode) = "dark" ]
               st "light"
             else
               st "dark"
@@ -113,10 +117,14 @@
           end
         '';
       };
-      os_dark_mode = {
-        description = "checks if macOS dark mode is on";
+      os_mode = {
+        description = "get the current appearance mode of the system";
         body = ''
-          osascript -l JavaScript -e "Application('System Events').appearancePreferences.darkMode()"
+          if [ (defaults read -g AppleInterfaceStyle 2> /dev/null) ]
+            echo "dark"
+          else
+            echo "light"
+          end
         '';
       };
     };
