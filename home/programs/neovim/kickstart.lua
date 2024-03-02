@@ -43,7 +43,6 @@ vim.keymap.set('n', 'N', 'Nzzzv', { desc = 'Find previous and keep cursor in the
 vim.keymap.set('n', '<leader>dv', ':DiffviewOpen<CR>', { desc = 'Opens diffview' })
 vim.keymap.set('n', '<leader>dc', ':DiffviewClose<CR>', { desc = 'Closes diffview' })
 vim.keymap.set('n', '<leader>es', ':EslintFixAll<CR>', { desc = 'Autofix eslint errors' })
-vim.keymap.set('n', '<C-s>', ':w<CR>', { desc = 'Save file' })
 vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv", { desc = 'Move selected lines down' })
 vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv", { desc = 'Move selected lines up' })
 vim.keymap.set('x', '<leader>p', '"_dP', { desc = 'Paste without overriding the buffer' })
@@ -153,7 +152,7 @@ require('lazy').setup({
       local builtin = require('telescope.builtin')
       vim.keymap.set('n', '<leader>sh', builtin.help_tags, { desc = '[S]earch [H]elp' })
       vim.keymap.set('n', '<leader>sk', builtin.keymaps, { desc = '[S]earch [K]eymaps' })
-      vim.keymap.set('n', '<leader>sf', builtin.find_files, { desc = '[S]earch [F]iles' })
+      vim.keymap.set('n', '<leader>f', builtin.find_files, { desc = 'Search [F]iles' })
       vim.keymap.set('n', '<leader>ss', builtin.builtin, { desc = '[S]earch [S]elect Telescope' })
       vim.keymap.set('n', '<leader>sw', builtin.grep_string, { desc = '[S]earch current [W]ord' })
       vim.keymap.set('n', '<leader>sg', builtin.live_grep, { desc = '[S]earch by [G]rep' })
@@ -181,7 +180,58 @@ require('lazy').setup({
       end, { desc = '[S]earch [/] in Open Files' })
     end,
   },
-
+  {
+    'ThePrimeagen/harpoon',
+    branch = 'harpoon2',
+    dependencies = { 'nvim-lua/plenary.nvim' },
+    config = function()
+      require('harpoon'):setup()
+    end,
+    keys = {
+      {
+        '<C-a>',
+        function()
+          require('harpoon'):list():append()
+        end,
+        desc = 'Add to Harpoon',
+      },
+      {
+        '<C-e>',
+        function()
+          require('harpoon').ui:toggle_quick_menu(require('harpoon'):list())
+        end,
+        desc = 'Toggle Harpoon Quick Menu',
+      },
+      {
+        '<C-h>',
+        function()
+          require('harpoon'):list():select(1)
+        end,
+        desc = 'which_key_ignore',
+      },
+      {
+        '<C-j>',
+        function()
+          require('harpoon'):list():select(2)
+        end,
+        desc = 'which_key_ignore',
+      },
+      {
+        '<C-k>',
+        function()
+          require('harpoon'):list():select(3)
+        end,
+        desc = 'which_key_ignore',
+      },
+      {
+        '<C-l>',
+        function()
+          require('harpoon'):list():select(4)
+        end,
+        desc = 'which_key_ignore',
+      },
+    },
+  },
   {
     'neovim/nvim-lspconfig',
     dependencies = {
