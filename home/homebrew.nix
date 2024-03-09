@@ -2,18 +2,13 @@
 
 let
   taps = [
-    "homebrew/cask"
     "homebrew/cask-versions"
     "homebrew/services"
     # yabai and skhd
     "koekeishiya/formulae"
   ];
 
-  brews = [
-    "skhd"
-    "yabai"
-    "cocoapods"
-  ];
+  brews = [ "skhd" "yabai" "cocoapods" ];
 
   casks = [
     "1password"
@@ -35,17 +30,16 @@ let
     "raycast"
     "stremio"
     "ubersicht"
+    "temurin17"
 
     "steam"
     "parsec"
   ];
 
-  mas = [
-    {
-      name = "WireGuard";
-      id = "1451685025";
-    }
-  ];
+  mas = [{
+    name = "WireGuard";
+    id = "1451685025";
+  }];
 in {
   home.sessionPath = [ "/opt/homebrew/bin" ];
 

@@ -24,7 +24,7 @@ with lib; {
     ./programs/simple-bar.nix
     ./programs/starship.nix
     ./programs/yabai.nix
-    ./programs/neovim/neovim.nix
+    ./programs/nvim/nvim.nix
   ];
 
   home.activation = {

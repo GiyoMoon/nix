@@ -57,9 +57,7 @@
       SecondClickThreshold = 0;
     };
 
-    "com.apple" = {
-      swipescrolldirection = false;
-    };
+    "com.apple" = { swipescrolldirection = false; };
     "com.apple.keyboard" = { fnState = true; };
     "com.apple.screencapture" = { disable-shadow = true; };
     "com.apple.LaunchServices" = { LSQuarantine = false; };

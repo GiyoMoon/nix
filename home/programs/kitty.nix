@@ -14,11 +14,18 @@
       name = "FiraCode Nerd Font";
       size = 18;
     };
+    keybindings = {
+      "kitty_mod+h" = "previous_tab";
+      "kitty_mod+l" = "next_tab";
+    };
     settings = {
+      kitty_mod = "shift+cmd";
       macos_quit_when_last_window_closed = "yes";
       window_padding_width = 15;
       # background_opacity = "0.75";
       disable_ligatures = "always";
+      tab_bar_style = "powerline";
+      tab_powerline_style = "round";
 
       allow_remote_control = "socket-only";
       listen_on = "unix:/tmp/kitty";

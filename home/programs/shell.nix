@@ -57,9 +57,6 @@
       find = "fd";
       gm = "gitmoji";
 
-      code = "codium";
-      "c." = "code .";
-
       p = "pnpm";
       pex = "pnpm exec";
       plx = "pnpm dlx";
