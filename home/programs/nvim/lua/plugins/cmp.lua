@@ -5,7 +5,7 @@ luasnip.config.setup({})
 
 cmp.setup({
   expand = function(args)
-    luasnip.lsp_exapnd(args.body)
+    luasnip.lsp_expand(args.body)
   end,
   mapping = cmp.mapping.preset.insert({
     ['<C-n>'] = cmp.mapping.select_next_item(),
