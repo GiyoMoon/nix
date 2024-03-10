@@ -1,12 +1,15 @@
+local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
+
 local lspconfig = require('lspconfig')
-lspconfig.nil_ls.setup({})
-lspconfig.tsserver.setup({})
-lspconfig.rust_analyzer.setup({})
-lspconfig.tailwindcss.setup({})
-lspconfig.cssls.setup({})
-lspconfig.html.setup({})
-lspconfig.jsonls.setup({})
+lspconfig.nil_ls.setup({ capabilities = capabilities })
+lspconfig.tsserver.setup({ capabilities = capabilities })
+lspconfig.rust_analyzer.setup({ capabilities = capabilities })
+lspconfig.tailwindcss.setup({ capabilities = capabilities })
+lspconfig.cssls.setup({ capabilities = capabilities })
+lspconfig.html.setup({ capabilities = capabilities })
+lspconfig.jsonls.setup({ capabilities = capabilities })
 lspconfig.lua_ls.setup({
+  capabilities = capabilities,
   settings = {
     Lua = {
       diagnostics = {
@@ -15,7 +18,7 @@ lspconfig.lua_ls.setup({
     },
   },
 })
-lspconfig.eslint.setup({})
+lspconfig.eslint.setup({ capabilities = capabilities })
 
 vim.api.nvim_create_autocmd('LspAttach', {
   callback = function(event)
@@ -51,9 +54,6 @@ vim.api.nvim_create_autocmd('LspAttach', {
     end
   end,
 })
-
-local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities = vim.tbl_deep_extend('force', capabilities, require('cmp_nvim_lsp').default_capabilities())
 
 vim.fn.sign_define('DiagnosticSignError', { text = '', texthl = 'DiagnosticSignError' })
 vim.fn.sign_define('DiagnosticSignWarn', { text = '', texthl = 'DiagnosticSignWarn' })
