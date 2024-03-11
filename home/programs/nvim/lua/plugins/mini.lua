@@ -70,6 +70,11 @@ starter.setup({
       section = '──────────────Actions──────────────',
     },
     {
+      action = 'Oil',
+      name = 'O: Oil',
+      section = '──────────────Actions──────────────',
+    },
+    {
       action = 'enew',
       name = 'E: New Buffer',
       section = '──────────────Actions──────────────',
