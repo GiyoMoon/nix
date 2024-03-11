@@ -2,7 +2,14 @@ local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protoc
 
 local lspconfig = require('lspconfig')
 lspconfig.nil_ls.setup({ capabilities = capabilities })
-lspconfig.tsserver.setup({ capabilities = capabilities })
+lspconfig.tsserver.setup({
+  capabilities = capabilities,
+  init_options = {
+    preferences = {
+      importModuleSpecifierPreference = 'non-relative',
+    },
+  },
+})
 lspconfig.rust_analyzer.setup({ capabilities = capabilities })
 lspconfig.tailwindcss.setup({ capabilities = capabilities })
 lspconfig.cssls.setup({ capabilities = capabilities })

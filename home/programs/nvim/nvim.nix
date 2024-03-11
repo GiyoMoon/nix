@@ -6,6 +6,7 @@
     defaultEditor = true;
     plugins = with pkgs.vimPlugins; [
       catppuccin-nvim
+      conform-nvim
       diffview-nvim
       flash-nvim
       gitsigns-nvim
@@ -14,10 +15,11 @@
       noice-nvim
       nvim-tree-lua
       nvim-treesitter.withAllGrammars
+      nvim-ts-autotag
       oil-nvim
       telescope-nvim
+      tokyonight-nvim
       vim-sleuth
-      conform-nvim
 
       # lsp
       nvim-lspconfig

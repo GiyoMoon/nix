@@ -7,3 +7,6 @@ require('opt')
 require('cmd')
 require('keymap')
 require('plugins')
+
+-- Has to be last
+require('theme')

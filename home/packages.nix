@@ -4,7 +4,12 @@
   fonts.fontconfig.enable = true;
 
   programs.bat.enable = true;
-  programs.eza.enable = true;
+  programs.eza = {
+    enable = true;
+    icons = true;
+    git = true;
+    extraOptions = [ "--group-directories-first" ];
+  };
 
   nixpkgs.overlays = [
     (self: super: {
