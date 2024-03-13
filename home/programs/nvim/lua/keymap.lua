@@ -1,5 +1,5 @@
 vim.keymap.set('n', 'Q', '<nop>')
-vim.keymap.set('n', 's', '<nop>')
+-- vim.keymap.set('n', 's', '<nop>')
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>', { desc = 'Remove search highlights when pressing <Esc>' })
 vim.keymap.set('n', '<left>', '<cmd>echo "Silly you, use h to move :3"<CR>')
 vim.keymap.set('n', '<right>', '<cmd>echo "Silly you, use l to move :3"<CR>')
@@ -36,12 +36,3 @@ vim.keymap.set('n', '<leader>df', vim.diagnostic.setloclist, { desc = 'Open diag
 -- [[ diffview ]]
 vim.keymap.set('n', '<leader>do', ':DiffviewOpen<CR>', { desc = 'Opens diffview' })
 vim.keymap.set('n', '<leader>dc', ':DiffviewClose<CR>', { desc = 'Closes diffview' })
-
--- [[ telescope ]]
-local telescope = require('telescope.builtin')
-vim.keymap.set('n', '<leader>ff', telescope.find_files, { desc = '[F]ind [F]iles' })
-vim.keymap.set('n', '<leader>fh', telescope.help_tags, { desc = '[F]ind [H]elp' })
-vim.keymap.set('n', '<leader>fk', telescope.keymaps, { desc = '[F]ind [K]eymaps' })
-vim.keymap.set('n', '<leader>fg', telescope.live_grep, { desc = '[F]ind by [G]rep' })
-vim.keymap.set('n', '<leader>fr', telescope.resume, { desc = '[F]ind [R]esume' })
-vim.keymap.set('n', '<leader><leader>', '<Cmd>Telescope frecency workspace=CWD<CR>', { desc = 'Find by frecency' })

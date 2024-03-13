@@ -29,6 +29,8 @@
 
       allow_remote_control = "socket-only";
       listen_on = "unix:/tmp/kitty";
+      macos_thicken_font = "0.75";
+      hide_window_decorations = "titlebar-only";
     };
     extraConfig = "include current-theme.conf";
   };

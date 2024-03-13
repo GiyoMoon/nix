@@ -6,5 +6,5 @@ require('tokyonight').setup({
     sidebars = 'dark',
     floats = 'dark',
   },
-  day_brightness = 0.3,
+  day_brightness = 0.5,
 })

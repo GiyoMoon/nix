@@ -5,7 +5,6 @@
     enable = true;
     defaultEditor = true;
     plugins = with pkgs.vimPlugins; [
-      catppuccin-nvim
       conform-nvim
       diffview-nvim
       flash-nvim
@@ -16,14 +15,18 @@
       nvim-tree-lua
       nvim-treesitter.withAllGrammars
       nvim-ts-autotag
+      nvim-web-devicons
       oil-nvim
       telescope-nvim
-      tokyonight-nvim
       vim-sleuth
 
-      # lsp
+      # themes
+      catppuccin-nvim
+      everforest-nvim
+      tokyonight-nvim
+
+      # lsp/cmp
       nvim-lspconfig
-      # completions
       nvim-cmp
       cmp-nvim-lsp
       cmp-buffer
@@ -35,11 +38,11 @@
       luasnip
       cmp_luasnip
 
-      nvim-web-devicons
       # noice deps
       nui-nvim
       nvim-notify
-      # telescope dep
+
+      # telescope deps
       telescope-frecency-nvim
       plenary-nvim
     ];

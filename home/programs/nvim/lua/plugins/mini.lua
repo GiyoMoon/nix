@@ -45,6 +45,7 @@ statusline.section_fileinfo = function(args)
 end
 
 local starter = require('mini.starter')
+local action_section = '──────────────Actions──────────────'
 starter.setup({
   content_hooks = {
     starter.gen_hook.adding_bullet('» '),
@@ -57,32 +58,33 @@ starter.setup({
     [[\_\ \/ \___|\___/ \_/ |_|_| |_| |_|]],
     [[───────────────────────────────────]],
   }, '\n'),
-  footer = '──────────' .. os.date('%d.%m.%y  %H:%M') .. '──────────',
+  -- footer = '──────────' .. os.date('%d.%m.%y  %H:%M') .. '──────────',
+  footer = '',
   items = {
     {
       action = 'Telescope frecency workspace=CWD',
       name = 'R: Recent',
-      section = '──────────────Actions──────────────',
+      section = action_section,
     },
     {
       action = 'Telescope find_files',
       name = 'F: Find Files',
-      section = '──────────────Actions──────────────',
+      section = action_section,
     },
     {
       action = 'Oil',
       name = 'O: Oil',
-      section = '──────────────Actions──────────────',
+      section = action_section,
     },
     {
-      action = 'enew',
-      name = 'E: New Buffer',
-      section = '──────────────Actions──────────────',
+      action = 'DiffviewOpen',
+      name = 'D: Diffview',
+      section = action_section,
     },
     {
       action = 'qall!',
       name = 'Q: Quit Neovim',
-      section = '──────────────Actions──────────────',
+      section = action_section,
     },
   },
 })
