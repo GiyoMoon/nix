@@ -20,17 +20,19 @@
     };
     settings = {
       kitty_mod = "shift+cmd";
-      macos_quit_when_last_window_closed = "yes";
+
       window_padding_width = 15;
-      # background_opacity = "0.75";
       disable_ligatures = "always";
       tab_bar_style = "powerline";
       tab_powerline_style = "round";
+      hide_window_decorations = "titlebar-only";
+
+      macos_quit_when_last_window_closed = "yes";
+      macos_thicken_font = "0.75";
+      macos_option_as_alt = "yes";
 
       allow_remote_control = "socket-only";
       listen_on = "unix:/tmp/kitty";
-      macos_thicken_font = "0.75";
-      hide_window_decorations = "titlebar-only";
     };
     extraConfig = "include current-theme.conf";
   };

@@ -6,6 +6,7 @@
     defaultEditor = true;
     plugins = with pkgs.vimPlugins; [
       conform-nvim
+      copilot-lua
       diffview-nvim
       flash-nvim
       gitsigns-nvim
