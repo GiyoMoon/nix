@@ -27,25 +27,26 @@
       tokyonight-nvim
 
       # lsp/cmp
-      nvim-lspconfig
       nvim-cmp
-      cmp-nvim-lsp
+      nvim-lspconfig
       cmp-buffer
       cmp-cmdline
+      cmp-nvim-lsp
       cmp-path
       cmp-tailwind-colors
 
       # snippets
-      luasnip
       cmp_luasnip
+      luasnip
 
       # noice deps
       nui-nvim
       nvim-notify
 
       # telescope deps
-      telescope-frecency-nvim
       plenary-nvim
+      telescope-frecency-nvim
+      telescope-undo-nvim
     ];
     extraConfig = ":luafile ~/.nix/home/programs/nvim/lua/init.lua";
   };
