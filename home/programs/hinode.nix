@@ -5,7 +5,7 @@
     enable = true;
     agents = {
       hinode = {
-        enable = true;
+        enable = false;
         config = {
           ProgramArguments = [
             "${pkgs.hinode}/bin/hinode"

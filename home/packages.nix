@@ -63,7 +63,6 @@
     fd
     ripgrep
     hadolint
-    gitmoji-cli
     yt-dlp
     cloudflared
     hinode

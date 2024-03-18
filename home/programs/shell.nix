@@ -55,7 +55,6 @@
       ls = "eza";
       cat = "bat";
       find = "fd";
-      gm = "gitmoji";
 
       p = "pnpm";
       pex = "pnpm exec";

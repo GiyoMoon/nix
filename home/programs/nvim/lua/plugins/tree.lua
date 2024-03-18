@@ -5,5 +5,8 @@ require('nvim-tree').setup({
   git = {
     enable = false,
   },
+  update_focused_file = {
+    enable = true,
+  },
 })
-vim.keymap.set('n', '<leader>t', '<cmd>NvimTreeToggle<CR>', { desc = 'Toggle nvim-tree' })
+vim.keymap.set('n', '<leader>t', '<cmd>NvimTreeToggle<CR>', { desc = 'Nvim-tree [T]oggle' })
