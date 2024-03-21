@@ -8,7 +8,7 @@ let
     "koekeishiya/formulae"
   ];
 
-  brews = [ "skhd" "yabai" "cocoapods" ];
+  brews = [ "skhd" "yabai" ];
 
   casks = [
     "1password"

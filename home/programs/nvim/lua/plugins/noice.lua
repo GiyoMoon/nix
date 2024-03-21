@@ -6,7 +6,31 @@ require('noice').setup({
         kind = '',
         find = 'written',
       },
-      opts = { skip = true },
+      view = 'mini',
+    },
+    {
+      filter = {
+        event = 'msg_show',
+        kind = '',
+        find = 'more lines',
+      },
+      view = 'mini',
+    },
+    {
+      filter = {
+        event = 'msg_show',
+        kind = '',
+        find = 'fewer lines',
+      },
+      view = 'mini',
+    },
+    {
+      filter = {
+        event = 'msg_show',
+        kind = '',
+        find = 'lines yanked',
+      },
+      view = 'mini',
     },
   },
   lsp = {
