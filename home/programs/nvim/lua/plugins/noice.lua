@@ -12,7 +12,7 @@ require('noice').setup({
       filter = {
         event = 'msg_show',
         kind = '',
-        find = 'more lines',
+        find = 'more line',
       },
       view = 'mini',
     },
@@ -20,7 +20,7 @@ require('noice').setup({
       filter = {
         event = 'msg_show',
         kind = '',
-        find = 'fewer lines',
+        find = 'fewer line',
       },
       view = 'mini',
     },
@@ -29,6 +29,22 @@ require('noice').setup({
         event = 'msg_show',
         kind = '',
         find = 'lines yanked',
+      },
+      view = 'mini',
+    },
+    {
+      filter = {
+        event = 'msg_show',
+        kind = '',
+        find = 'change; after',
+      },
+      view = 'mini',
+    },
+    {
+      filter = {
+        event = 'msg_show',
+        kind = '',
+        find = 'change; before',
       },
       view = 'mini',
     },

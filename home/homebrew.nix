@@ -34,6 +34,8 @@ let
 
     "steam"
     "parsec"
+    "qbittorrent"
+    "vlc"
   ];
 
   mas = [{
