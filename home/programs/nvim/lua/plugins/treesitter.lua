@@ -8,4 +8,11 @@ require('nvim-treesitter.configs').setup({
   },
 })
 
+vim.treesitter.language.register('markdown', 'mdx')
+vim.filetype.add({
+  extension = {
+    mdx = 'mdx',
+  },
+})
+
 require('nvim-ts-autotag').setup()

@@ -79,6 +79,7 @@
     bun
 
     rustup
+    elixir_1_16
     sqlx-cli
 
     # mobile development
@@ -90,9 +91,9 @@
     tailwindcss-language-server
     vscode-langservers-extracted
     nodePackages.typescript-language-server
+    elixir_ls
 
     # formatters
-    eslint_d
     stylua
     nixfmt
 

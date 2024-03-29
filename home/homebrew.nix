@@ -36,6 +36,7 @@ let
     "parsec"
     "qbittorrent"
     "vlc"
+    "mullvadvpn"
   ];
 
   mas = [{
