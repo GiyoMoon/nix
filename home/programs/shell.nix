@@ -1,10 +1,12 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   programs.direnv = {
     enable = true;
     nix-direnv.enable = true;
-    config.global = { load_dotenv = true; };
+    config.global = {
+      load_dotenv = true;
+    };
   };
 
   programs.atuin = {
@@ -21,15 +23,17 @@
   programs.fish = {
     enable = true;
 
-    plugins = [{
-      name = "puffer-fish";
-      src = pkgs.fetchFromGitHub {
-        owner = "nickeb96";
-        repo = "puffer-fish";
-        rev = "5d3cb25e0d63356c3342fb3101810799bb651b64";
-        sha256 = "sha256-aPxEHSXfiJJXosIm7b3Pd+yFnyz43W3GXyUB5BFAF54=";
-      };
-    }];
+    plugins = [
+      {
+        name = "puffer-fish";
+        src = pkgs.fetchFromGitHub {
+          owner = "nickeb96";
+          repo = "puffer-fish";
+          rev = "5d3cb25e0d63356c3342fb3101810799bb651b64";
+          sha256 = "sha256-aPxEHSXfiJJXosIm7b3Pd+yFnyz43W3GXyUB5BFAF54=";
+        };
+      }
+    ];
 
     shellInit = ''
       # Remove last login message. See: https://stackoverflow.com/a/69915614

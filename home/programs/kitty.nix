@@ -8,8 +8,11 @@
       mkdir -p $out/bin
       ln -s /opt/homebrew/bin/kitty $out/bin/kitty
     '';
-    darwinLaunchOptions =
-      [ "--single-instance" "--directory=~" "--listen-on=unix:/tmp/kitty" ];
+    darwinLaunchOptions = [
+      "--single-instance"
+      "--directory=~"
+      "--listen-on=unix:/tmp/kitty"
+    ];
     font = {
       name = "FiraCode Nerd Font";
       size = 18;

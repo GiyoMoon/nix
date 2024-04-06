@@ -105,7 +105,7 @@
 
     # formatters
     stylua
-    nixfmt
+    nixfmt-rfc-style
 
     # php stuff :(
     (php83.buildEnv {

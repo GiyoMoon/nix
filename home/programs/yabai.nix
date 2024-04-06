@@ -65,26 +65,28 @@
   home.file.skhd = {
     executable = true;
     target = ".config/skhd/skhdrc";
-    text = let
-      modMask = "shift + alt";
-      moveMask = "ctrl + shift + alt";
-    in ''
-      # focus window
-      ${modMask} - h : yabai -m window --focus west
-      ${modMask} - j : yabai -m window --focus south
-      ${modMask} - k : yabai -m window --focus north
-      ${modMask} - l : yabai -m window --focus east
-      # swap managed window
-      ${moveMask} - h : yabai -m window --swap west
-      ${moveMask} - j : yabai -m window --swap south
-      ${moveMask} - k : yabai -m window --swap north
-      ${moveMask} - l : yabai -m window --swap east
-      # balance size of windows
-      ${modMask} - space : yabai -m space --balance
-      # Change layout
-      ${modMask} - a : yabai -m config layout bsp
-      ${modMask} - d : yabai -m config layout stack
-    '';
+    text =
+      let
+        modMask = "shift + alt";
+        moveMask = "ctrl + shift + alt";
+      in
+      ''
+        # focus window
+        ${modMask} - h : yabai -m window --focus west
+        ${modMask} - j : yabai -m window --focus south
+        ${modMask} - k : yabai -m window --focus north
+        ${modMask} - l : yabai -m window --focus east
+        # swap managed window
+        ${moveMask} - h : yabai -m window --swap west
+        ${moveMask} - j : yabai -m window --swap south
+        ${moveMask} - k : yabai -m window --swap north
+        ${moveMask} - l : yabai -m window --swap east
+        # balance size of windows
+        ${modMask} - space : yabai -m space --balance
+        # Change layout
+        ${modMask} - a : yabai -m config layout bsp
+        ${modMask} - d : yabai -m config layout stack
+      '';
     onChange = ''
       /opt/homebrew/bin/skhd --restart-service
     '';

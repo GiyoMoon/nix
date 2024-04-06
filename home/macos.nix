@@ -1,4 +1,4 @@
-{ lib, ... }:
+{ ... }:
 
 {
   targets.darwin.defaults = {
@@ -57,10 +57,20 @@
       SecondClickThreshold = 0;
     };
 
-    "com.apple" = { swipescrolldirection = false; };
-    "com.apple.keyboard" = { fnState = true; };
-    "com.apple.screencapture" = { disable-shadow = true; };
-    "com.apple.LaunchServices" = { LSQuarantine = false; };
-    "com.apple.BluetoothAudioAgent" = { "Apple Bitpool Min (editable)" = 40; };
+    "com.apple" = {
+      swipescrolldirection = false;
+    };
+    "com.apple.keyboard" = {
+      fnState = true;
+    };
+    "com.apple.screencapture" = {
+      disable-shadow = true;
+    };
+    "com.apple.LaunchServices" = {
+      LSQuarantine = false;
+    };
+    "com.apple.BluetoothAudioAgent" = {
+      "Apple Bitpool Min (editable)" = 40;
+    };
   };
 }

@@ -46,7 +46,9 @@
         format = "[$symbol $branch](fg:purple)";
         symbol = "";
       };
-      git_status = { format = "[$all_status$ahead_behind](fg:red) "; };
+      git_status = {
+        format = "[$all_status$ahead_behind](fg:red) ";
+      };
 
       c = {
         format = "[$symbol ($version)](fg:green) ";
@@ -94,7 +96,9 @@
         symbol = "";
       };
 
-      cmd_duration = { format = "[ $duration](fg:yellow)"; };
+      cmd_duration = {
+        format = "[ $duration](fg:yellow)";
+      };
 
       character = {
         success_symbol = "❯";

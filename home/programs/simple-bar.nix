@@ -1,4 +1,5 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
+
 let
   simple_bar = pkgs.fetchFromGitHub {
     owner = "Jean-Tinland";
@@ -6,10 +7,10 @@ let
     rev = "40fc6516023f2d09f530704f3ed1f808c1a26c90";
     sha256 = "sha256-UDKDZY4xO0gJ/tPIVHNBqlQmfvbZFAg5A1TG6pF0pLQ=";
   };
-in {
+in
+{
   home = {
-    file."Library/Application Support/Übersicht/widgets/simple-bar".source =
-      simple_bar;
+    file."Library/Application Support/Übersicht/widgets/simple-bar".source = simple_bar;
 
     file.".simplebarrc".text = ''
       {

@@ -1,6 +1,6 @@
-{ config, pkgs, lib, inputs, ... }:
+{ ... }:
 
-with lib; {
+{
   home = {
     username = "jasi";
     homeDirectory = "/Users/jasi";
@@ -8,7 +8,9 @@ with lib; {
     # Release notes: https://nix-community.github.io/home-manager/release-notes.xhtml
     stateVersion = "24.05";
 
-    sessionVariables = { TERM = "xterm-256color"; };
+    sessionVariables = {
+      TERM = "xterm-256color";
+    };
   };
 
   programs.home-manager.enable = true;
