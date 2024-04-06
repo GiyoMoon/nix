@@ -50,6 +50,16 @@
             sha256 = "sha256-/k6VBzXuap8FTqMij7EQCh32TWaDPR9vAvEHw20fMCo=";
           };
         };
+        eldritch-nvim = super.vimUtils.buildVimPlugin {
+          pname = "eldritch-nvim";
+          version = "main";
+          src = super.fetchFromGitHub {
+            owner = "eldritch-theme";
+            repo = "eldritch.nvim";
+            rev = "4bd7d105ddf8ab843a538ba78fa71b32011a90fb";
+            sha256 = "sha256-/FJ7o5c2RDO+i0yP+tsl3BmA8hvF/cCzJo00JXWmI0M=";
+          };
+        };
       };
     })
   ];

@@ -25,6 +25,8 @@
       catppuccin-nvim
       everforest-nvim
       tokyonight-nvim
+      eldritch-nvim
+      rose-pine
 
       # lsp/cmp
       nvim-cmp
@@ -47,6 +49,7 @@
       plenary-nvim
       telescope-frecency-nvim
       telescope-undo-nvim
+      telescope-live-grep-args-nvim
     ];
     extraConfig = ":luafile ~/.nix/home/programs/nvim/lua/init.lua";
   };

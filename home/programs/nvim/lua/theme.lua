@@ -1,9 +1,12 @@
 require('themes/catppuccin')
 require('themes/everforest')
 require('themes/tokyonight')
+-- Dark theme only
+require('themes/eldritch')
+require('themes/rose-pine')
 
-local LIGHT_COLORSCHEME = 'everforest'
-local DARK_COLORSCHEME = 'everforest'
+local LIGHT_COLORSCHEME = 'rose-pine'
+local DARK_COLORSCHEME = 'eldritch'
 
 local light = function()
   vim.cmd.colorscheme(LIGHT_COLORSCHEME)

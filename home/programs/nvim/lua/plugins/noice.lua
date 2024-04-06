@@ -64,3 +64,5 @@ require('noice').setup({
     lsp_doc_border = false,
   },
 })
+
+require('notify').setup({ background_color = '#00000000' })
