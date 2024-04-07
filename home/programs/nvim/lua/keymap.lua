@@ -15,8 +15,8 @@ vim.keymap.set('n', 'n', 'nzzzv', { desc = 'Find next and keep cursor in the cen
 vim.keymap.set('n', 'N', 'Nzzzv', { desc = 'Find previous and keep cursor in the center' })
 
 -- [[ visual ]]
-vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv", { desc = 'Move selected lines up' })
-vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv", { desc = 'Move selected lines down' })
+vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv", { desc = 'Move selected lines up', silent = true })
+vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv", { desc = 'Move selected lines down', silent = true })
 
 vim.keymap.set('x', '<leader>p', '"_dP', { desc = 'Paste without overriding the buffer' })
 vim.keymap.set('x', '<leader>rw', 'y:%s/<C-r>0/<C-r>0/gc<left><left><left>', { desc = 'Replace Selection' })
