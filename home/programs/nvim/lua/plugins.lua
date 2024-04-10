@@ -1,6 +1,6 @@
 require('plugins/cmp')
 require('plugins/conform')
-require('plugins/copilot')
+-- require('plugins/copilot')
 require('plugins/flash')
 require('plugins/gitsigns')
 require('plugins/harpoon')

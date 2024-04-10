@@ -16,6 +16,7 @@
       nvim-tree-lua
       nvim-treesitter.withAllGrammars
       nvim-ts-autotag
+      nvim-ts-context-commentstring
       nvim-web-devicons
       oil-nvim
       telescope-nvim

@@ -32,7 +32,6 @@
 
       macos_quit_when_last_window_closed = "yes";
       macos_thicken_font = "0.75";
-      macos_option_as_alt = "yes";
 
       allow_remote_control = "socket-only";
       listen_on = "unix:/tmp/kitty";
