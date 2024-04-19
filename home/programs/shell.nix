@@ -29,8 +29,8 @@
         src = pkgs.fetchFromGitHub {
           owner = "nickeb96";
           repo = "puffer-fish";
-          rev = "5d3cb25e0d63356c3342fb3101810799bb651b64";
-          sha256 = "sha256-aPxEHSXfiJJXosIm7b3Pd+yFnyz43W3GXyUB5BFAF54=";
+          rev = "12d062eae0ad24f4ec20593be845ac30cd4b5923";
+          sha256 = "sha256-2niYj0NLfmVIQguuGTA7RrPIcorJEPkxhH6Dhcy+6Bk=";
         };
       }
     ];

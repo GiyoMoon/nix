@@ -1,3 +1,4 @@
+require('notify').setup({ background_colour = '#00000000' })
 require('noice').setup({
   routes = {
     {
@@ -64,5 +65,3 @@ require('noice').setup({
     lsp_doc_border = false,
   },
 })
-
-require('notify').setup({ background_color = '#00000000' })

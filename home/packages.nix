@@ -26,8 +26,8 @@
           src = super.fetchFromGitHub {
             owner = "ThePrimeagen";
             repo = "harpoon";
-            rev = "a38be6e0dd4c6db66997deab71fc4453ace97f9c";
-            sha256 = "sha256-RjwNUuKQpLkRBX3F9o25Vqvpu3Ah1TCFQ5Dk4jXhsbI=";
+            rev = "0378a6c428a0bed6a2781d459d7943843f374bce";
+            sha256 = "sha256-FZQH38E02HuRPIPAog/nWM55FuBxKp8AyrEldFkoLYk=";
           };
         };
         cmp-tailwind-colors = super.vimUtils.buildVimPlugin {
@@ -46,8 +46,8 @@
           src = super.fetchFromGitHub {
             owner = "neanias";
             repo = "everforest-nvim";
-            rev = "eedb19079c6bf9d162f74a5c48a6d2759f38cc76";
-            sha256 = "sha256-/k6VBzXuap8FTqMij7EQCh32TWaDPR9vAvEHw20fMCo=";
+            rev = "5e0e32a569fb464911342f0d421721cc1c94cf25";
+            sha256 = "sha256-qKyPqkcf420eMbgGNXmMgF3i9GZ71NpoqeK3+Gz0fzc=";
           };
         };
         eldritch-nvim = super.vimUtils.buildVimPlugin {
@@ -56,8 +56,8 @@
           src = super.fetchFromGitHub {
             owner = "eldritch-theme";
             repo = "eldritch.nvim";
-            rev = "4bd7d105ddf8ab843a538ba78fa71b32011a90fb";
-            sha256 = "sha256-/FJ7o5c2RDO+i0yP+tsl3BmA8hvF/cCzJo00JXWmI0M=";
+            rev = "754e9dd1ea529ce72efa754584c35daaa87e65fa";
+            sha256 = "sha256-XwvI2URsZ4aFCoZFWlfN5e3rp8tJZc9x6bI0p1c/0oA=";
           };
         };
       };

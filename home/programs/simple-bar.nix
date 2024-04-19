@@ -4,8 +4,8 @@ let
   simple_bar = pkgs.fetchFromGitHub {
     owner = "Jean-Tinland";
     repo = "simple-bar";
-    rev = "40fc6516023f2d09f530704f3ed1f808c1a26c90";
-    sha256 = "sha256-UDKDZY4xO0gJ/tPIVHNBqlQmfvbZFAg5A1TG6pF0pLQ=";
+    rev = "21b4ebd0416475f181252171e9a42b909688128f";
+    sha256 = "sha256-3eB7Xwu2Bsf0PxXFsuVsRGiQYkgzqricUnA7aJLEtms=";
   };
 in
 {
