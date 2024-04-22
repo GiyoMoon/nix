@@ -7,6 +7,7 @@
     plugins = with pkgs.vimPlugins; [
       conform-nvim
       copilot-lua
+      debugprint-nvim
       diffview-nvim
       flash-nvim
       gitsigns-nvim

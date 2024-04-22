@@ -12,3 +12,5 @@ require('copilot').setup({
     },
   },
 })
+
+vim.keymap.set('n', '<leader>ct', require('copilot.suggestion').toggle_auto_trigger, { desc = '[C]opilot [T]oggle' })

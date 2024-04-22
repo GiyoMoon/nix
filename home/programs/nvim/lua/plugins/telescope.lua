@@ -1,3 +1,10 @@
+require('telescope').setup({
+  pickers = {
+    find_files = {
+      hidden = true,
+    },
+  },
+})
 require('telescope').load_extension('frecency')
 require('telescope').load_extension('undo')
 require('telescope').load_extension('undo')
