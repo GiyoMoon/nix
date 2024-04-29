@@ -82,12 +82,12 @@
         body = ''
           if [ "$mode" = "light" ]
             osascript -l JavaScript -e "Application('System Events').appearancePreferences.darkMode = false" > /dev/null
-            st_kitty "Catppuccin-Latte"
+            st_kitty "Rosé Pine Dawn"
             nvim --server /tmp/nvim.socket --remote-send ':LightTheme<CR>'
             echo "Switched to Light Theme"
           else if [ "$mode" = "dark" ]
             osascript -l JavaScript -e "Application('System Events').appearancePreferences.darkMode = true" > /dev/null
-            st_kitty "Catppuccin-Macchiato"
+            st_kitty "Tokyo Night Moon"
             nvim --server /tmp/nvim.socket --remote-send ':DarkTheme<CR>'
             echo "Switched to Dark Theme"
           else
