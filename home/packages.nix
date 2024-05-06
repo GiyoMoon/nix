@@ -77,13 +77,14 @@
     cloudflared
     hinode
     hyperfine
+    ripgrep
 
     # fonts
     (nerdfonts.override { fonts = [ "FiraCode" ]; })
     monaspace
 
     # javascript
-    nodejs_20
+    nodejs_22
     nodePackages.pnpm
     nodePackages.yarn
     bun
@@ -102,6 +103,7 @@
     vscode-langservers-extracted
     nodePackages.typescript-language-server
     elixir_ls
+    nodePackages."@astrojs/language-server"
 
     # formatters
     stylua

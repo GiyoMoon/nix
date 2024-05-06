@@ -1,5 +1,6 @@
 vim.keymap.set('n', 'Q', '<nop>')
 vim.keymap.set('i', '<C-n>', '<nop>')
+vim.keymap.set({ 'n', 'x' }, 's', '<nop>')
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>', { desc = 'Remove search highlights when pressing <Esc>' })
 vim.keymap.set('n', '<left>', '<cmd>echo "Silly you, use h to move :3"<CR>')
 vim.keymap.set('n', '<right>', '<cmd>echo "Silly you, use l to move :3"<CR>')
@@ -20,6 +21,7 @@ vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv", { desc = 'Move selected lines down'
 
 vim.keymap.set('x', '<leader>p', '"_dP', { desc = 'Paste without overriding the buffer' })
 vim.keymap.set('x', '<leader>rw', 'y:%s/<C-r>0/<C-r>0/gc<left><left><left>', { desc = 'Replace Selection' })
+vim.keymap.set('x', '/', '"sy:/\\V<C-r>s<CR>N', { desc = 'Search for selection' })
 
 -- [[ windows ]]
 vim.keymap.set('n', '<C-h>', '<C-w>h', { desc = 'Move focus to the left window' })

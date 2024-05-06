@@ -36,6 +36,7 @@ lspconfig.eslint.setup({
 })
 lspconfig.elixirls.setup({ capabilities = capabilities, cmd = { 'elixir-ls' } })
 lspconfig.mdx_analyzer.setup({})
+lspconfig.astro.setup({})
 
 vim.api.nvim_create_autocmd('LspAttach', {
   callback = function(event)

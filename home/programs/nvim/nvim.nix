@@ -15,6 +15,7 @@
       harpoon
       mini-nvim
       noice-nvim
+      nvim-spectre
       nvim-tree-lua
       nvim-treesitter.withAllGrammars
       nvim-ts-autotag
