@@ -12,7 +12,6 @@
       flash-nvim
       git-conflict-nvim
       gitsigns-nvim
-      harpoon
       mini-nvim
       noice-nvim
       nvim-spectre

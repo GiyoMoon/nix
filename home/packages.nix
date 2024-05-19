@@ -20,16 +20,6 @@
         sha256 = "sha256-rbFwQn52aoIUWhx+zyiJRqcdNRGaDowblpk/DCqHXUs=";
       }}" { };
       vimPlugins = super.vimPlugins // {
-        harpoon = super.vimUtils.buildVimPlugin {
-          pname = "harpoon";
-          version = "v2";
-          src = super.fetchFromGitHub {
-            owner = "ThePrimeagen";
-            repo = "harpoon";
-            rev = "0378a6c428a0bed6a2781d459d7943843f374bce";
-            sha256 = "sha256-FZQH38E02HuRPIPAog/nWM55FuBxKp8AyrEldFkoLYk=";
-          };
-        };
         cmp-tailwind-colors = super.vimUtils.buildVimPlugin {
           pname = "cmp-tailwind-colors";
           version = "main";
@@ -69,15 +59,17 @@
     gnupg
 
     # cli
-    wget
-    fd
-    ripgrep
-    hadolint
-    yt-dlp
     cloudflared
+    fd
+    gnused
+    (writeShellScriptBin "gsed" "exec ${gnused}/bin/sed \"$@\"")
+    hadolint
     hinode
     hyperfine
     ripgrep
+    ripgrep
+    wget
+    yt-dlp
 
     # fonts
     (nerdfonts.override { fonts = [ "FiraCode" ]; })
