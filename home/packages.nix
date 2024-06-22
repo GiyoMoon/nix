@@ -70,6 +70,8 @@
     ripgrep
     wget
     yt-dlp
+    ollama
+    minikube
 
     # fonts
     (nerdfonts.override { fonts = [ "FiraCode" ]; })
@@ -77,7 +79,7 @@
 
     # javascript
     nodejs_22
-    nodePackages.pnpm
+    pnpm
     nodePackages.yarn
     bun
 

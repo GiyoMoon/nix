@@ -16,7 +16,7 @@ vim.keymap.set('n', '<leader>fk', builtin.keymaps, { desc = '[F]ind [K]eymaps' }
 vim.keymap.set(
   'n',
   '<leader>fg',
-  ":lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>",
+  require('telescope').extensions.live_grep_args.live_grep_args,
   { desc = '[F]ind by [G]rep' }
 )
 vim.keymap.set('n', '<leader>fr', builtin.resume, { desc = '[F]ind [R]esume' })
