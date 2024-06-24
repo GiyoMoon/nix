@@ -11,14 +11,37 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nixvim = {
+      url = "github:nix-community/nixvim";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    cmp-tailwind-colors = {
+      url = "github:js-everts/cmp-tailwind-colors";
+      flake = false;
+    };
+    eldritch = {
+      url = "github:eldritch-theme/eldritch.nvim";
+      flake = false;
+    };
+    everforest = {
+      url = "github:neanias/everforest-nvim";
+      flake = false;
+    };
   };
 
   outputs =
-    { nixpkgs, home-manager, ... }:
-
+    {
+      nixpkgs,
+      home-manager,
+      nixvim,
+      ...
+    }@inputs:
     let
       system = "aarch64-darwin";
-      pkgs = nixpkgs.legacyPackages.${system};
+      pkgs = import nixpkgs {
+        inherit system;
+        overlays = [ (import ./overlays.nix inputs) ];
+      };
     in
     {
       nix.extraOptions = ''
@@ -29,7 +52,10 @@
       homeConfigurations.jasi = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
 
-        modules = [ ./home/home.nix ];
+        modules = [
+          nixvim.homeManagerModules.nixvim
+          ./home/home.nix
+        ];
       };
     };
 }

@@ -26,7 +26,7 @@
     ./programs/simple-bar.nix
     ./programs/starship.nix
     ./programs/yabai.nix
-    ./programs/nvim/nvim.nix
+    ./programs/nixvim
   ];
 
   home.activation = {
