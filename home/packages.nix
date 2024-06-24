@@ -11,17 +11,6 @@
     extraOptions = [ "--group-directories-first" ];
   };
 
-  nixpkgs.overlays = [
-    (self: super: {
-      hinode = pkgs.callPackage "${pkgs.fetchFromGitHub {
-        owner = "GiyoMoon";
-        repo = "hinode";
-        rev = "a15255357472fc19ba6b2a5272ec136e659d3e3c";
-        sha256 = "sha256-rbFwQn52aoIUWhx+zyiJRqcdNRGaDowblpk/DCqHXUs=";
-      }}" { };
-    })
-  ];
-
   home.packages = with pkgs; [
     pinentry_mac
     gnupg
@@ -32,7 +21,6 @@
     gnused
     (writeShellScriptBin "gsed" "exec ${gnused}/bin/sed \"$@\"")
     hadolint
-    hinode
     hyperfine
     ripgrep
     ripgrep
