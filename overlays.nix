@@ -9,9 +9,9 @@ inputs: self: super: {
         name = "eldritch";
         src = inputs.eldritch;
       };
-      everforest = super.vimUtils.buildVimPlugin {
-        name = "everforest";
-        src = inputs.everforest;
+      everforest-lua = super.vimUtils.buildVimPlugin {
+        name = "everforest-lua";
+        src = inputs.everforest-lua;
       };
     }
   );

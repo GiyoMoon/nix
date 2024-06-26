@@ -23,7 +23,7 @@
       url = "github:eldritch-theme/eldritch.nvim";
       flake = false;
     };
-    everforest = {
+    everforest-lua = {
       url = "github:neanias/everforest-nvim";
       flake = false;
     };

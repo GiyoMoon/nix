@@ -19,7 +19,7 @@
     extraPlugins = with pkgs.vimPlugins; [
       cmp-tailwind-colors
       eldritch
-      everforest
+      everforest-lua
       telescope-live-grep-args-nvim
     ];
   };

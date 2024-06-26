@@ -3,7 +3,6 @@
     plugins.treesitter = {
       enable = true;
       indent = true;
-      grammarPackages = [ ];
       languageRegister = {
         markdown = "mdx";
       };

@@ -54,7 +54,7 @@
         "type": "github"
       }
     },
-    "everforest": {
+    "everforest-lua": {
       "flake": false,
       "locked": {
         "lastModified": 1717597221,
@@ -297,7 +297,7 @@
       "inputs": {
         "cmp-tailwind-colors": "cmp-tailwind-colors",
         "eldritch": "eldritch",
-        "everforest": "everforest",
+        "everforest-lua": "everforest-lua",
         "home-manager": "home-manager",
         "nixpkgs": "nixpkgs",
         "nixvim": "nixvim"

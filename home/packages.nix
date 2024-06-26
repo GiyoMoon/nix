@@ -23,7 +23,6 @@
     hadolint
     hyperfine
     ripgrep
-    ripgrep
     wget
     yt-dlp
     ollama

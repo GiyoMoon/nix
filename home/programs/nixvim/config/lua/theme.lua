@@ -1,5 +1,10 @@
+-- catppuccin
+-- eldritch - dark only
+-- everforest
+-- rose-pine
+-- tokyonight
 local LIGHT_COLORSCHEME = 'rose-pine'
-local DARK_COLORSCHEME = 'tokyonight'
+local DARK_COLORSCHEME = 'eldritch'
 
 local light = function()
   vim.cmd.colorscheme(LIGHT_COLORSCHEME)
