@@ -1,6 +1,4 @@
 {
   imports = [ ./themes ];
-  programs.nixvim = {
-    extraConfigLuaPost = builtins.readFile ./lua/theme.lua;
-  };
+  programs.nixvim.extraConfigLua = builtins.readFile ./lua/theme.lua;
 }

@@ -12,6 +12,7 @@
     ./mini.nix
     ./noice.nix
     ./oil.nix
+    ./spectre.nix
     ./telescope.nix
     ./tree.nix
     ./treesitter.nix
