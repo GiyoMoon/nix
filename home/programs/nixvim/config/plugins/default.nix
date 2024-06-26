@@ -15,5 +15,6 @@
     ./telescope.nix
     ./tree.nix
     ./treesitter.nix
+    ./ts-context-commentstring.nix
   ];
 }
