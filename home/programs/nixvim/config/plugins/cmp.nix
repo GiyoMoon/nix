@@ -4,11 +4,12 @@
     cmp = {
       enable = true;
       settings = {
-        snippet.expand.__raw = ''
-          function(args)
-            require('luasnip').lsp_expand(args.body)
-          end
-        '';
+        snippet.expand.__raw = # lua
+          ''
+            function(args)
+              require('luasnip').lsp_expand(args.body)
+            end
+          '';
         mapping = {
           "<C-n>" = "cmp.mapping.select_next_item()";
           "<C-p>" = "cmp.mapping.select_prev_item()";

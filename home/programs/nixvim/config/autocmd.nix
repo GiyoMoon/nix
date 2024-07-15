@@ -5,11 +5,12 @@
         desc = "Highlight on yank";
         event = [ "TextYankPost" ];
         callback = {
-          __raw = ''
-            function()
-              vim.highlight.on_yank()
-            end
-          '';
+          __raw = # lua
+            ''
+              function()
+                vim.highlight.on_yank()
+              end
+            '';
         };
       }
       {

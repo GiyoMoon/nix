@@ -1,7 +1,8 @@
 {
-  programs.nixvim.extraConfigLua = ''
-    require('everforest').setup({
-      background = 'dark'
-    })
-  '';
+  programs.nixvim.extraConfigLua = # lua
+    ''
+      require('everforest').setup({
+        background = 'dark'
+      })
+    '';
 }

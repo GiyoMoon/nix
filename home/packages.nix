@@ -27,6 +27,7 @@
     yt-dlp
     ollama
     minikube
+    jq
 
     # fonts
     (nerdfonts.override { fonts = [ "FiraCode" ]; })
