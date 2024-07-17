@@ -4,14 +4,12 @@
       {
         desc = "Highlight on yank";
         event = [ "TextYankPost" ];
-        callback = {
-          __raw = # lua
-            ''
-              function()
-                vim.highlight.on_yank()
-              end
-            '';
-        };
+        callback.__raw = # lua
+          ''
+            function()
+              vim.highlight.on_yank()
+            end
+          '';
       }
       {
         desc = "Remove kitty padding on enter";

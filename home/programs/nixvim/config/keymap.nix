@@ -220,6 +220,15 @@
           desc = "Close diffview";
         };
       }
+      {
+        mode = "n";
+        key = "<leader>p";
+        action = ":lua require('otter').activate()<CR>";
+        options = {
+          desc = "Otter";
+          silent = true;
+        };
+      }
     ];
   };
 }

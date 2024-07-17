@@ -23,7 +23,7 @@ let
     "bruno"
     "discord"
     "docker"
-    "firefox-developer-edition"
+    # "firefox-developer-edition"
     "gimp"
     "google-chrome"
     "handbrake"
