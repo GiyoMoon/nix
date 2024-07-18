@@ -34,14 +34,15 @@
       run /opt/homebrew/bin/yabai --start-service
       run /opt/homebrew/bin/skhd --start-service
     '';
-    disableStartupSound = ''
-      run /usr/bin/sudo /usr/sbin/nvram StartupMute=%01
-    '';
-    sleepSetting = ''
-      run /usr/bin/sudo /usr/bin/pmset -a displaysleep 15
-    '';
-    disableInterfaceSounds = ''
-      run /usr/bin/defaults write com.apple.sound.uiaudio.enabled -bool false
-    '';
+    # TODO: Find a way to only run this on first activation
+    # disableStartupSound = ''
+    #   run /usr/bin/sudo /usr/sbin/nvram StartupMute=%01
+    # '';
+    # sleepSetting = ''
+    #   run /usr/bin/sudo /usr/bin/pmset -a displaysleep 15
+    # '';
+    # disableInterfaceSounds = ''
+    #   run /usr/bin/defaults write com.apple.sound.uiaudio.enabled -bool false
+    # '';
   };
 }

@@ -82,8 +82,8 @@
         body = ''
           if [ "$mode" = "light" ]
             osascript -l JavaScript -e "Application('System Events').appearancePreferences.darkMode = false" > /dev/null
-            # st_kitty "Rosé Pine Dawn"
-            st_kitty "Everforest Light Medium"
+            st_kitty "Rosé Pine Dawn"
+            # st_kitty "Everforest Light Medium"
             nvim --server /tmp/nvim.socket --remote-send ':LightTheme<CR>'
             echo "Switched to Light Theme"
           else if [ "$mode" = "dark" ]
