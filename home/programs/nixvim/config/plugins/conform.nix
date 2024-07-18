@@ -3,14 +3,15 @@
     plugins.conform-nvim = {
       enable = true;
       notifyOnError = true;
-      formatOnSave = ''
-        function(bufnr)
-          if vim.g.disable_autoformat or vim.b[bufnr].disable_autoformat then
-            return
+      formatOnSave = # lua
+        ''
+          function(bufnr)
+            if vim.g.disable_autoformat or vim.b[bufnr].disable_autoformat then
+              return
+            end
+            return { timeout_ms = 1500, lsp_fallback = false }
           end
-          return { timeout_ms = 1500, lsp_fallback = false }
-        end
-      '';
+        '';
       formattersByFt = {
         lua = [ "stylua" ];
         rust = [ "rustfmt" ];
