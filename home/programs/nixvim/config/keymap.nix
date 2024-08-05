@@ -96,6 +96,28 @@
           desc = "Find previous and keep cursor in the center";
         };
       }
+      {
+        mode = [
+          "n"
+          "x"
+        ];
+        key = "k";
+        action = "gk";
+        options = {
+          desc = "Navigate with line wrap";
+        };
+      }
+      {
+        mode = [
+          "n"
+          "x"
+        ];
+        key = "j";
+        action = "gj";
+        options = {
+          desc = "Navigate with line wrap";
+        };
+      }
       # [[ visual ]]
       {
         mode = "v";
