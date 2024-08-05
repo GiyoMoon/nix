@@ -8,8 +8,8 @@
     colorscheme = lib.mkForce null;
 
     defaultEditor = true;
-    # viAlias = true;
-    # vimAlias = true;
+    viAlias = true;
+    vimAlias = true;
 
     globals = {
       mapleader = " ";
@@ -21,6 +21,7 @@
       eldritch
       everforest-lua
       telescope-live-grep-args-nvim
+      markdown
     ];
   };
 }

@@ -27,6 +27,10 @@
       url = "github:neanias/everforest-nvim";
       flake = false;
     };
+    markdown = {
+      url = "github:MeanderingProgrammer/markdown.nvim";
+      flake = false;
+    };
   };
 
   outputs =

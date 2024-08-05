@@ -18,11 +18,17 @@
           enable = true;
           installCargo = false;
           installRustc = false;
+          extraOptions = {
+            settings = {
+              rust-analyzer = {
+                checkOnSave.command = "clippy";
+              };
+            };
+          };
         };
         tailwindcss.enable = true;
         cssls.enable = true;
         html.enable = true;
-        jsonls.enable = true;
         lua-ls = {
           enable = true;
           extraOptions = {
@@ -54,6 +60,62 @@
           cmd = [ "elixir-ls" ];
         };
         astro.enable = true;
+        jsonls = {
+          enable = true;
+          extraOptions = {
+            settings = {
+              json = {
+                schemas = [
+                  {
+                    fileMatch = [ "package.json" ];
+                    url = "https://json.schemastore.org/package.json";
+                  }
+                  {
+                    fileMatch = [ "tsconfig*.json" ];
+                    url = "https://json.schemastore.org/tsconfig.json";
+                  }
+                  {
+                    fileMatch = [
+                      ".prettierrc"
+                      ".prettierrc.json"
+                      "prettier.config.json"
+                    ];
+                    url = "https://json.schemastore.org/prettierrc.json";
+                  }
+                  {
+                    fileMatch = [
+                      ".eslintrc"
+                      ".eslintrc.json"
+                    ];
+                    url = "https://json.schemastore.org/eslintrc.json";
+                  }
+                  {
+                    fileMatch = [
+                      ".babelrc"
+                      ".babelrc.json"
+                      "babel.config.json"
+                    ];
+                    url = "https://json.schemastore.org/babelrc.json";
+                  }
+                ];
+              };
+            };
+          };
+        };
+        yamlls = {
+          enable = true;
+          extraOptions = {
+            settings = {
+              yaml = {
+                schemas = {
+                  "https://json.schemastore.org/github-workflow.json" = "/.github/workflows/*";
+                  "https://json.schemastore.org/github-action.json" = "/.github/actions/*";
+                  "https://raw.githubusercontent.com/compose-spec/compose-spec/master/schema/compose-spec.json" = "{docker-compose,compose}*.{yml,yaml}";
+                };
+              };
+            };
+          };
+        };
       };
       preConfig = ''
         require('lspconfig').mdx_analyzer.setup({})

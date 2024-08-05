@@ -64,9 +64,6 @@
       pex = "pnpm exec";
       plx = "pnpm dlx";
 
-      nvim = "nvim --listen /tmp/nvim.socket";
-      vim = "nvim";
-      vi = "nvim";
       v = "nvim";
 
       flutter = "fvm flutter";
@@ -84,13 +81,23 @@
             osascript -l JavaScript -e "Application('System Events').appearancePreferences.darkMode = false" > /dev/null
             st_kitty "Rosé Pine Dawn"
             # st_kitty "Everforest Light Medium"
-            nvim --server /tmp/nvim.socket --remote-send ':LightTheme<CR>'
+            set nvims "$TMPDIR"nvim."$USER"/*/nvim.*.0
+            if count $nvims >/dev/null
+              for i in (ls $nvims)
+                nvim --server $i --remote-send ':LightTheme<CR>'
+              end
+            end
             echo "Switched to Light Theme"
           else if [ "$mode" = "dark" ]
             osascript -l JavaScript -e "Application('System Events').appearancePreferences.darkMode = true" > /dev/null
             # st_kitty "Tokyo Night Moon"
             st_kitty "Everforest Dark Medium"
-            nvim --server /tmp/nvim.socket --remote-send ':DarkTheme<CR>'
+            set nvims "$TMPDIR"nvim."$USER"/*/nvim.*.0
+            if count $nvims >/dev/null
+              for i in (ls $nvims)
+                nvim --server $i --remote-send ':DarkTheme<CR>'
+              end
+            end
             echo "Switched to Dark Theme"
           else
             if [ (os_mode) = "dark" ]

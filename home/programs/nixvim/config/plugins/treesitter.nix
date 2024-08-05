@@ -9,6 +9,7 @@
         };
         languageRegister = {
           markdown = "mdx";
+          html = "mjml";
         };
       };
       ts-autotag.enable = true;
@@ -16,6 +17,7 @@
     filetype = {
       extension = {
         mdx = "mdx";
+        mjml = "mjml";
       };
     };
   };

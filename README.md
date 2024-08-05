@@ -1,7 +1,5 @@
 # .nix
-Jasi's macOS nix configs.
-
-Inspired by [@okkdev](https://github.com/okkdev)'s [Nix configs](https://github.com/okkdev/dotnix) 🌟
+My nix flake config to manage macOS.
 
 ## ⚡️ Installation
 ### ✨ Prerequisites

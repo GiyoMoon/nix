@@ -13,6 +13,10 @@ inputs: self: super: {
         name = "everforest-lua";
         src = inputs.everforest-lua;
       };
+      markdown = super.vimUtils.buildVimPlugin {
+        name = "markdown";
+        src = inputs.markdown;
+      };
     }
   );
 }
