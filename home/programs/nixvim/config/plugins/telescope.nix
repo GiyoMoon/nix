@@ -3,6 +3,9 @@
     plugins.telescope = {
       enable = true;
       settings = {
+        defaults = {
+          file_ignore_patterns = [ ".git" ];
+        };
         pickers = {
           find_files = {
             hidden = true;
@@ -10,7 +13,6 @@
         };
       };
       extensions = {
-        frecency.enable = true;
         undo.enable = true;
       };
       keymaps = {
@@ -64,9 +66,9 @@
       {
         mode = "n";
         key = "<leader><leader>";
-        action = "<cmd>Telescope frecency workspace=CWD<CR>";
+        action.__raw = "require('telescope').extensions['recent-files'].recent_files";
         options = {
-          desc = "Find by frecency";
+          desc = "Find recent files";
         };
       }
     ];

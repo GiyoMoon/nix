@@ -17,6 +17,10 @@ inputs: self: super: {
         name = "markdown";
         src = inputs.markdown;
       };
+      telescope-recent-files = super.vimUtils.buildVimPlugin {
+        name = "telescope-recent-files";
+        src = inputs.telescope-recent-files;
+      };
     }
   );
 }

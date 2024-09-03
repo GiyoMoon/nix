@@ -31,6 +31,10 @@
       url = "github:MeanderingProgrammer/markdown.nvim";
       flake = false;
     };
+    telescope-recent-files = {
+      url = "github:mollerhoj/telescope-recent-files.nvim";
+      flake = false;
+    };
   };
 
   outputs =

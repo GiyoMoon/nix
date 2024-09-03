@@ -3,7 +3,7 @@
 -- everforest
 -- rose-pine
 -- tokyonight
-local LIGHT_COLORSCHEME = 'rose-pine'
+local LIGHT_COLORSCHEME = 'everforest'
 local DARK_COLORSCHEME = 'everforest'
 
 local light = function()

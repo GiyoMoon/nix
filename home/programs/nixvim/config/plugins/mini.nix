@@ -24,7 +24,7 @@ in
           };
           items = [
             {
-              action = "Telescope frecency workspace=CWD";
+              action.__raw = "require('telescope').extensions['recent-files'].recent_files";
               name = "R: Recent";
               section = action_section;
             }

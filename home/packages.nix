@@ -28,10 +28,18 @@
     ollama
     minikube
     jq
+    lima
+    xz
+    toybox
 
     # fonts
-    (nerdfonts.override { fonts = [ "FiraCode" ]; })
-    monaspace
+    (nerdfonts.override {
+      fonts = [
+        "FiraCode"
+        "Agave"
+        "Monaspace"
+      ];
+    })
 
     # javascript
     nodejs_22

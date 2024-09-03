@@ -2,20 +2,22 @@
   programs.nixvim = {
     plugins.conform-nvim = {
       enable = true;
-      notifyOnError = true;
-      formatOnSave = # lua
-        ''
-          function(bufnr)
-            if vim.g.disable_autoformat or vim.b[bufnr].disable_autoformat then
-              return
+      settings = {
+        notify_on_error = true;
+        format_on_save = # lua
+          ''
+            function(bufnr)
+              if vim.g.disable_autoformat or vim.b[bufnr].disable_autoformat then
+                return
+              end
+              return { timeout_ms = 1500, lsp_fallback = false }
             end
-            return { timeout_ms = 1500, lsp_fallback = false }
-          end
-        '';
-      formattersByFt = {
-        lua = [ "stylua" ];
-        rust = [ "rustfmt" ];
-        nix = [ "nixfmt" ];
+          '';
+        formatters_by_ft = {
+          lua = [ "stylua" ];
+          rust = [ "rustfmt" ];
+          nix = [ "nixfmt" ];
+        };
       };
     };
     userCommands = {

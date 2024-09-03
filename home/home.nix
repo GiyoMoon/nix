@@ -21,11 +21,11 @@
     ./homebrew.nix
     ./programs/git.nix
     ./programs/kitty.nix
+    ./programs/nixvim
     ./programs/shell.nix
     ./programs/simple-bar.nix
     ./programs/starship.nix
     ./programs/yabai.nix
-    ./programs/nixvim
   ];
 
   home.activation = {
