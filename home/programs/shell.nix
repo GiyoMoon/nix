@@ -76,65 +76,86 @@
       st = {
         argumentNames = "mode";
         description = "switches global theme";
-        body = ''
-          if [ "$mode" = "light" ]
-            osascript -l JavaScript -e "Application('System Events').appearancePreferences.darkMode = false" > /dev/null
-            # st_kitty "Rosé Pine Dawn"
-            st_kitty "Everforest Light Medium"
-            set nvims "$TMPDIR"nvim."$USER"/*/nvim.*.0
-            if count $nvims >/dev/null
-              for i in (ls $nvims)
-                nvim --server $i --remote-send ':LightTheme<CR>'
+        body = # fish
+          ''
+            if [ "$mode" = "light" ]
+              osascript -l JavaScript -e "Application('System Events').appearancePreferences.darkMode = false" > /dev/null
+              # st_kitty "Rosé Pine Dawn"
+              st_kitty "Everforest Light Medium"
+              set nvims "$TMPDIR"nvim."$USER"/*/nvim.*.0
+              if count $nvims >/dev/null
+                for i in (ls $nvims)
+                  nvim --server $i --remote-send ':LightTheme<CR>'
+                end
               end
-            end
-            echo "Switched to Light Theme"
-          else if [ "$mode" = "dark" ]
-            osascript -l JavaScript -e "Application('System Events').appearancePreferences.darkMode = true" > /dev/null
-            # st_kitty "Tokyo Night Moon"
-            st_kitty "Everforest Dark Medium"
-            set nvims "$TMPDIR"nvim."$USER"/*/nvim.*.0
-            if count $nvims >/dev/null
-              for i in (ls $nvims)
-                nvim --server $i --remote-send ':DarkTheme<CR>'
+              echo "Switched to Light Theme"
+            else if [ "$mode" = "dark" ]
+              osascript -l JavaScript -e "Application('System Events').appearancePreferences.darkMode = true" > /dev/null
+              # st_kitty "Tokyo Night Moon"
+              st_kitty "Everforest Dark Medium"
+              set nvims "$TMPDIR"nvim."$USER"/*/nvim.*.0
+              if count $nvims >/dev/null
+                for i in (ls $nvims)
+                  nvim --server $i --remote-send ':DarkTheme<CR>'
+                end
               end
-            end
-            echo "Switched to Dark Theme"
-          else
-            if [ (os_mode) = "dark" ]
-              st "light"
+              echo "Switched to Dark Theme"
             else
-              st "dark"
+              if [ (os_mode) = "dark" ]
+                st "light"
+              else
+                st "dark"
+              end
             end
-          end
-        '';
+          '';
       };
       st_kitty = {
         argumentNames = "theme_name";
         description = "changes the kitty terminal theme";
-        body = ''
-          if [ -z "$theme_name" ]
-            echo "Please pass a theme as argument"
-            return
-          end
+        body = # fish
+          ''
+            if [ -z "$theme_name" ]
+              echo "Please pass a theme as argument"
+              return
+            end
 
-          set -l current_theme (realpath ~/.config/kitty/current-theme.conf)
+            set -l current_theme (realpath ~/.config/kitty/current-theme.conf)
 
-          if kitty +kitten themes --dump-theme $theme_name > $current_theme
-            kitty @ --to unix:/tmp/kitty set-colors -a -c $current_theme
-          else
-            echo "Theme not found"
-          end
-        '';
+            if kitty +kitten themes --dump-theme $theme_name > $current_theme
+              kitty @ --to unix:/tmp/kitty set-colors -a -c $current_theme
+            else
+              echo "Theme not found"
+            end
+          '';
       };
       os_mode = {
         description = "get the current appearance mode of the system";
-        body = ''
-          if [ (defaults read -g AppleInterfaceStyle 2> /dev/null) ]
-            echo "dark"
-          else
-            echo "light"
-          end
-        '';
+        body = # fish
+          ''
+            if [ (defaults read -g AppleInterfaceStyle 2> /dev/null) ]
+              echo "dark"
+            else
+              echo "light"
+            end
+          '';
+      };
+      ns = {
+        description = "nix shell shortcut";
+        body = # fish
+          ''
+            if test (count $argv) -eq 0
+                echo "Error: Please provide at least one package name"
+                return 1
+            end
+
+            set nix_shell_cmd "nix shell"
+
+            for pkg in $argv
+                set nix_shell_cmd "$nix_shell_cmd nixpkgs#$pkg"
+            end
+
+            eval $nix_shell_cmd
+          '';
       };
     };
   };

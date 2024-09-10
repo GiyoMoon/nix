@@ -27,7 +27,6 @@
         "$cmd_duration"
 
         "$line_break"
-        # "$nix_shell"
         "$character"
       ];
 
@@ -104,12 +103,6 @@
         success_symbol = "❯";
         error_symbol = "[❯](fg:red)";
       };
-
-      # nix_shell = {
-      #   format = "[$symbol ($name)](fg:cyan) ";
-      #   symbol = "";
-      # };
-      # docker_context.symbol = "";
     };
   };
 }

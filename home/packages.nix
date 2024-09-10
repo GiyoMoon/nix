@@ -30,7 +30,6 @@
     jq
     lima
     xz
-    toybox
 
     # fonts
     (nerdfonts.override {
@@ -53,6 +52,7 @@
 
     # mobile development
     cocoapods
+    temurin-bin-17
 
     # LSPs
     lua-language-server

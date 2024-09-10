@@ -2,10 +2,8 @@
   description = "Jasi's macOS nix config 🦇";
 
   inputs = {
-    # Stable: github:NixOS/nixpkgs/nixos-23.11
-    # Unstable: github:NixOS/nixpkgs/nixos-unstable
     nixpkgs = {
-      url = "github:NixOS/nixpkgs/nixos-unstable";
+      url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     };
     home-manager = {
       url = "github:nix-community/home-manager";
