@@ -37,6 +37,7 @@ let
     "stremio"
     "ubersicht"
     "vlc"
+    "yaak"
     # "firefox-developer-edition"
 
     "steam"

@@ -30,6 +30,8 @@
     jq
     lima
     xz
+    fastlane
+    coreutils
 
     # fonts
     (nerdfonts.override {
