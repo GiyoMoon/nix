@@ -11,18 +11,19 @@ let
   brews = [
     "skhd"
     "yabai"
+    "handbrake"
   ];
 
   casks = [
     "1password"
     "aldente"
     "android-commandlinetools"
-    "android-file-transfer"
     "arc"
     "beekeeper-studio"
     "bruno"
     "discord"
     "docker"
+    "firefox"
     "gimp"
     "google-chrome"
     "handbrake"
@@ -32,13 +33,14 @@ let
     "obsidian"
     "parsec"
     "pika"
+    "prismlauncher"
     "qbittorrent"
     "raycast"
     "stremio"
     "ubersicht"
     "vlc"
     "yaak"
-    # "firefox-developer-edition"
+    "zen-browser"
 
     "steam"
     "minecraft"

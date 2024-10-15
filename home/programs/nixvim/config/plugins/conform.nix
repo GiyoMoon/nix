@@ -22,7 +22,7 @@
     };
     userCommands = {
       Format = {
-        command = ''
+        command.__raw = ''
           function(args)
             local range = nil
             if args.count ~= -1 then
@@ -38,7 +38,7 @@
         range = true;
       };
       FormatDisable = {
-        command = ''
+        command.__raw = ''
           function(args)
             if args.bang then
               vim.b.disable_autoformat = true
@@ -51,7 +51,7 @@
         bang = true;
       };
       FormatEnable = {
-        command = ''
+        command.__raw = ''
           function()
             vim.b.disable_autoformat = false
             vim.g.disable_autoformat = false

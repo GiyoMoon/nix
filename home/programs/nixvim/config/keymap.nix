@@ -22,7 +22,7 @@
       {
         mode = "n";
         key = "<Esc>";
-        action = "<cmd>nohlsearch<CR>";
+        action = "<cmd>nohlsearch<CR><Esc>";
         options = {
           desc = "Remove search highlights when pressing <Esc>";
         };

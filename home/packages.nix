@@ -26,12 +26,12 @@
     wget
     yt-dlp
     ollama
-    minikube
     jq
     lima
     xz
     fastlane
     coreutils
+    kubectl
 
     # fonts
     (nerdfonts.override {
@@ -39,6 +39,7 @@
         "FiraCode"
         "Agave"
         "Monaspace"
+        "CascadiaCode"
       ];
     })
 
@@ -78,5 +79,8 @@
     })
     php83Packages.composer
     php83Extensions.imagick
+
+    # UI
+    lens
   ];
 }

@@ -8,6 +8,7 @@
     ./flash.nix
     ./git-conflict.nix
     ./gitsigns.nix
+    ./hex.nix
     ./lsp.nix
     ./markdown.nix
     ./mini.nix

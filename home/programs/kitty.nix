@@ -14,8 +14,7 @@
       "--listen-on=unix:/tmp/kitty"
     ];
     font = {
-      # name = "FiraCode Nerd Font";
-      name = "Monaspice Nerd Font";
+      name = "CaskaydiaCove Nerd Font Mono";
       size = 18;
     };
     keybindings = {

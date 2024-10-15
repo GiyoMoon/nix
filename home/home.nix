@@ -41,8 +41,11 @@
     # sleepSetting = ''
     #   run /usr/bin/sudo /usr/bin/pmset -a displaysleep 15
     # '';
-    # disableInterfaceSounds = ''
-    #   run /usr/bin/defaults write com.apple.sound.uiaudio.enabled -bool false
-    # '';
+    disableInterfaceSounds = ''
+      run /usr/bin/defaults write com.apple.sound.uiaudio.enabled -bool false
+    '';
+    dsDontWriteNetworkStores = ''
+      run /usr/bin/defaults write com.apple.desktopservices DSDontWriteNetworkStores true
+    '';
   };
 }

@@ -47,6 +47,11 @@
       pkgs = import nixpkgs {
         inherit system;
         overlays = [ (import ./overlays.nix inputs) ];
+        config.allowUnfreePredicate =
+          pkg:
+          builtins.elem (nixpkgs.lib.getName pkg) [
+            "lens-desktop"
+          ];
       };
     in
     {

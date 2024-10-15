@@ -70,6 +70,8 @@
       dart = "fvm dart";
 
       pa = "php artisan";
+
+      k = "kubectl";
     };
 
     functions = {
