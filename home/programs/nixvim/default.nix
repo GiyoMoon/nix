@@ -16,6 +16,8 @@
       maplocalleader = " ";
     };
 
+    plugins.web-devicons.enable = true;
+
     extraPlugins = with pkgs.vimPlugins; [
       cmp-tailwind-colors
       eldritch

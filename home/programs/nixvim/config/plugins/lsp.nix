@@ -3,8 +3,8 @@
     plugins.lsp = {
       enable = true;
       servers = {
-        nil-ls.enable = true;
-        ts-ls = {
+        nil_ls.enable = true;
+        ts_ls = {
           enable = true;
           extraOptions = {
             init_options = {
@@ -14,7 +14,7 @@
             };
           };
         };
-        rust-analyzer = {
+        rust_analyzer = {
           enable = true;
           installCargo = false;
           installRustc = false;
@@ -29,7 +29,7 @@
         tailwindcss.enable = true;
         cssls.enable = true;
         html.enable = true;
-        lua-ls = {
+        lua_ls = {
           enable = true;
           extraOptions = {
             settings = {
