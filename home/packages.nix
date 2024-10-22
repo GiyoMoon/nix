@@ -6,7 +6,7 @@
   programs.bat.enable = true;
   programs.eza = {
     enable = true;
-    icons = true;
+    icons = "auto";
     git = true;
     extraOptions = [ "--group-directories-first" ];
   };
@@ -32,6 +32,7 @@
     fastlane
     coreutils
     kubectl
+    rcon
 
     # fonts
     (nerdfonts.override {
@@ -40,6 +41,7 @@
         "Agave"
         "Monaspace"
         "CascadiaCode"
+        "GeistMono"
       ];
     })
 

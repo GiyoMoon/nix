@@ -1,6 +1,6 @@
 {
   programs.nixvim.extraConfigLua = # lua
     ''
-      require('render-markdown').setup()
+      require('render-markdown').setup({ latex = { enabled = false } })
     '';
 }

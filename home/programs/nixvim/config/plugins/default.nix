@@ -14,7 +14,8 @@
     ./mini.nix
     ./noice.nix
     ./oil.nix
-    ./otter.nix
+    # Somehow active in .astro files
+    # ./otter.nix
     ./spectre.nix
     ./telescope.nix
     ./tree.nix
