@@ -13,7 +13,7 @@
                   local line_count = vim.api.nvim_buf_line_count(buf)
                   if line_count == 1 then
                     local line = vim.api.nvim_buf_get_lines(buf, 0, 1, false)[1]
-                      if #line > max_line_length then
+                        if line ~= nil and #line > max_char_count then
                         return true
                       else
                         return false
