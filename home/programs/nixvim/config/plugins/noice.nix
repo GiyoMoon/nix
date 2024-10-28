@@ -2,7 +2,7 @@
   programs.nixvim.plugins = {
     notify = {
       enable = true;
-      timeout = 2500;
+      timeout = 1000;
     };
     noice = {
       enable = true;
@@ -17,56 +17,11 @@
         "vim.lsp.util.convert_input_to_markdown_lines" = true;
         "vim.lsp.util.stylize_markdown" = true;
       };
-      routes = [
-        {
-          filter = {
-            event = "msg_show";
-            kind = "";
-            find = "written";
-          };
-          view = "mini";
-        }
-        {
-          filter = {
-            event = "wsg_show";
-            kind = "";
-            find = "more line";
-          };
-          view = "mini";
-        }
-        {
-          filter = {
-            event = "msg_show";
-            kind = "";
-            find = "fewer line";
-          };
-          view = "mini";
-        }
-        {
-          filter = {
-            event = "msg_show";
-            kind = "";
-            find = "lines yanked";
-          };
-          view = "mini";
-        }
-        {
-          filter = {
-            event = "msg_show";
-            kind = "";
-            find = "change; after";
-          };
-          view = "mini";
-        }
-        {
-          filter = {
-            event = "msg_show";
-            kind = "";
-            find = "change; before";
-          };
-          view = "mini";
-        }
-      ];
+      messages = {
+        enabled = true;
+        view = "mini";
+        viewError = "notify";
+      };
     };
   };
 }
