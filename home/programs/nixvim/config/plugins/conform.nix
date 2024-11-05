@@ -14,9 +14,16 @@
             end
           '';
         formatters_by_ft = {
+          css = [ "biome" ];
+          javascript = [ "biome" ];
+          javascriptreact = [ "biome" ];
+          json = [ "biome" ];
+          jsonc = [ "biome" ];
           lua = [ "stylua" ];
-          rust = [ "rustfmt" ];
           nix = [ "nixfmt" ];
+          rust = [ "rustfmt" ];
+          typescript = [ "biome" ];
+          typescriptreact = [ "biome" ];
         };
       };
     };

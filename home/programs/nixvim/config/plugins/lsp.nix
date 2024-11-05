@@ -55,6 +55,9 @@
               '';
           };
         };
+        biome = {
+          enable = true;
+        };
         elixirls = {
           enable = true;
           cmd = [ "elixir-ls" ];

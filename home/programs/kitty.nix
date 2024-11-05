@@ -41,6 +41,8 @@
 
       allow_remote_control = "socket-only";
       listen_on = "unix:/tmp/kitty";
+      cursor_trail = 1;
+      cursor_trail_decay = "0.01 0.09";
     };
     extraConfig = "include current-theme.conf";
   };

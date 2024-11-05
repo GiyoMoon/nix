@@ -22,7 +22,6 @@ let
     "beekeeper-studio"
     "bruno"
     "discord"
-    "docker"
     "firefox"
     "gimp"
     "google-chrome"
@@ -30,20 +29,20 @@ let
     "hoppscotch"
     "kitty"
     "licecap"
+    "minecraft"
     "obsidian"
+    "orbstack"
     "parsec"
     "pika"
     "prismlauncher"
     "qbittorrent"
     "raycast"
+    "steam"
     "stremio"
     "ubersicht"
     "vlc"
     "yaak"
     "zen-browser"
-
-    "steam"
-    "minecraft"
   ];
 
   mas = [
