@@ -4,6 +4,7 @@
       enable = true;
       settings = {
         notify_on_error = true;
+        notify_on_no_formatters = false;
         format_on_save = # lua
           ''
             function(bufnr)
@@ -14,6 +15,7 @@
             end
           '';
         formatters_by_ft = {
+          astro = [ "biome" ];
           css = [ "biome" ];
           javascript = [ "biome" ];
           javascriptreact = [ "biome" ];
@@ -24,6 +26,15 @@
           rust = [ "rustfmt" ];
           typescript = [ "biome" ];
           typescriptreact = [ "biome" ];
+        };
+        formatters = {
+          biome.condition.__raw = # lua
+            ''
+              function(ctx)
+                local config_exists = vim.fs.find({ 'biome.json' }, { upward = true, path = ctx.filename })
+                return not vim.tbl_isempty(config_exists)
+              end
+            '';
         };
       };
     };
