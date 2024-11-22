@@ -63,14 +63,6 @@
           desc = "[F]ind [U]ndo";
         };
       }
-      {
-        mode = "n";
-        key = "<leader><leader>";
-        action.__raw = "require('telescope').extensions['recent-files'].recent_files";
-        options = {
-          desc = "Find recent files";
-        };
-      }
     ];
   };
 }

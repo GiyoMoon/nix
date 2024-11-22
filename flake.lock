@@ -355,8 +355,7 @@
         "home-manager": "home-manager",
         "markdown": "markdown",
         "nixpkgs": "nixpkgs",
-        "nixvim": "nixvim",
-        "telescope-recent-files": "telescope-recent-files"
+        "nixvim": "nixvim"
       }
     },
     "systems": {
@@ -371,22 +370,6 @@
       "original": {
         "owner": "nix-systems",
         "repo": "default",
-        "type": "github"
-      }
-    },
-    "telescope-recent-files": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1723635287,
-        "narHash": "sha256-nLy1WciLIjIqrD1az6JEXcx5EvaZSn8gBQ6HzQIhAp0=",
-        "owner": "mollerhoj",
-        "repo": "telescope-recent-files.nvim",
-        "rev": "23b29aa701cd07c723282b3094e1a4dfc231f557",
-        "type": "github"
-      },
-      "original": {
-        "owner": "mollerhoj",
-        "repo": "telescope-recent-files.nvim",
         "type": "github"
       }
     },

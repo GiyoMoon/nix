@@ -24,11 +24,6 @@ in
           };
           items = [
             {
-              action.__raw = "require('telescope').extensions['recent-files'].recent_files";
-              name = "R: Recent";
-              section = action_section;
-            }
-            {
               action = "Telescope find_files";
               name = "F: Find Files";
               section = action_section;
