@@ -6,12 +6,14 @@ let
     "homebrew/services"
     # yabai and skhd
     "koekeishiya/formulae"
+    "mac-cleanup/mac-cleanup-py"
   ];
 
   brews = [
     "skhd"
     "yabai"
     "handbrake"
+    "mac-cleanup-py"
   ];
 
   casks = [
@@ -29,20 +31,15 @@ let
     "hoppscotch"
     "kitty"
     "licecap"
-    "minecraft"
     "obsidian"
     "orbstack"
     "parsec"
     "pika"
-    "prismlauncher"
-    "qbittorrent"
     "raycast"
     "steam"
     "stremio"
     "ubersicht"
     "vlc"
-    "yaak"
-    "zen-browser"
   ];
 
   mas = [

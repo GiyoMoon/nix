@@ -82,8 +82,8 @@
           ''
             if [ "$mode" = "light" ]
               osascript -l JavaScript -e "Application('System Events').appearancePreferences.darkMode = false" > /dev/null
-              # st_kitty "Rosé Pine Dawn"
-              st_kitty "Everforest Light Medium"
+              st_kitty "Rosé Pine Dawn"
+              # st_kitty "Everforest Light Medium"
               set nvims "$TMPDIR"nvim."$USER"/*/nvim.*.0
               if count $nvims >/dev/null
                 for i in (ls $nvims)
@@ -94,7 +94,9 @@
             else if [ "$mode" = "dark" ]
               osascript -l JavaScript -e "Application('System Events').appearancePreferences.darkMode = true" > /dev/null
               # st_kitty "Tokyo Night Moon"
-              st_kitty "Everforest Dark Medium"
+              # st_kitty "Everforest Dark Medium"
+              # st_kitty "Eldritch"
+              st_kitty "Rosé Pine"
               set nvims "$TMPDIR"nvim."$USER"/*/nvim.*.0
               if count $nvims >/dev/null
                 for i in (ls $nvims)

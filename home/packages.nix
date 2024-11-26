@@ -33,6 +33,7 @@
     coreutils
     kubectl
     rcon
+    mgitstatus
 
     # fonts
     (nerdfonts.override {
