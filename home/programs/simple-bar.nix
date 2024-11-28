@@ -1,16 +1,8 @@
-{ pkgs, ... }:
+{ inputs, ... }:
 
-let
-  simple_bar = pkgs.fetchFromGitHub {
-    owner = "Jean-Tinland";
-    repo = "simple-bar";
-    rev = "21b4ebd0416475f181252171e9a42b909688128f";
-    sha256 = "sha256-3eB7Xwu2Bsf0PxXFsuVsRGiQYkgzqricUnA7aJLEtms=";
-  };
-in
 {
   home = {
-    file."Library/Application Support/Übersicht/widgets/simple-bar".source = simple_bar;
+    file."Library/Application Support/Übersicht/widgets/simple-bar".source = inputs.simple-bar;
 
     file.".simplebarrc".text = # json
       ''

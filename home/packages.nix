@@ -36,16 +36,11 @@
     mgitstatus
     dust
 
-    # fonts
-    (nerdfonts.override {
-      fonts = [
-        "FiraCode"
-        "Agave"
-        "Monaspace"
-        "CascadiaCode"
-        "GeistMono"
-      ];
-    })
+    nerd-fonts.fira-code
+    nerd-fonts.agave
+    nerd-fonts.monaspace
+    nerd-fonts.caskaydia-cove
+    nerd-fonts.geist-mono
 
     # javascript
     nodejs_22

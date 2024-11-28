@@ -29,6 +29,14 @@
       url = "github:MeanderingProgrammer/markdown.nvim";
       flake = false;
     };
+    simple-bar = {
+      url = "github:Jean-Tinland/simple-bar";
+      flake = false;
+    };
+    puffer-fish = {
+      url = "github:nickeb96/puffer-fish";
+      flake = false;
+    };
   };
 
   outputs =
@@ -58,6 +66,9 @@
 
       homeConfigurations.jasi = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
+        extraSpecialArgs = {
+          inherit inputs;
+        };
 
         modules = [
           nixvim.homeManagerModules.nixvim
