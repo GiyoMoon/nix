@@ -59,6 +59,7 @@
       ls = "eza";
       cat = "bat";
       find = "fd";
+      du = "dust";
 
       p = "pnpm";
       pex = "pnpm exec";

@@ -34,6 +34,7 @@
     kubectl
     rcon
     mgitstatus
+    dust
 
     # fonts
     (nerdfonts.override {
