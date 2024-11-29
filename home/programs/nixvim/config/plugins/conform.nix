@@ -15,7 +15,7 @@
             end
           '';
         formatters_by_ft = {
-          astro = [ "biome" ];
+          astro = [ "prettierd" ];
           css = [ "biome" ];
           javascript = [ "biome" ];
           javascriptreact = [ "biome" ];
@@ -32,6 +32,13 @@
             ''
               function(ctx)
                 local config_exists = vim.fs.find({ 'biome.json' }, { upward = true, path = ctx.filename })
+                return not vim.tbl_isempty(config_exists)
+              end
+            '';
+          prettierd.condition.__raw = # lua
+            ''
+              function(ctx)
+                local config_exists = vim.fs.find({ 'prettier.config.mjs' }, { upward = true, path = ctx.filename })
                 return not vim.tbl_isempty(config_exists)
               end
             '';

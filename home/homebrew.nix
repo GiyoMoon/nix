@@ -35,6 +35,7 @@ let
     "orbstack"
     "parsec"
     "pika"
+    "prismlauncher"
     "raycast"
     "steam"
     "stremio"

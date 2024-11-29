@@ -13,6 +13,7 @@
             "noBarBg": true,
             "noColorInData": false,
             "bottomBar": false,
+            "sideDecoration": false,
             "inlineSpacesOptions": false,
             "disableNotifications": true,
             "compactMode": true,
@@ -23,6 +24,7 @@
             "fontSize": "11px",
             "yabaiPath": "/opt/homebrew/bin/yabai",
             "shell": "sh",
+            "terminal": "Terminal",
             "slidingAnimationPace": 4,
             "externalConfigFile": true,
             "enableServer": false,
@@ -30,16 +32,17 @@
             "yabaiServerRefresh": false
           },
           "themes": {
-            "lightTheme": "OneLight",
-            "darkTheme": "NightShiftDark"
+            "lightTheme": "RosePineDawn",
+            "darkTheme": "RosePine"
           },
           "process": {
             "showOnDisplay": "",
             "displayOnlyCurrent": false,
             "centered": false,
-            "showCurrentSpaceMode": true,
+            "showCurrentSpaceMode": false,
             "hideWindowTitle": true,
             "displayOnlyIcon": true,
+            "expandAllProcesses": false,
             "displaySkhdMode": false,
             "displayStackIndex": false,
             "displayOnlyCurrentStack": false
@@ -62,7 +65,7 @@
             "processWidget": false,
             "weatherWidget": false,
             "netstatsWidget": false,
-            "cpuWidget": false,
+            "cpuWidget": true,
             "batteryWidget": true,
             "wifiWidget": true,
             "vpnWidget": false,
@@ -96,7 +99,8 @@
           "cpuWidgetOptions": {
             "refreshFrequency": 2000,
             "showOnDisplay": "",
-            "displayAsGraph": false
+            "displayAsGraph": false,
+            "cpuMonitorApp": "Top"
           },
           "batteryWidgetOptions": {
             "refreshFrequency": 10000,

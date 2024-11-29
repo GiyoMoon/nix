@@ -69,6 +69,7 @@
     # formatters
     stylua
     nixfmt-rfc-style
+    prettierd
 
     # php stuff :(
     (php83.buildEnv {
