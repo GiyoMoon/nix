@@ -64,6 +64,7 @@
           cmd = [ "elixir-ls" ];
         };
         astro.enable = true;
+        gleam.enable = true;
         jsonls = {
           enable = true;
           extraOptions = {

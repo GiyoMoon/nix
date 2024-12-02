@@ -40,6 +40,7 @@ let
     "steam"
     "stremio"
     "ubersicht"
+    "utm"
     "vlc"
   ];
 

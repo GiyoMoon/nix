@@ -35,6 +35,7 @@
     rcon
     mgitstatus
     dust
+    gh
 
     nerd-fonts.fira-code
     nerd-fonts.agave
@@ -51,6 +52,9 @@
     rustup
     elixir_1_16
     sqlx-cli
+    gleam
+    erlang_27
+    rebar3
 
     # mobile development
     cocoapods

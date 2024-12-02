@@ -26,6 +26,7 @@
           rust = [ "rustfmt" ];
           typescript = [ "biome" ];
           typescriptreact = [ "biome" ];
+          gleam = [ "gleam" ];
         };
         formatters = {
           biome.condition.__raw = # lua
