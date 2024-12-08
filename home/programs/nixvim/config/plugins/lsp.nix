@@ -1,3 +1,5 @@
+{ pkgs, ... }:
+
 {
   programs.nixvim = {
     plugins.lsp = {
@@ -27,7 +29,10 @@
             };
           };
         };
-        tailwindcss.enable = true;
+        tailwindcss = {
+          enable = true;
+          package = pkgs.tailwind-ls;
+        };
         cssls.enable = true;
         html.enable = true;
         lua_ls = {
@@ -115,7 +120,8 @@
                 schemas = {
                   "https://json.schemastore.org/github-workflow.json" = "/.github/workflows/*";
                   "https://json.schemastore.org/github-action.json" = "/.github/actions/*";
-                  "https://raw.githubusercontent.com/compose-spec/compose-spec/master/schema/compose-spec.json" = "{docker-compose,compose}*.{yml,yaml}";
+                  "https://raw.githubusercontent.com/compose-spec/compose-spec/master/schema/compose-spec.json" =
+                    "{docker-compose,compose}*.{yml,yaml}";
                 };
               };
             };

@@ -60,16 +60,6 @@
     cocoapods
     temurin-bin-17
 
-    # LSPs
-    biome
-    elixir_ls
-    lua-language-server
-    nil
-    nodePackages."@astrojs/language-server"
-    nodePackages.typescript-language-server
-    tailwindcss-language-server
-    vscode-langservers-extracted
-
     # formatters
     stylua
     nixfmt-rfc-style
