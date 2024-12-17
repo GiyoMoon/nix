@@ -13,10 +13,6 @@
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    cmp-tailwind-colors = {
-      url = "github:js-everts/cmp-tailwind-colors";
-      flake = false;
-    };
     eldritch = {
       url = "github:eldritch-theme/eldritch.nvim";
       flake = false;
@@ -35,6 +31,10 @@
     };
     puffer-fish = {
       url = "github:nickeb96/puffer-fish";
+      flake = false;
+    };
+    blink-cmp-copilot = {
+      url = "github:giuxtaposition/blink-cmp-copilot";
       flake = false;
     };
   };

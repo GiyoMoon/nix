@@ -1,6 +1,6 @@
 {
   imports = [
-    ./cmp.nix
+    ./blink-cmp.nix
     ./conform.nix
     ./copilot.nix
     ./debugprint.nix
@@ -14,8 +14,6 @@
     ./mini.nix
     ./noice.nix
     ./oil.nix
-    # Somehow active in .astro files
-    # ./otter.nix
     ./spectre.nix
     ./telescope.nix
     ./tree.nix

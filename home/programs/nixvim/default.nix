@@ -19,11 +19,11 @@
     plugins.web-devicons.enable = true;
 
     extraPlugins = with pkgs.vimPlugins; [
-      cmp-tailwind-colors
       eldritch
       everforest-lua
       telescope-live-grep-args-nvim
       markdown
+      blink-cmp-copilot
     ];
   };
 }
