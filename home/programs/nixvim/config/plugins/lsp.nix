@@ -2,7 +2,7 @@
   programs.nixvim = {
     plugins.lsp = {
       enable = true;
-      capabilities = "capabilities = require('blink.cmp').get_lsp_capabilities()";
+      capabilities = "capabilities = require('blink.cmp').get_lsp_capabilities(nil, true)";
       servers = {
         nil_ls.enable = true;
         ts_ls = {

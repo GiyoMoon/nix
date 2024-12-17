@@ -9,7 +9,7 @@
           auto_show_delay_ms = 0;
         };
         list = {
-          selection = "manual";
+          selection = "auto_insert";
         };
         menu = {
           draw = {
