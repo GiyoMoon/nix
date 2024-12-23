@@ -9,12 +9,15 @@
           auto_show_delay_ms = 0;
         };
         list = {
-          selection = "auto_insert";
+          selection = "preselect";
         };
         menu = {
           draw = {
             gap = 2;
-            treesitter = true;
+            treesitter = [
+              "lsp"
+              "copilot"
+            ];
             columns = [
               {
                 __unkeyed-1 = "label";
@@ -43,21 +46,14 @@
         };
       };
       sources = {
-        # Future release
-        # default = [
-        #   "lsp"
-        #   "path"
-        #   "snippets"
-        #   "buffer"
-        #   "copilot"
-        # ];
-        completion.enabled_providers = [
+        default = [
           "lsp"
           "path"
           "snippets"
           "buffer"
           "copilot"
         ];
+        cmdline.__raw = "{}";
         providers = {
           copilot = {
             name = "copilot";
