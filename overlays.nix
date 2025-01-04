@@ -13,10 +13,6 @@ inputs: self: super: {
         name = "markdown";
         src = inputs.markdown;
       };
-      blink-cmp-copilot = super.vimUtils.buildVimPlugin {
-        name = "blink-cmp-copilot";
-        src = inputs.blink-cmp-copilot;
-      };
     }
   );
 }

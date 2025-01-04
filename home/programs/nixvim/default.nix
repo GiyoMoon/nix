@@ -23,7 +23,6 @@
       everforest-lua
       telescope-live-grep-args-nvim
       markdown
-      blink-cmp-copilot
     ];
   };
 }

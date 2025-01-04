@@ -33,10 +33,6 @@
       url = "github:nickeb96/puffer-fish";
       flake = false;
     };
-    blink-cmp-copilot = {
-      url = "github:giuxtaposition/blink-cmp-copilot";
-      flake = false;
-    };
   };
 
   outputs =
