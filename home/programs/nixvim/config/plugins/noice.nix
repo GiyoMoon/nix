@@ -2,7 +2,9 @@
   programs.nixvim.plugins = {
     notify = {
       enable = true;
-      timeout = 1000;
+      settings = {
+        timeout = 1000;
+      };
     };
     noice = {
       enable = true;

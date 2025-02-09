@@ -10,7 +10,9 @@
             auto_show_delay_ms = 0;
           };
           list = {
-            selection = "preselect";
+            selection = {
+              preselect = true;
+            };
           };
           menu = {
             draw = {
@@ -52,7 +54,7 @@
             "path"
             "snippets"
             "buffer"
-            "copilot"
+            # "copilot"
           ];
           cmdline.__raw = "{}";
           providers = {

@@ -2,8 +2,20 @@
   programs.nixvim = {
     plugins.copilot-lua = {
       enable = true;
-      suggestion.enabled = false;
-      panel.enabled = false;
+      settings = {
+        suggestion = {
+          enabled = true;
+          auto_trigger = true;
+          keymap = {
+            accept = "<C-c>";
+            accept_word = false;
+            accept_line = false;
+            next = "<M-]>";
+            prev = "<M-[>";
+            dismiss = "<C-]>";
+          };
+        };
+      };
     };
     keymaps = [
       {

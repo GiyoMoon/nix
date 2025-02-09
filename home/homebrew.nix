@@ -42,6 +42,9 @@ let
     "ubersicht"
     "utm"
     "vlc"
+    "bambu-studio"
+    "autodesk-fusion"
+    "zen-browser"
   ];
 
   mas = [
