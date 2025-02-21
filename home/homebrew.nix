@@ -21,6 +21,8 @@ let
     "aldente"
     "android-commandlinetools"
     "arc"
+    "autodesk-fusion"
+    "bambu-studio"
     "beekeeper-studio"
     "bruno"
     "discord"
@@ -33,6 +35,7 @@ let
     "licecap"
     "obsidian"
     "orbstack"
+    "orcaslicer"
     "parsec"
     "pika"
     "prismlauncher"
@@ -42,8 +45,6 @@ let
     "ubersicht"
     "utm"
     "vlc"
-    "bambu-studio"
-    "autodesk-fusion"
     "zen-browser"
   ];
 

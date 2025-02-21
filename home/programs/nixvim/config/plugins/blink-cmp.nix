@@ -56,7 +56,6 @@
             "buffer"
             # "copilot"
           ];
-          cmdline.__raw = "{}";
           providers = {
             copilot = {
               name = "copilot";
@@ -78,6 +77,7 @@
             };
           };
         };
+        cmdline.sources.__raw = "{}";
         appearance = {
           kind_icons = {
             Copilot = "";
