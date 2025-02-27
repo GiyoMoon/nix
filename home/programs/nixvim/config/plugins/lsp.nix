@@ -69,63 +69,8 @@
         };
         astro.enable = true;
         gleam.enable = true;
-        jsonls = {
-          enable = true;
-          extraOptions = {
-            settings = {
-              json = {
-                schemas = [
-                  {
-                    fileMatch = [ "package.json" ];
-                    url = "https://json.schemastore.org/package.json";
-                  }
-                  {
-                    fileMatch = [ "tsconfig*.json" ];
-                    url = "https://json.schemastore.org/tsconfig.json";
-                  }
-                  {
-                    fileMatch = [
-                      ".prettierrc"
-                      ".prettierrc.json"
-                      "prettier.config.json"
-                    ];
-                    url = "https://json.schemastore.org/prettierrc.json";
-                  }
-                  {
-                    fileMatch = [
-                      ".eslintrc"
-                      ".eslintrc.json"
-                    ];
-                    url = "https://json.schemastore.org/eslintrc.json";
-                  }
-                  {
-                    fileMatch = [
-                      ".babelrc"
-                      ".babelrc.json"
-                      "babel.config.json"
-                    ];
-                    url = "https://json.schemastore.org/babelrc.json";
-                  }
-                ];
-              };
-            };
-          };
-        };
-        yamlls = {
-          enable = true;
-          extraOptions = {
-            settings = {
-              yaml = {
-                schemas = {
-                  "https://json.schemastore.org/github-workflow.json" = "/.github/workflows/*";
-                  "https://json.schemastore.org/github-action.json" = "/.github/actions/*";
-                  "https://raw.githubusercontent.com/compose-spec/compose-spec/master/schema/compose-spec.json" =
-                    "{docker-compose,compose}*.{yml,yaml}";
-                };
-              };
-            };
-          };
-        };
+        jsonls.enable = true;
+        yamlls.enable = true;
         # mdx_analyzer = {
         #    enable = false;
         #    package = pkgs.mdx-language-server;
@@ -180,6 +125,7 @@
         };
       }
     ];
+    plugins.schemastore.enable = true;
     extraConfigLua = # lua
       ''
         -- Fix: https://github.com/neovim/neovim/issues/30985
