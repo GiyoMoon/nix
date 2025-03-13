@@ -17,6 +17,9 @@
         };
       };
     };
+    # plugins.copilot-chat = {
+    #   enable = true;
+    # };
     keymaps = [
       {
         mode = "n";

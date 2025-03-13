@@ -30,7 +30,7 @@
 
   home.activation = {
     homebrew = ''
-      run /opt/homebrew/bin/brew bundle install --force --no-lock --global --cleanup --zap
+      run /opt/homebrew/bin/brew bundle install --force --global --cleanup --zap
       run /opt/homebrew/bin/yabai --start-service
       run /opt/homebrew/bin/skhd --start-service
     '';

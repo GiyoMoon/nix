@@ -16,20 +16,20 @@
           '';
         formatters_by_ft = {
           astro = [ "prettierd" ];
-          css = [ "biome" ];
-          javascript = [ "biome" ];
-          javascriptreact = [ "biome" ];
-          json = [ "biome" ];
-          jsonc = [ "biome" ];
+          css = [ "biome-check" ];
+          javascript = [ "biome-check" ];
+          javascriptreact = [ "biome-check" ];
+          json = [ "biome-check" ];
+          jsonc = [ "biome-check" ];
           lua = [ "stylua" ];
           nix = [ "nixfmt" ];
           rust = [ "rustfmt" ];
-          typescript = [ "biome" ];
-          typescriptreact = [ "biome" ];
+          typescript = [ "biome-check" ];
+          typescriptreact = [ "biome-check" ];
           gleam = [ "gleam" ];
         };
         formatters = {
-          biome.condition.__raw = # lua
+          biome-check.condition.__raw = # lua
             ''
               function(ctx)
                 local config_exists = vim.fs.find({ 'biome.json' }, { upward = true, path = ctx.filename })
