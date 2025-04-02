@@ -42,6 +42,7 @@
     nerd-fonts.monaspace
     nerd-fonts.caskaydia-cove
     nerd-fonts.geist-mono
+    maple-mono.NF
 
     # javascript
     nodejs_22

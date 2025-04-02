@@ -11,8 +11,11 @@
           };
           list = {
             selection = {
-              preselect = true;
+              preselect = false;
             };
+          };
+          accept = {
+            auto_brackets.enabled = false;
           };
           menu = {
             draw = {
@@ -77,7 +80,7 @@
             };
           };
         };
-        cmdline.sources.__raw = "{}";
+        cmdline.enabled = false;
         appearance = {
           kind_icons = {
             Copilot = "";

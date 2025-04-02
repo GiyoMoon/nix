@@ -30,7 +30,6 @@ let
     "gimp"
     "google-chrome"
     "handbrake"
-    "hoppscotch"
     "kitty"
     "licecap"
     "obsidian"

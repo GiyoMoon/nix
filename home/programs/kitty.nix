@@ -14,7 +14,8 @@
       "--listen-on=unix:/tmp/kitty"
     ];
     font = {
-      name = "CaskaydiaCove Nerd Font Mono";
+      name = "Maple Mono NF";
+      # name = "CaskaydiaCove Nerd Font Mono";
       # name = "GeistMono Nerd Font Mono";
       size = 18;
     };

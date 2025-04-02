@@ -9,6 +9,7 @@
     ./git-conflict.nix
     ./gitsigns.nix
     ./hex.nix
+    ./image.nix
     ./lsp.nix
     ./markdown.nix
     ./mini.nix
