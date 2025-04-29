@@ -46,6 +46,7 @@
     '';
     dsDontWriteNetworkStores = ''
       run /usr/bin/defaults write com.apple.desktopservices DSDontWriteNetworkStores true
+      run /usr/bin/defaults write com.apple.desktopservices DSDontWriteUSBStores true
     '';
   };
 }

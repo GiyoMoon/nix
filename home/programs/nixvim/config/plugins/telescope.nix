@@ -10,6 +10,14 @@
           find_files = {
             hidden = true;
           };
+          live_grep = {
+            additional_args.__raw = # lua
+              ''
+                function(_)
+                  return { "--hidden" }
+                end
+              '';
+          };
         };
       };
       extensions = {
@@ -21,6 +29,13 @@
           action = "find_files";
           options = {
             desc = "[F]ind [F]iles";
+          };
+        };
+        "<leader>fg" = {
+          mode = "n";
+          action = "live_grep";
+          options = {
+            desc = "[F]ind by [G]rep";
           };
         };
         "<leader>fh" = {
@@ -47,14 +62,6 @@
       };
     };
     keymaps = [
-      {
-        mode = "n";
-        key = "<leader>fg";
-        action.__raw = "require('telescope').extensions.live_grep_args.live_grep_args";
-        options = {
-          desc = "[F]ind by [G]rep";
-        };
-      }
       {
         mode = "n";
         key = "<leader>fu";

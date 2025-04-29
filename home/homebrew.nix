@@ -45,6 +45,7 @@ let
     "utm"
     "vlc"
     "zen-browser"
+    "qbittorrent"
   ];
 
   mas = [

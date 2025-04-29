@@ -200,7 +200,7 @@
         action.__raw = # lua
           ''
             function()
-              vim.diagnostic.jump({count=-1, float=false})
+              vim.diagnostic.jump({count=-1, float=true})
             end
           '';
         options = {
@@ -213,7 +213,7 @@
         action.__raw = # lua
           ''
             function()
-              vim.diagnostic.jump({count=1, float=false})
+              vim.diagnostic.jump({count=1, float=true})
             end
           '';
         options = {

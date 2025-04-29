@@ -1,9 +1,10 @@
 {
   programs.nixvim = {
     diagnostics = {
-      virtual_lines = {
-        current_line = true;
-      };
+      #   virtual_lines = {
+      #     current_line = true;
+      #   };
+      virtual_text = true;
     };
     opts = {
       breakindent = true;
