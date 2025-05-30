@@ -6,7 +6,7 @@
     homeDirectory = "/Users/jasi";
 
     # Release notes: https://nix-community.github.io/home-manager/release-notes.xhtml
-    stateVersion = "24.05";
+    stateVersion = "25.05";
 
     sessionVariables = {
       TERM = "xterm-256color";

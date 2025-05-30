@@ -46,6 +46,7 @@ let
     "vlc"
     "zen-browser"
     "qbittorrent"
+    "ghidra"
   ];
 
   mas = [
