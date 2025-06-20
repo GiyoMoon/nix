@@ -23,7 +23,10 @@
           extraOptions = {
             settings = {
               rust-analyzer = {
-                cargo.allFeatures = true;
+                cargo = {
+                  allFeatures = true;
+                  # target = "x86_64-pc-windows-msvc";
+                };
                 checkOnSave.command = "clippy";
               };
             };
@@ -71,6 +74,7 @@
         gleam.enable = true;
         jsonls.enable = true;
         yamlls.enable = true;
+        openscad_lsp.enable = true;
         # mdx_analyzer = {
         #    enable = false;
         #    package = pkgs.mdx-language-server;
