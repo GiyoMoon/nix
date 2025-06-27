@@ -12,7 +12,6 @@ let
   brews = [
     "skhd"
     "yabai"
-    "handbrake"
     "mac-cleanup-py"
   ];
 
@@ -30,7 +29,7 @@ let
     "firefox"
     "gimp"
     "google-chrome"
-    "handbrake"
+    "handbrake-app"
     "kitty"
     "licecap"
     "obsidian"
