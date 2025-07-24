@@ -4,7 +4,7 @@
 -- rose-pine
 -- tokyonight
 local LIGHT_COLORSCHEME = 'rose-pine'
-local DARK_COLORSCHEME = 'tokyonight'
+local DARK_COLORSCHEME = 'rose-pine'
 
 local light = function()
   vim.cmd.colorscheme(LIGHT_COLORSCHEME)

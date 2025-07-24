@@ -11,7 +11,6 @@
     ./hex.nix
     ./image.nix
     ./lsp.nix
-    ./markdown.nix
     ./mini.nix
     ./noice.nix
     ./oil.nix

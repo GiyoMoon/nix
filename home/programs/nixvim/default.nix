@@ -22,7 +22,6 @@
       eldritch
       everforest-lua
       telescope-live-grep-args-nvim
-      markdown
     ];
   };
 }

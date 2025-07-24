@@ -36,6 +36,9 @@
     mgitstatus
     dust
     gh
+    rainfrog
+    restic
+    rclone
 
     nerd-fonts.fira-code
     nerd-fonts.agave

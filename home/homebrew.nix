@@ -19,7 +19,6 @@ let
     "1password"
     "aldente"
     "android-commandlinetools"
-    "arc"
     "bambu-studio"
     "beekeeper-studio"
     "bruno"
@@ -44,10 +43,10 @@ let
     "steam"
     "stremio"
     "teamspeak-client"
+    "teamspeak-client@beta"
     "ubersicht"
     "utm"
     "vlc"
-    "zen-browser"
   ];
 
   mas = [

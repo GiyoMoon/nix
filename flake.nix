@@ -21,10 +21,6 @@
       url = "github:neanias/everforest-nvim";
       flake = false;
     };
-    markdown = {
-      url = "github:MeanderingProgrammer/markdown.nvim";
-      flake = false;
-    };
     simple-bar = {
       url = "github:Jean-Tinland/simple-bar";
       flake = false;
