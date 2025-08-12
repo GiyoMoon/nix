@@ -13,6 +13,7 @@ let
     "skhd"
     "yabai"
     "mac-cleanup-py"
+    "monero"
   ];
 
   casks = [
@@ -31,6 +32,7 @@ let
     "handbrake-app"
     "kitty"
     "licecap"
+    "monero-wallet"
     "obsidian"
     "openscad"
     "orbstack"
@@ -47,13 +49,6 @@ let
     "ubersicht"
     "utm"
     "vlc"
-  ];
-
-  mas = [
-    {
-      name = "WireGuard";
-      id = "1451685025";
-    }
   ];
 in
 {
@@ -84,7 +79,6 @@ in
         + ''
           "
         ''
-      ) casks)
-      + (lib.concatMapStrings ({ name, id }: ''mas "'' + name + ''", id: '' + id + "\n") mas);
+      ) casks);
   };
 }

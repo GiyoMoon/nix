@@ -11,12 +11,11 @@
             hidden = true;
           };
           live_grep = {
-            additional_args.__raw = # lua
-              ''
-                function(_)
-                  return { "--hidden" }
-                end
-              '';
+            additional_args.__raw = ''
+              function(_)
+                return { "--hidden" }
+              end
+            '';
           };
         };
       };
@@ -68,6 +67,14 @@
         action = "<cmd>Telescope undo<CR>";
         options = {
           desc = "[F]ind [U]ndo";
+        };
+      }
+      {
+        mode = "n";
+        key = "<leader>fl";
+        action = "<cmd>Telescope lsp_references<CR>";
+        options = {
+          desc = "[F]ind [L]sp References";
         };
       }
     ];

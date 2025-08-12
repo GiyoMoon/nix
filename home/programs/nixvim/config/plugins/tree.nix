@@ -2,7 +2,7 @@
   programs.nixvim = {
     plugins.nvim-tree = {
       enable = true;
-      extraOptions = {
+      settings = {
         view = {
           side = "right";
         };

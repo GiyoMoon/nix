@@ -39,6 +39,9 @@
     rainfrog
     restic
     rclone
+    tor
+    xmrig
+    btop
 
     nerd-fonts.fira-code
     nerd-fonts.agave

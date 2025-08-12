@@ -29,20 +29,18 @@
           gleam = [ "gleam" ];
         };
         formatters = {
-          biome-check.condition.__raw = # lua
-            ''
-              function(ctx)
-                local config_exists = vim.fs.find({ 'biome.json' }, { upward = true, path = ctx.filename })
-                return not vim.tbl_isempty(config_exists)
-              end
-            '';
-          prettierd.condition.__raw = # lua
-            ''
-              function(ctx)
-                local config_exists = vim.fs.find({ '.prettierrc.json' }, { upward = true, path = ctx.filename })
-                return not vim.tbl_isempty(config_exists)
-              end
-            '';
+          biome-check.condition.__raw = ''
+            function(ctx)
+              local config_exists = vim.fs.find({ 'biome.json' }, { upward = true, path = ctx.filename })
+              return not vim.tbl_isempty(config_exists)
+            end
+          '';
+          prettierd.condition.__raw = ''
+            function(ctx)
+              local config_exists = vim.fs.find({ '.prettierrc.json' }, { upward = true, path = ctx.filename })
+              return not vim.tbl_isempty(config_exists)
+            end
+          '';
         };
       };
     };

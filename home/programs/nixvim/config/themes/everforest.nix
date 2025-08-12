@@ -1,6 +1,5 @@
 {
-  programs.nixvim.extraConfigLua = # lua
-    ''
-      require('everforest').setup()
-    '';
+  programs.nixvim.extraConfigLua = ''
+    require('everforest').setup()
+  '';
 }

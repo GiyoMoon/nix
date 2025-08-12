@@ -65,7 +65,7 @@
             "processWidget": false,
             "weatherWidget": false,
             "netstatsWidget": false,
-            "cpuWidget": true,
+            "cpuWidget": false,
             "batteryWidget": true,
             "wifiWidget": true,
             "vpnWidget": false,

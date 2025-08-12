@@ -10,6 +10,7 @@
 
     sessionVariables = {
       TERM = "xterm-256color";
+      SOPS_AGE_KEY_FILE = "$HOME/.config/sops/age/keys.txt";
     };
   };
 
@@ -31,8 +32,6 @@
   home.activation = {
     homebrew = ''
       run /opt/homebrew/bin/brew bundle install --force --global --cleanup --zap
-      run /opt/homebrew/bin/yabai --start-service
-      run /opt/homebrew/bin/skhd --start-service
     '';
     # TODO: Find a way to only run this on first activation
     # disableStartupSound = ''

@@ -58,7 +58,7 @@
       # [[ movement ]]
       {
         mode = "n";
-        key = "<D-d>";
+        key = "<C-d>";
         action = "<C-d>zz";
         options = {
           desc = "Scroll down and keep cursor in the center";
@@ -66,7 +66,7 @@
       }
       {
         mode = "n";
-        key = "<D-u>";
+        key = "<C-u>";
         action = "<C-u>zz";
         options = {
           desc = "Scroll up and keep cursor in the center";
@@ -197,12 +197,11 @@
       {
         mode = "n";
         key = "<leader>[";
-        action.__raw = # lua
-          ''
-            function()
-              vim.diagnostic.jump({count=-1, float=true})
-            end
-          '';
+        action.__raw = ''
+          function()
+            vim.diagnostic.jump({count=-1, float=true})
+          end
+        '';
         options = {
           desc = "Go to previous [D]iagnostic message";
         };
@@ -210,12 +209,11 @@
       {
         mode = "n";
         key = "<leader>]";
-        action.__raw = # lua
-          ''
-            function()
-              vim.diagnostic.jump({count=1, float=true})
-            end
-          '';
+        action.__raw = ''
+          function()
+            vim.diagnostic.jump({count=1, float=true})
+          end
+        '';
         options = {
           desc = "Go to next [D]iagnostic message";
         };

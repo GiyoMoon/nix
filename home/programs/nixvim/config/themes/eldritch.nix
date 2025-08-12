@@ -1,6 +1,5 @@
 {
-  programs.nixvim.extraConfigLua = # lua
-    ''
-      require('eldritch').setup()
-    '';
+  programs.nixvim.extraConfigLua = ''
+    require('eldritch').setup()
+  '';
 }
