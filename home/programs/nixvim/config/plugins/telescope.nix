@@ -21,6 +21,7 @@
       };
       extensions = {
         undo.enable = true;
+        ui-select.enable = true;
       };
       keymaps = {
         "<leader>ff" = {

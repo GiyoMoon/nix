@@ -161,6 +161,24 @@
           desc = "Search for selection";
         };
       }
+      {
+        mode = "n";
+        key = "<leader>le";
+        action.__raw = ''
+          function()
+            if vim.b.diagnostics_open then
+              vim.diagnostic.config { virtual_lines = false }
+              vim.b.diagnostics_open = false
+            else
+              vim.diagnostic.config { virtual_lines = { current_line = true } }
+              vim.b.diagnostics_open = true
+            end
+          end
+        '';
+        options = {
+          desc = "Toggle virtual lines";
+        };
+      }
       # [[ windows ]]
       {
         mode = "n";

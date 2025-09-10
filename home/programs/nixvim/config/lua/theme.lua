@@ -3,8 +3,9 @@
 -- everforest
 -- rose-pine
 -- tokyonight
-local LIGHT_COLORSCHEME = 'rose-pine'
-local DARK_COLORSCHEME = 'everforest'
+-- zonbones
+local LIGHT_COLORSCHEME = 'zenbones'
+local DARK_COLORSCHEME = 'zenbones'
 
 local light = function()
   vim.cmd.colorscheme(LIGHT_COLORSCHEME)
