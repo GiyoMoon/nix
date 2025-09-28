@@ -21,12 +21,16 @@
       url = "github:neanias/everforest-nvim";
       flake = false;
     };
-    simple-bar = {
-      url = "github:Jean-Tinland/simple-bar";
-      flake = false;
-    };
     puffer-fish = {
       url = "github:nickeb96/puffer-fish";
+      flake = false;
+    };
+    sketchybar-font = {
+      url = "https://github.com/kvndrsslr/sketchybar-app-font/releases/latest/download/sketchybar-app-font.ttf";
+      flake = false;
+    };
+    sketchybar-icon-map = {
+      url = "https://github.com/kvndrsslr/sketchybar-app-font/releases/latest/download/icon_map.sh";
       flake = false;
     };
   };

@@ -56,9 +56,6 @@
         /opt/homebrew/bin/yabai -m rule --add app="sc-assets" manage=off
         /opt/homebrew/bin/yabai -m signal --add event=window_created app="sc-assets" action="yabai -m window --focus mouse"
 
-        # https://www.jeantinland.com/toolbox/simple-bar/documentation/installation/#update-your-yabai-config
-        osascript -e 'tell application id "tracesOf.Uebersicht" to refresh'
-
         echo "yabai configuration loaded.."
       '';
     onChange = ''

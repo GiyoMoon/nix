@@ -7,13 +7,16 @@ let
     # yabai and skhd
     "koekeishiya/formulae"
     "mac-cleanup/mac-cleanup-py"
+    # sketchybar
+    "FelixKratz/formulae"
   ];
 
   brews = [
-    "skhd"
-    "yabai"
     "mac-cleanup-py"
     "monero"
+    "sketchybar"
+    "skhd"
+    "yabai"
   ];
 
   casks = [
@@ -22,6 +25,7 @@ let
     "android-commandlinetools"
     "bambu-studio"
     "beekeeper-studio"
+    "blender"
     "bruno"
     "discord"
     "firefox"
@@ -38,6 +42,7 @@ let
     "orbstack"
     "orcaslicer"
     "parsec"
+    "pdfsam-basic"
     "pika"
     "prismlauncher"
     "qbittorrent"
@@ -46,7 +51,6 @@ let
     "stremio"
     "teamspeak-client"
     "teamspeak-client@beta"
-    "ubersicht"
     "utm"
     "vlc"
   ];

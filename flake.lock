@@ -205,23 +205,32 @@
         "nixpkgs": "nixpkgs",
         "nixvim": "nixvim",
         "puffer-fish": "puffer-fish",
-        "simple-bar": "simple-bar"
+        "sketchybar-font": "sketchybar-font",
+        "sketchybar-icon-map": "sketchybar-icon-map"
       }
     },
-    "simple-bar": {
+    "sketchybar-font": {
       "flake": false,
       "locked": {
-        "lastModified": 1755888254,
-        "narHash": "sha256-8MpANF0m/c8Z2btgArn1pavxoP2qdkKX4dD9l3nDFa8=",
-        "owner": "Jean-Tinland",
-        "repo": "simple-bar",
-        "rev": "7673cbbc56973748897bcae15afc135865694351",
-        "type": "github"
+        "narHash": "sha256-3+V4mHbgl8JOTy6pg1e3bsSPSMJmsdllxRH3KWUfKl8=",
+        "type": "file",
+        "url": "https://github.com/kvndrsslr/sketchybar-app-font/releases/latest/download/sketchybar-app-font.ttf"
       },
       "original": {
-        "owner": "Jean-Tinland",
-        "repo": "simple-bar",
-        "type": "github"
+        "type": "file",
+        "url": "https://github.com/kvndrsslr/sketchybar-app-font/releases/latest/download/sketchybar-app-font.ttf"
+      }
+    },
+    "sketchybar-icon-map": {
+      "flake": false,
+      "locked": {
+        "narHash": "sha256-gb9Aj7Q5ZMRw4FqTACsDcN6rraDmcehMs7wzA+CLTLg=",
+        "type": "file",
+        "url": "https://github.com/kvndrsslr/sketchybar-app-font/releases/latest/download/icon_map.sh"
+      },
+      "original": {
+        "type": "file",
+        "url": "https://github.com/kvndrsslr/sketchybar-app-font/releases/latest/download/icon_map.sh"
       }
     },
     "systems": {
