@@ -81,5 +81,7 @@
 
     # UI
     lens
+
+    wireguard-tools
   ];
 }
