@@ -96,12 +96,15 @@ in
                    --add item battery right \
                    --set battery script="$PLUGIN_DIR/battery.sh" \
                    --subscribe battery system_woke power_source_change \
-                   --add item disk right \
-                   --set disk script="$PLUGIN_DIR/disk.sh" \
                    --add item wireguard right \
                    --set wireguard script="$PLUGIN_DIR/wireguard.sh" \
                    --add item docker right \
-                   --set docker script="$PLUGIN_DIR/docker.sh"
+                   --set docker script="$PLUGIN_DIR/docker.sh" \
+                   --add item media right \
+                   --set media script="$PLUGIN_DIR/media.sh"
+
+                   # --add item disk right \
+                   # --set disk script="$PLUGIN_DIR/disk.sh" \
 
         sketchybar --update
       '';

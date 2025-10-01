@@ -46,7 +46,7 @@
         # excluded applications
         /opt/homebrew/bin/yabai -m rule --add app="System Settings" manage=off
         /opt/homebrew/bin/yabai -m rule --add app="OrbStack" manage=off
-        # /opt/homebrew/bin/yabai -m rule --add app="Godot" manage=off
+        /opt/homebrew/bin/yabai -m rule --add app="Godot" title!='Godot Engine$' manage=off
         # /opt/homebrew/bin/yabai -m rule --add app="GIMP" title!='(^GNU|^GIMP)' manage=off
         /opt/homebrew/bin/yabai -m rule --add title="^Android Emulator*" manage=off
         /opt/homebrew/bin/yabai -m rule --add app="Simulator" manage=off

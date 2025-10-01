@@ -17,6 +17,7 @@ let
     "sketchybar"
     "skhd"
     "yabai"
+    "media-control"
   ];
 
   casks = [
@@ -32,6 +33,7 @@ let
     "freecad"
     "ghidra"
     "gimp"
+    "godot"
     "google-chrome"
     "handbrake-app"
     "kitty"
