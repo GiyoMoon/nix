@@ -25,5 +25,7 @@
       zenbones-nvim
       lush-nvim
     ];
+
+    extraConfigLua = builtins.readFile ./config/lua/godot_server.lua;
   };
 }

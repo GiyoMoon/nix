@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 {
   programs.nixvim = {
     plugins.lsp = {
@@ -79,6 +79,10 @@
         #    package = pkgs.mdx-language-server;
         #  };
         clangd.enable = true;
+        gdscript = {
+          enable = true;
+          package = pkgs.gdtoolkit_4;
+        };
       };
       preConfig = ''
         vim.fn.sign_define('DiagnosticSignError', { text = '', texthl = 'DiagnosticSignError' })
