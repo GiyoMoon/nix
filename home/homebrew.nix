@@ -37,6 +37,7 @@ let
     "google-chrome"
     "handbrake-app"
     "kitty"
+    "krita"
     "licecap"
     "monero-wallet"
     "obsidian"

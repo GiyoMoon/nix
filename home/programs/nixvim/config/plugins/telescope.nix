@@ -4,7 +4,10 @@
       enable = true;
       settings = {
         defaults = {
-          file_ignore_patterns = [ "^.git/" ];
+          file_ignore_patterns = [
+            "^.git/"
+            "gd.uid$"
+          ];
         };
         pickers = {
           find_files = {

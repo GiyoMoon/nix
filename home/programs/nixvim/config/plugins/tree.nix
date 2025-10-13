@@ -14,6 +14,10 @@
         };
         filters = {
           dotfiles = false;
+          custom = [
+            ".gd.uid$"
+            ".DS_Store"
+          ];
         };
       };
     };
