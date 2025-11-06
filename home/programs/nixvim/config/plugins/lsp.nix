@@ -83,6 +83,7 @@
           enable = true;
           package = pkgs.gdtoolkit_4;
         };
+        phpactor.enable = true;
       };
       preConfig = ''
         vim.fn.sign_define('DiagnosticSignError', { text = '', texthl = 'DiagnosticSignError' })

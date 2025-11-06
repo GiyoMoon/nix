@@ -31,7 +31,6 @@ let
     "discord"
     "firefox"
     "freecad"
-    "ghidra"
     "gimp"
     "godot"
     "google-chrome"

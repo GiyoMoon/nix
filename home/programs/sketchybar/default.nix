@@ -100,9 +100,8 @@ in
                    --set wireguard script="$PLUGIN_DIR/wireguard.sh" \
                    --add item docker right \
                    --set docker script="$PLUGIN_DIR/docker.sh" \
-                   --add item media right \
-                   --set media script="$PLUGIN_DIR/media.sh"
-
+                   # --add item media right \
+                   # --set media script="$PLUGIN_DIR/media.sh"
                    # --add item disk right \
                    # --set disk script="$PLUGIN_DIR/disk.sh" \
 

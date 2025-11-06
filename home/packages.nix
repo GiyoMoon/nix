@@ -70,14 +70,14 @@
     prettierd
 
     # php stuff :(
-    (php83.buildEnv {
+    (php.buildEnv {
       extraConfig = ''
         memory_limit = 2G
-        extension = ${php83Extensions.imagick}/lib/php/extensions/imagick.so
+        extension = ${php84Extensions.imagick}/lib/php/extensions/imagick.so
       '';
     })
-    php83Packages.composer
-    php83Extensions.imagick
+    php84Packages.composer
+    php84Extensions.imagick
 
     # UI
     lens
