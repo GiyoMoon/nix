@@ -4,7 +4,7 @@
       enable = true;
       settings = {
         notify_on_error = true;
-        notify_on_no_formatters = false;
+        notify_no_formatters = false;
         format_on_save = # lua
           ''
             function(bufnr)
