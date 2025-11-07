@@ -53,10 +53,13 @@
           enable = true;
           extraOptions = {
             on_attach.__raw = ''
-              function(_, bufnr)
+              function(client, bufnr)
+                 if not eslint_base_on_attach then return end
+
+                eslint_base_on_attach(client, bufnr)
                 vim.api.nvim_create_autocmd('BufWritePre', {
                   buffer = bufnr,
-                  command = 'EslintFixAll',
+                  command = 'LspEslintFixAll',
                 })
               end
             '';
@@ -90,6 +93,8 @@
         vim.fn.sign_define('DiagnosticSignWarn', { text = '', texthl = 'DiagnosticSignWarn' })
         vim.fn.sign_define('DiagnosticSignInfo', { text = '', texthl = 'DiagnosticSignInfo' })
         vim.fn.sign_define('DiagnosticSignHint', { text = '', texthl = 'DiagnosticSignHint' })
+
+        local eslint_base_on_attach = vim.lsp.config.eslint.on_attach
       '';
     };
     autoCmd = [
