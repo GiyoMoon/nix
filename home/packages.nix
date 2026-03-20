@@ -42,6 +42,9 @@
     tor
     xmrig
     btop
+    deploy-rs
+
+    wasm-pack
 
     nerd-fonts.fira-code
     nerd-fonts.agave
@@ -60,6 +63,14 @@
     rustup
     sqlx-cli
 
+    jujutsu
+    gleam
+    beam.packages.erlang_28.erlang
+
+    claude-code
+
+    mumble
+
     # mobile development
     cocoapods
     temurin-bin-17
@@ -70,17 +81,14 @@
     prettierd
 
     # php stuff :(
-    (php.buildEnv {
+    (php85.buildEnv {
       extraConfig = ''
         memory_limit = 2G
-        extension = ${php84Extensions.imagick}/lib/php/extensions/imagick.so
+        extension = ${php85Extensions.imagick}/lib/php/extensions/imagick.so
       '';
     })
-    php84Packages.composer
-    php84Extensions.imagick
-
-    # UI
-    lens
+    php85Packages.composer
+    php85Extensions.imagick
 
     wireguard-tools
   ];

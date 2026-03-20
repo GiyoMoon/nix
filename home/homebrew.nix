@@ -2,7 +2,6 @@
 
 let
   taps = [
-    "homebrew/cask-versions"
     "homebrew/services"
     # yabai and skhd
     "koekeishiya/formulae"
@@ -18,6 +17,7 @@ let
     "skhd"
     "yabai"
     "media-control"
+    "asheshgoplani/tap/agent-deck"
   ];
 
   casks = [
@@ -34,9 +34,12 @@ let
     "gimp"
     "godot"
     "google-chrome"
+    "halloy"
     "handbrake-app"
+    "kicad"
     "kitty"
     "krita"
+    "libreoffice"
     "licecap"
     "monero-wallet"
     "obsidian"

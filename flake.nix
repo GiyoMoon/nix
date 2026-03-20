@@ -26,11 +26,11 @@
       flake = false;
     };
     sketchybar-font = {
-      url = "https://github.com/kvndrsslr/sketchybar-app-font/releases/latest/download/sketchybar-app-font.ttf";
+      url = "https://github.com/kvndrsslr/sketchybar-app-font/releases/download/v2.0.51/sketchybar-app-font.ttf";
       flake = false;
     };
     sketchybar-icon-map = {
-      url = "https://github.com/kvndrsslr/sketchybar-app-font/releases/latest/download/icon_map.sh";
+      url = "https://github.com/kvndrsslr/sketchybar-app-font/releases/download/v2.0.51/icon_map.sh";
       flake = false;
     };
   };
@@ -50,7 +50,7 @@
         config.allowUnfreePredicate =
           pkg:
           builtins.elem (nixpkgs.lib.getName pkg) [
-            "lens-desktop"
+            "claude-code"
           ];
       };
     in

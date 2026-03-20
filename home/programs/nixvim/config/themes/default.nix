@@ -2,7 +2,8 @@
   imports = [
     ./catppuccin.nix
     ./eldritch.nix
-    ./everforest.nix
+    # currently throwing an error
+    # ./everforest.nix
     ./rose-pine.nix
     ./tokyonight.nix
   ];
