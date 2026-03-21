@@ -58,6 +58,7 @@ let
     "teamspeak-client@beta"
     "utm"
     "vlc"
+    "wireshark"
   ];
 in
 {
