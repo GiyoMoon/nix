@@ -52,13 +52,14 @@ let
     "prismlauncher"
     "qbittorrent"
     "raycast"
+    "signal"
     "steam"
     "stremio"
     "teamspeak-client"
     "teamspeak-client@beta"
     "utm"
     "vlc"
-    "wireshark"
+    "wireshark-app"
   ];
 in
 {
