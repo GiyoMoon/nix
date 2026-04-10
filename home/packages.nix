@@ -57,7 +57,7 @@
     # javascript
     nodejs_22
     pnpm
-    nodePackages.yarn
+    yarn
     bun
 
     rustup
@@ -77,7 +77,7 @@
 
     # formatters
     stylua
-    nixfmt-rfc-style
+    nixfmt
     prettierd
 
     # php stuff :(
