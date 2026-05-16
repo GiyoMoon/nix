@@ -2,10 +2,12 @@ inputs: self: super: {
   vimPlugins = super.vimPlugins.extend (
     self': super': {
       eldritch = super.vimUtils.buildVimPlugin {
+        pname = "eldritch";
         name = "eldritch";
         src = inputs.eldritch;
       };
       everforest-lua = super.vimUtils.buildVimPlugin {
+        pname = "everforest-lua";
         name = "everforest-lua";
         src = inputs.everforest-lua;
       };
