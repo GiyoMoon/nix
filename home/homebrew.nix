@@ -36,6 +36,7 @@ let
     "google-chrome"
     "halloy"
     "handbrake-app"
+    "inkscape"
     "kicad"
     "kitty"
     "krita"
