@@ -29,6 +29,7 @@ let
     "blender"
     "bruno"
     "discord"
+    "figma"
     "firefox"
     "freecad"
     "gimp"
