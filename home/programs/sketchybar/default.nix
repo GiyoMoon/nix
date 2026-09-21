@@ -72,13 +72,13 @@ in
           padding_right=0
           icon.font="Symbols Nerd Font Mono:Regular:15.0"
           label.font="Maple Mono NF:Bold:13.0"
-          icon.color=0xff180f23
-          label.color=0xff180f23
+          icon.color=0xff020304
+          label.color=0xff020304
           icon.padding_left=10
           icon.padding_right=6
           label.padding_left=0
           label.padding_right=10
-          background.color=0xffb3a3f1
+          background.color=0xffb2c97f
           background.corner_radius=99
           background.height=22
         )

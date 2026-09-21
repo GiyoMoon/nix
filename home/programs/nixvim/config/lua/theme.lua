@@ -5,7 +5,7 @@
 -- tokyonight
 -- zonbones
 local LIGHT_COLORSCHEME = 'everforest'
-local DARK_COLORSCHEME = 'everforest'
+local DARK_COLORSCHEME = 'catppuccin'
 
 local light = function()
   vim.cmd.colorscheme(LIGHT_COLORSCHEME)

@@ -19,5 +19,7 @@
     ./tree.nix
     ./treesitter.nix
     ./ts-context-commentstring.nix
+    ./typst-preview.nix
+    ./markdown-preview.nix
   ];
 }

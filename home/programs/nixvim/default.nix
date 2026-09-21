@@ -18,6 +18,13 @@
 
     plugins.web-devicons.enable = true;
 
+    nixpkgs.config.allowUnfreePredicate =
+      pkg:
+      builtins.elem (lib.getName pkg) [
+        "git-conflict.nvim"
+        "copilot-language-server"
+      ];
+
     extraPlugins = with pkgs.vimPlugins; [
       eldritch
       everforest-lua

@@ -31,7 +31,7 @@
 
   home.activation = {
     homebrew = ''
-      run /opt/homebrew/bin/brew bundle install --force --global --cleanup --zap
+      run /opt/homebrew/bin/brew bundle install --force --force-cleanup --global --zap
     '';
     # TODO: Find a way to only run this on first activation
     # disableStartupSound = ''

@@ -62,6 +62,9 @@
 
     rustup
     sqlx-cli
+    espup
+    esp-generate
+    espflash
 
     jujutsu
     gleam
@@ -79,6 +82,8 @@
     stylua
     nixfmt
     prettierd
+
+    typst
 
     # php stuff :(
     (php85.buildEnv {

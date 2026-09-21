@@ -48,7 +48,7 @@
       AppleFontSmoothing = 1;
       ApplePressAndHoldEnabled = false;
       InitialKeyRepeat = 15;
-      KeyRepeat = 3;
+      KeyRepeat = 2;
     };
 
     "com.apple.AppleMultitouchTrackpad" = {

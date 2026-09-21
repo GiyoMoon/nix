@@ -85,6 +85,12 @@
           package = pkgs.gdtoolkit_4;
         };
         phpactor.enable = true;
+        tinymist = {
+          enable = true;
+          settings = {
+            formatterMode = "typstyle";
+          };
+        };
       };
       preConfig = ''
         vim.diagnostic.config({

@@ -7,17 +7,18 @@ let
     "koekeishiya/formulae"
     "mac-cleanup/mac-cleanup-py"
     # sketchybar
-    "FelixKratz/formulae"
+    "felixkratz/formulae"
   ];
 
   brews = [
     "mac-cleanup-py"
     "monero"
-    "sketchybar"
-    "skhd"
-    "yabai"
+    "felixkratz/formulae/sketchybar"
+    "koekeishiya/formulae/skhd"
+    "koekeishiya/formulae/yabai"
     "media-control"
     "asheshgoplani/tap/agent-deck"
+    "ashuttl/linecast/linecast"
   ];
 
   casks = [
@@ -26,6 +27,7 @@ let
     "android-commandlinetools"
     "bambu-studio"
     "beekeeper-studio"
+    "bitwarden"
     "blender"
     "bruno"
     "discord"
@@ -74,7 +76,7 @@ in
         ''tap "''
         + tap
         + ''
-          "
+          ", trusted: true
         ''
       ) taps)
       + (lib.concatMapStrings (
@@ -82,7 +84,7 @@ in
         ''brew "''
         + brew
         + ''
-          "
+          ", trusted: true
         ''
       ) brews)
       + (lib.concatMapStrings (
@@ -90,7 +92,7 @@ in
         ''cask "''
         + cask
         + ''
-          "
+          ", trusted: true
         ''
       ) casks);
   };

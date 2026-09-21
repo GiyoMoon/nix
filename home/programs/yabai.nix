@@ -47,14 +47,16 @@
         /opt/homebrew/bin/yabai -m rule --add app="System Settings" manage=off
         /opt/homebrew/bin/yabai -m rule --add app="OrbStack" manage=off
         /opt/homebrew/bin/yabai -m rule --add app="Godot" title!='Godot Engine$' manage=off
-        # /opt/homebrew/bin/yabai -m rule --add app="GIMP" title!='(^GNU|^GIMP)' manage=off
+        /opt/homebrew/bin/yabai -m rule --add app="GIMP" title!='(^GNU|^GIMP)' manage=off
         /opt/homebrew/bin/yabai -m rule --add title="^Android Emulator*" manage=off
         /opt/homebrew/bin/yabai -m rule --add app="Simulator" manage=off
         /opt/homebrew/bin/yabai -m rule --add app="Bruno" manage=off
         /opt/homebrew/bin/yabai -m rule --add app="1Password" manage=off
+        /opt/homebrew/bin/yabai -m rule --add app="Bitwarden" manage=off
         /opt/homebrew/bin/yabai -m rule --add app="Prism Launcher" manage=off
-        /opt/homebrew/bin/yabai -m rule --add app="sc-assets" manage=off
-        /opt/homebrew/bin/yabai -m signal --add event=window_created app="sc-assets" action="yabai -m window --focus mouse"
+        /opt/homebrew/bin/yabai -m rule --add app="Signal" manage=off
+
+        /opt/homebrew/bin/yabai -m rule --apply
 
         echo "yabai configuration loaded.."
       '';

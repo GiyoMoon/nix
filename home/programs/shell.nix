@@ -58,13 +58,6 @@
 
       v = "nvim";
 
-      flutter = "fvm flutter";
-      dart = "fvm dart";
-
-      pa = "php artisan";
-
-      k = "kubectl";
-
       xmr = "monero-wallet-cli";
       xmrd = "monerod";
     };
@@ -90,7 +83,8 @@
             else if [ "$mode" = "dark" ]
               osascript -l JavaScript -e "Application('System Events').appearancePreferences.darkMode = true" > /dev/null
               # st_kitty "Tokyo Night Moon"
-              st_kitty "Everforest Dark Medium"
+              # st_kitty "Everforest Dark Medium"
+              st_kitty "Catppuccin-Macchiato"
               # st_kitty "zenbones_dark"
               # st_kitty "Eldritch"
               # st_kitty "Rosé Pine Moon"

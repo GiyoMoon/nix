@@ -11,7 +11,6 @@
     };
     nixvim = {
       url = "github:nix-community/nixvim";
-      inputs.nixpkgs.follows = "nixpkgs";
     };
     eldritch = {
       url = "github:eldritch-theme/eldritch.nvim";
